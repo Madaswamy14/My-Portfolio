@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Jira - Madaswamy Portfolio</title>
+    <meta name="description" content="This guide introduces basic Jira concepts to new users.">
+    <link rel="stylesheet" href="styleindex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <h1>Madaswamy - Portfolio</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="experience.html">Experience</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="freelance.html">Freelance</a>
+        <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+</header>
+
+<main>
+    <section id="documentation" class="main-section">
+        <div class="page-header">
+            <h2><i class="fa-solid fa-book"></i> Getting Started with Jira</h2>
+            <p class="subtitle">A comprehensive guide for new users</p>
+            <div class="doc-meta">
+                <span class="version"><strong>Version:</strong> 1.0</span>
+                <span class="date"><strong>Date:</strong> October 1, 2025</span>
+            </div>
+        </div>
+
+        <div class="info-block">
+            <div class="doc-intro">
+                <p>This guide introduces basic Jira concepts to new users. For detailed explanations of all features, see the user guide.</p>
+            </div>
+
+            <div class="table-of-contents">
+                <h3><i class="fa-solid fa-list"></i> Table of Contents</h3>
+                <ul>
+                    <li><a href="#jira-overview">Jira Overview</a></li>
+                    <li><a href="#core-concepts">Core Concepts</a></li>
+                    <li><a href="#jira-user-interface">Jira User Interface</a></li>
+                    <li><a href="#create-project">Create a Project</a></li>
+                    <li><a href="#create-issue">Create an Issue</a></li>
+                    <li><a href="#next-steps">Next Steps</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-block" id="jira-overview">
+            <h3><i class="fa-solid fa-eye"></i> Jira Overview</h3>
+            <p>Jira is a project management tool teams use to plan, track, and manage their work. Jira is flexible, allowing teams to configure various methodologies such as Agile, Scrum, and Kanban.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h4>Centralized Work Tracking</h4>
+                    <p>Provides a single point of reference for all tasks, bugs, and user stories.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h4>Improved Collaboration</h4>
+                    <p>Facilitates communication and transparency among team members.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <h4>Visual Workflows</h4>
+                    <p>Allow teams to visualize their work process and identify bottlenecks.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h4>Powerful Reporting</h4>
+                    <p>Offers insights into team performance and project progress.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-block" id="core-concepts">
+            <h3><i class="fa-solid fa-lightbulb"></i> Core Concepts</h3>
+            <p>This section defines fundamental Jira terms.</p>
+            
+            <div class="concepts-list">
+                <div class="concept-item">
+                    <div class="concept-icon">
+                        <i class="fa-solid fa-folder"></i>
+                    </div>
+                    <div class="concept-content">
+                        <h4>Project</h4>
+                        <p>A container for the work of your team in Jira. It groups related tasks or issues.</p>
+                    </div>
+                </div>
+                
+                <div class="concept-item">
+                    <div class="concept-icon">
+                        <i class="fa-solid fa-ticket"></i>
+                    </div>
+                    <div class="concept-content">
+                        <h4>Issue</h4>
+                        <p>A basic unit of work in Jira. It can represent a task, a bug, a user story, or any other work item.</p>
+                    </div>
+                </div>
+                
+                <div class="concept-item">
+                    <div class="concept-icon">
+                        <i class="fa-solid fa-table-columns"></i>
+                    </div>
+                    <div class="concept-content">
+                        <h4>Board</h4>
+                        <p>A visual representation of the workflow of your team. To track progress, issues move across columns on the board from To Do to Done.</p>
+                    </div>
+                </div>
+                
+                <div class="concept-item">
+                    <div class="concept-icon">
+                        <i class="fa-solid fa-route"></i>
+                    </div>
+                    <div class="concept-content">
+                        <h4>Workflow</h4>
+                        <p>A set of statuses and transitions an issue moves through during its lifecycle, from creation to completion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-block" id="jira-user-interface">
+            <h3><i class="fa-solid fa-desktop"></i> Jira User Interface</h3>
+            <p>The Jira user interface includes a customizable left pane for navigation, a top pane for product switching and search, and a main work area. The main work area displays project boards, issues, timelines, and dashboards.</p>
+            
+            <div class="ui-sections">
+                <div class="ui-section">
+                    <h4><i class="fa-solid fa-arrow-up"></i> Top Pane</h4>
+                    <ul>
+                        <li><strong>Switch sites or apps:</strong> Moves between Atlassian applications such as Confluence and Bitbucket.</li>
+                        <li><strong>Create:</strong> Creates new issues.</li>
+                        <li><strong>Search:</strong> Finds issues, projects, boards, and people across your site.</li>
+                        <li><strong>Help and Settings:</strong> Provides access to documentation, support, account, and Jira settings.</li>
+                        <li><strong>Notifications:</strong> Displays updates on your work.</li>
+                    </ul>
+                </div>
+                
+                <div class="ui-section">
+                    <h4><i class="fa-solid fa-arrow-left"></i> Left Pane</h4>
+                    <ul>
+                        <li><strong>For you:</strong> Provides personalized task views.</li>
+                        <li><strong>Recent:</strong> Shows recently viewed items.</li>
+                        <li><strong>Starred:</strong> Displays pinned or favorite items.</li>
+                        <li><strong>Projects:</strong> Navigates projects and their various views.</li>
+                        <li><strong>Goals:</strong> Aligns work to strategic objectives.</li>
+                        <li><strong>Plans:</strong> Views and manages project plans.</li>
+                        <li><strong>Boards:</strong> Accesses Kanban and Scrum agile boards.</li>
+                        <li><strong>Backlog:</strong> Views and prioritizes your product backlog.</li>
+                        <li><strong>Timeline:</strong> Plans and tracks work over time.</li>
+                        <li><strong>Reports:</strong> Accesses various reports and dashboards.</li>
+                        <li><strong>Apps:</strong> Manages installed Atlassian apps and integrations.</li>
+                        <li><strong>Customization:</strong> Rearranges, hides, or displays sidebar items to personalize your view.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-block" id="create-project">
+            <h3><i class="fa-solid fa-plus-circle"></i> Create a Project</h3>
+            <p>This topic explains how to create a project in Jira.</p>
+            
+            <div class="prerequisites">
+                <h4><i class="fa-solid fa-exclamation-triangle"></i> Prerequisites</h4>
+                <ul>
+                    <li>Administrative access to create projects</li>
+                    <li>Basic understanding of Agile development concepts</li>
+                </ul>
+            </div>
+            
+            <div class="procedure">
+                <h4><i class="fa-solid fa-list-ol"></i> Steps to Create a Project</h4>
+                <ol>
+                    <li>On your browser, open the Jira website and sign in.</li>
+                    <li>On the home screen, in the left pane, select the plus icon next to <strong>Projects</strong>.</li>
+                    <li>On the <strong>Project templates</strong> screen, select a template.</li>
+                    <li>Select <strong>Use template</strong>.</li>
+                    <li>Select either the <strong>Select a team-managed project</strong> button or <strong>Select a company-managed project</strong> button, based on the project type.</li>
+                    <li>On the <strong>Add project details</strong> screen, enter a name and key.</li>
+                    <li>From the <strong>Access</strong> dropdown list, select an access level.</li>
+                    <li>Select <strong>Create project</strong>.</li>
+                    <li>On the <strong>Bring the team with you</strong> screen, enter team member names or email addresses and select their roles.
+                        <div class="note">
+                            <i class="fa-solid fa-info-circle"></i>
+                            <strong>Note:</strong> To invite teammates later, select <strong>Skip</strong>.
+                        </div>
+                    </li>
+                    <li>Select <strong>Invite and continue</strong>.</li>
+                </ol>
+                
+                <div class="result">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <strong>Result:</strong> The Projects screen displays the new project details. Teammates receive a notification.
+                </div>
+            </div>
+        </div>
+
+        <div class="info-block" id="create-issue">
+            <h3><i class="fa-solid fa-bug"></i> Create an Issue</h3>
+            <p>This topic explains how to create an issue in Jira.</p>
+            
+            <div class="prerequisites">
+                <h4><i class="fa-solid fa-exclamation-triangle"></i> Prerequisites</h4>
+                <ul>
+                    <li>Basic understanding of Agile development concepts</li>
+                </ul>
+            </div>
+            
+            <div class="procedure">
+                <h4><i class="fa-solid fa-list-ol"></i> Steps to Create an Issue</h4>
+                <ol>
+                    <li>On your browser, open the Jira website and sign in.</li>
+                    <li>On the home screen, in the top pane, select <strong>Create</strong>.</li>
+                    <li>On the <strong>Create</strong> screen, from the <strong>Project</strong> dropdown list, select your project.</li>
+                    <li>From the <strong>Work type</strong> dropdown list, select <strong>Task</strong>, <strong>Bug</strong>, <strong>Story</strong>, or <strong>Epic</strong>.</li>
+                    <li>From the <strong>Status</strong> dropdown list, select <strong>To Do</strong>, <strong>In Progress</strong>, or <strong>Done</strong>.</li>
+                    <li>In the <strong>Summary</strong> field, enter a title.</li>
+                    <li><em>(Optional)</em> Enter the following details:
+                        <ul>
+                            <li><strong>Description:</strong> Add details about the issue.</li>
+                            <li><strong>Assignee:</strong> Select a team member.</li>
+                            <li><strong>Priority:</strong> Specify the priority.</li>
+                            <li><strong>Labels:</strong> Enter labels to categorize and group similar issues.</li>
+                            <li><strong>Attachments:</strong> Upload files, screenshots, or designs.</li>
+                            <li><strong>Linked Issues:</strong> Link this issue to other Jira issues.</li>
+                        </ul>
+                    </li>
+                    <li>In the <strong>Reporter</strong> field, select a reporter.</li>
+                    <li>Select <strong>Create</strong>.</li>
+                </ol>
+                
+                <div class="result">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <strong>Result:</strong> The issue appears in the project backlog or board. Jira sends a notification to the assignee.
+                </div>
+            </div>
+        </div>
+
+        <div class="info-block" id="next-steps">
+            <h3><i class="fa-solid fa-arrow-right"></i> Next Steps</h3>
+            <p>Now that you have set up your first project and created an issue, you can:</p>
+            
+            <div class="next-steps-grid">
+                <div class="next-step-card">
+                    <div class="step-icon">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+                    <h4>Invite Team Members</h4>
+                    <p>Add your team members to the project to start collaborating.</p>
+                </div>
+                
+                <div class="next-step-card">
+                    <div class="step-icon">
+                        <i class="fa-solid fa-arrows-alt-h"></i>
+                    </div>
+                    <h4>Track Progress</h4>
+                    <p>Move the issue across the columns on your board to track its progress.</p>
+                </div>
+                
+                <div class="next-step-card">
+                    <div class="step-icon">
+                        <i class="fa-solid fa-cog"></i>
+                    </div>
+                    <h4>Customize Settings</h4>
+                    <p>Explore your project settings to customize the workflow and board columns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 Madaswamy Portfolio
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

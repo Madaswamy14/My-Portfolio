@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madaswamy - Technical Writer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleindex.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-    <div class="resume-container">
+    <header>
+        <h1>Madaswamy - Portfolio</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="experience.html">Experience</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="freelance.html">Freelance</a>
+            <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="resume-container">
         <header>
             <div class="header-main">
                 <h1>Madaswamy</h1>
@@ -54,7 +67,7 @@
                 </section>
             </aside>
 
-            <main class="main-content">
+            <div class="main-content">
                 <section id="profile">
                     <h2><i class="fa-solid fa-user"></i> PROFILE</h2>
                     <p>Senior technical writer with 12 years of experience creating clear, concise, and user-centric documentation that enhances product understanding and adoption.</p>
@@ -114,9 +127,15 @@
                         <p class="job-details"><strong>Madha Engineering College (Anna University)</strong> | 2006-2010 | Chennai, India</p>
                     </div>
                 </section>
-            </main>
+            </div>
         </div>
     </div>
+    </main>
 
+    <footer>
+        &copy; 2025 Madaswamy Portfolio
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
