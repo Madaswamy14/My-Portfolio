@@ -1,17 +1,95 @@
----
-layout: default
-title: Portfolio
-permalink: /portfolio/
----
- 
-## Portfolio
- 
-### Project: User Guide
-Built for Tech Writer's Tribe App.  
-🔗 [Live Demo](https://example.com)
- 
----
- 
-### Project: Topic-based XML Content
-Multiple topics depicted as a process flow in images.  
-📷 [Screenshots](assets/images/project1.png)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Madaswamy</title>
+    <link rel="stylesheet" href="styleindex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <h1>Madaswamy - Portfolio</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="experience.html">Experience</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="freelance.html">Freelance</a>
+        <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+</header>
+
+<main>
+    <section id="portfolio" class="main-section">
+        <div class="page-header">
+            <h2><i class="fa-solid fa-folder-open"></i> Portfolio</h2>
+            <p class="subtitle">Sample projects and code examples</p>
+        </div>
+
+        <div class="info-block">
+            <h3>Getting Started Guide</h3>
+
+            <div class="project">
+                <h4><a href="Sample Documents/Jira Getting Started Guide.md">Jira Getting Started Guide</a></h4>
+                 </div>
+            </div>
+            
+            <div class="project">
+                <h4><i class="fa-solid fa-clock"></i> Python Alarm Clock</h4>
+                <p class="project-meta"><strong>Technology:</strong> Python | <strong>Libraries:</strong> datetime, playsound</p>
+                <p>This Python-based alarm clock allows users to set a specific time and plays a sound when the time is reached. It's built with the <code>datetime</code> and <code>playsound</code> libraries.</p>
+                
+                <div class="project-highlights">
+                    <span class="highlight">Python</span>
+                    <span class="highlight">DateTime</span>
+                    <span class="highlight">Audio Playback</span>
+                    <span class="highlight">Automation</span>
+                </div>
+
+                <div class="code-section">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" onclick="showTab('alarm-code', this)">Code</button>
+                        <button class="tab-button" onclick="showTab('alarm-features', this)">Features</button>
+                    </div>
+                    
+                    <div id="alarm-code" class="tab-content">
+import datetime
+import time
+import playsound
+
+alarm_time = "07:30"
+while True:
+    current_time = datetime.datetime.now().strftime("%H:%M")
+    if current_time == alarm_time:
+        playsound.playsound('alarm.mp3')
+        break
+    time.sleep(30)
+                    </div>
+                    
+                    <div id="alarm-features" class="tab-content" style="display: none;">
+• Simple time-based alarm system
+• Customizable alarm time
+• Audio notification support
+• Lightweight and efficient
+• Easy to modify and extend
+                    </div>
+                    
+                    <button class="copy-button" onclick="copyCode('alarm-code')">Copy Code</button>
+                </div>
+            </div>
+
+            
+
+        
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 Madaswamy Portfolio
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

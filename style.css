@@ -1,0 +1,221 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #2c3e50; /* Dark Slate Blue */
+    --secondary-color: #3498db; /* Bright Blue */
+    --light-grey: #f4f7f9;
+    --dark-text: #333;
+    --light-text: #666;
+    --border-color: #e0e0e0;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    background-color: var(--light-grey);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 20px;
+}
+
+.resume-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Contains the child elements */
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Header --- */
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.8em;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+}
+
+header .job-title {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: 5px 0 0 0;
+    opacity: 0.9;
+}
+
+.download-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* --- Resume Body Layout --- */
+.resume-body {
+    display: flex;
+}
+
+.sidebar {
+    width: 35%;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-right: 1px solid var(--border-color);
+}
+
+.main-content {
+    width: 65%;
+    padding: 30px 40px;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar section h2 {
+    font-size: 1.1em;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contact-info p {
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    word-break: break-all;
+}
+
+.contact-info i {
+    color: var(--secondary-color);
+    margin-right: 12px;
+    width: 16px;
+    text-align: center;
+}
+
+#skills h3 {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--dark-text);
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+#skills p, #languages p {
+    font-size: 0.95em;
+    color: var(--light-text);
+    margin: 0 0 8px 0;
+}
+
+/* --- Main Content Styling --- */
+.main-content section h2 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.main-content section h2 i {
+    color: var(--secondary-color);
+    margin-right: 15px;
+}
+
+.job {
+    margin-bottom: 25px;
+}
+
+.job h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+}
+
+.job-details {
+    font-size: 1em;
+    color: var(--light-text);
+    margin: 0 0 12px 0;
+}
+
+.job-details strong {
+    color: var(--dark-text);
+}
+
+.job ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.job li {
+    margin-bottom: 8px;
+    color: var(--light-text);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+    .resume-body {
+        flex-direction: column;
+    }
+
+    .sidebar, .main-content {
+        width: 100%;
+        padding: 25px;
+        box-sizing: border-box; /* Ensures padding is included in the width */
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+    
+    .resume-container {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+}

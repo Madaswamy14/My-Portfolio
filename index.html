@@ -1,16 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Madaswamy - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madaswamy - Portfolio</title>
+    <link rel="stylesheet" href="styleindex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-  <h1>Madaswamy</h1>
-  <p>Welcome to my portfolio!</p>
-  <nav>
-    <a href="projects.html">Projects</a> |
-    <a href="resume.pdf" target="_blank">Resume</a>
-  </nav>
+
+    <header>
+        <h1>Madaswamy - Portfolio</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="experience.html">Experience</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="freelance.html">Freelance</a>
+            <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="main-section">
+            <div class="profile">
+                <img src="profile.jpg" alt="Madaswamy Profile Picture">
+                <h2>Madaswamy</h2>
+                <p class="subtitle">Senior Technical Writer</p>
+
+                <div class="contact-info">
+                    <span><i class="fa-solid fa-envelope"></i> <a href="mailto:sci.madz@gmail.com">sci.madz@gmail.com</a></span>
+                    <span><i class="fa-solid fa-phone"></i> 8892826369</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Chennai, India</span>
+                    <span><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/madaswamy-r-b788b81b1" target="_blank">linkedin.com/in/madaswamy-r</a></span>
+                </div>
+            </div>
+
+            <div id="summary" class="info-block">
+                <h3>Summary</h3>
+                <p>Senior technical writer with 12 years of experience creating clear, concise, and user-centric documentation that enhances product understanding and adoption.</p>
+            </div>
+
+            <div id="experience" class="info-block">
+                <h3>Work Experience</h3>
+                <div class="job-timeline">
+                    <div class="job-entry">
+                        <h4>Tech Lead</h4>
+                        <p><strong>Tech Mahindra</strong> | Chennai, India</p>
+                        <p class="dates">April 2021 - March 2025</p>
+                    </div>
+                    <div class="job-entry">
+                        <h4>Technical Writer</h4>
+                        <p><strong>Flatiron Solutions</strong> | Chennai, India</p>
+                        <p class="dates">December 2016 - June 2020</p>
+                    </div>
+                    <div class="job-entry">
+                        <h4>Product Executive</h4>
+                        <p><strong>Ramco Systems Limited</strong> | Chennai, India</p>
+                        <p class="dates">January 2016 - October 2016</p>
+                    </div>
+                    <div class="job-entry">
+                        <h4>Technical Writer</h4>
+                        <p><strong>GGS Information Services India Limited</strong> | Bangalore, India</p>
+                        <p class="dates">February 2015 - December 2015</p>
+                    </div>
+                    <div class="job-entry">
+                        <h4>Associate Consultant</h4>
+                        <p><strong>Capgemini Business Services India Limited</strong> | Bangalore, India</p>
+                        <p class="dates">November 2011 - January 2015</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="skills" class="info-block">
+                <h3>Skills</h3>
+                <div class="skills-list">
+                    <span>XML</span>
+                    <span>HTML</span>
+                    <span>Markdown</span>
+                    <span>Adobe RoboHelp</span>
+                    <span>Adobe FrameMaker</span>
+                    <span>MadCap Flare</span>
+                    <span>Confluence</span>
+                    <span>Postman</span>
+                    <span>Swagger/OpenAPI</span>
+                    <span>Git & GitHub</span>
+                    <span>API Documentation</span>
+                    <span>User Guides</span>
+                </div>
+            </div>
+
+            <div id="education" class="info-block">
+                <h3>Education</h3>
+                <h4>Bachelor of Engineering</h4>
+                <p><strong>Madha Engineering College (Anna University)</strong></p>
+                <p class="dates">2006-2010 | Chennai, India</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Madaswamy Portfolio
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
