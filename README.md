@@ -1,2 +1,3 @@
 # My-Portfolio
-Contains sample portfolio files
+##Welcome to My Portfolio##
+Showcasing my projects and skills.
