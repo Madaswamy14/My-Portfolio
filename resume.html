@@ -109,6 +109,74 @@
             font-size: 1.1em;
         }
 
+        /* Certificate Section Styles */
+        .certificate-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            margin: 12px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .certificate-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-color: #60a5fa;
+        }
+
+        .certificate-content {
+            flex: 1;
+        }
+
+        .certificate-name {
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 1.1em;
+            margin-bottom: 4px;
+        }
+
+        .certificate-institution {
+            color: #64748b;
+            font-size: 0.95em;
+            font-style: italic;
+        }
+
+        .view-certificate-btn {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+        }
+
+        .view-certificate-btn:hover {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        }
+
+        .view-certificate-btn i {
+            font-size: 0.9em;
+        }
+
+        .section-title i {
+            color: #f59e0b;
+            margin-right: 8px;
+        }
+
         .resume-content {
             padding: 40px;
         }
@@ -470,22 +538,49 @@
             </div>
 
             <div class="section">
-                <h2 class="section-title">Certificates</h2>
-                <div class="education-item">
-                    <div class="degree">Technical Writing (Software)</div>
-                    <div class="institution">Tech Writer's Tribe</div>
+                <h2 class="section-title">
+                    <i class="fa-solid fa-certificate"></i>
+                    Certificates
+                </h2>
+                <div class="certificate-item">
+                    <div class="certificate-content">
+                        <div class="certificate-name">Technical Writing (Software)</div>
+                        <div class="certificate-institution">Tech Writer's Tribe</div>
+                    </div>
+                    <button class="view-certificate-btn" onclick="viewCertificate('assets/certificates/Madaswamy R - TWT Technical Writing Refresher Successful Certificate.pdf')">
+                        <i class="fa-solid fa-eye"></i>
+                        View
+                    </button>
                 </div>
-                <div class="education-item">
-                    <div class="degree">Fundamentals of API Documentation</div>
-                    <div class="institution">Tech Writer's Tribe</div>
+                <div class="certificate-item">
+                    <div class="certificate-content">
+                        <div class="certificate-name">Fundamentals of API Documentation</div>
+                        <div class="certificate-institution">Tech Writer's Tribe</div>
+                    </div>
+                    <button class="view-certificate-btn" onclick="viewCertificate('assets/certificates/Madaswamy R - TWT API Documentation Course Certificate.pdf')">
+                        <i class="fa-solid fa-eye"></i>
+                        View
+                    </button>
                 </div>
-                <div class="education-item">
-                    <div class="degree">MadCap Flare</div>
-                    <div class="institution">Tech Writer's Tribe</div>
+                <div class="certificate-item">
+                    <div class="certificate-content">
+                        <div class="certificate-name">MadCap Flare</div>
+                        <div class="certificate-institution">Tech Writer's Tribe</div>
+                    </div>
+                    <button class="view-certificate-btn" onclick="viewCertificate('assets/certificates/Madaswamy R - TWT MadCap Flare Course Certificate.pdf')">
+                        <i class="fa-solid fa-eye"></i>
+                        View
+                    </button>
                 </div>
-                <div class="education-item">
-                    <div class="degree">Markdown and GitHub</div>
-                    <div class="institution">Tech Writer's Tribe</div>
+                <div class="certificate-item">
+                    <div class="certificate-content">
+                        <div class="certificate-name">Markdown and GitHub</div>
+                        <div class="certificate-institution">Tech Writer's Tribe</div>
+                    </div>
+                    <button class="view-certificate-btn" onclick="viewCertificate('assets/certificates/Madaswamy - TWT Markdown Workshop Participation Certificate.pdf')">
+                        <i class="fa-solid fa-eye"></i>
+                        View
+                    </button>
                 </div>
             </div>
             </div>
@@ -506,6 +601,12 @@
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
+        }
+
+        function viewCertificate(certificatePath) {
+            // Open certificate PDF in a new tab
+            // The certificatePath should be the complete path to the PDF
+            window.open(certificatePath, '_blank');
         }
     </script>
     <script src="script.js"></script>
