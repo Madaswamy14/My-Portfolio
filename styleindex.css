@@ -692,6 +692,52 @@ body.dark .copy-button:hover {
     background-color: #93c5fd;
 }
 
+/* Portfolio Project Actions */
+.project-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.view-project-btn {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 12px rgba(96, 165, 250, 0.3);
+    border: none;
+}
+
+.view-project-btn:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(96, 165, 250, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.view-project-btn i {
+    font-size: 0.9em;
+}
+
+/* Dark mode project actions */
+body.dark .view-project-btn {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    color: white;
+}
+
+body.dark .view-project-btn:hover {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+}
+
 /* --- Freelance Page Specific Styles --- */
 .services-grid {
     display: grid;
@@ -1341,10 +1387,18 @@ body.dark .main-content .job li {
 .note i {
     color: #2563eb;
     margin-top: 2px;
+    flex-shrink: 0;
 }
 
 .note strong {
     color: #1e40af;
+}
+
+.note > div,
+.note > span {
+    flex: 1;
+    word-spacing: normal;
+    letter-spacing: normal;
 }
 
 .result {

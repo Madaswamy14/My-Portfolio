@@ -3,139 +3,511 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madaswamy - Technical Writer</title>
-    <link rel="stylesheet" href="styleindex.css">
+    <title>Madaswamy - Technical Writer Resume</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        /* Resume Header Container */
+        .resume-header-container {
+            max-width: 900px;
+            margin: 20px auto 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .resume-header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .resume-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .resume-header .title {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Resume Body Container */
+        .resume-body-container {
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .download-section {
+            margin-top: 25px;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
+        }
+
+        .download-btn:active {
+            transform: translateY(0);
+        }
+
+        .download-btn i {
+            font-size: 1.1em;
+        }
+
+        .resume-content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            color: #2c3e50;
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #3498db;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .summary {
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #555;
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skill-item {
+            padding: 12px;
+            background: #f8f9fa;
+            border-left: 3px solid #3498db;
+        }
+
+        .skill-item strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .skill-item span {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .job {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .job:last-child {
+            border-bottom: none;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .job-date {
+            color: #7f8c8d;
+            font-weight: 500;
+            font-size: 0.95em;
+        }
+
+        .company {
+            font-size: 1.05em;
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+
+        .location {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .responsibilities {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .responsibilities li {
+            margin-bottom: 8px;
+            color: #555;
+            line-height: 1.6;
+            list-style-type: disc;
+        }
+
+        .education-item {
+            margin-bottom: 15px;
+        }
+
+        .degree {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+
+        .institution {
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+
+        .edu-date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        .languages {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .language-item {
+            padding: 10px 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .resume-header-container,
+            .resume-body-container {
+                box-shadow: none;
+                max-width: 100%;
+                margin: 0;
+                border-radius: 0;
+            }
+            .resume-header {
+                background: #2c3e50;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+                border-radius: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .resume-header-container,
+            .resume-body-container {
+                margin: 10px auto;
+            }
+            .resume-header h1 {
+                font-size: 1.8em;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .resume-content {
+                padding: 20px;
+            }
+            .job-header {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <header>
-        <h1>Madaswamy - Portfolio</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <a href="experience.html">Experience</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="freelance.html">Freelance</a>
-            <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
-        </nav>
+    <!-- Navigation Header from index.html -->
+    <header style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(30, 41, 59, 0.1); position: relative; z-index: 1000;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+            <h1 style="margin: 0; font-size: 1.5em; font-weight: 700;">Madaswamy - Resume</h1>
+            <nav style="display: flex; align-items: center; gap: 25px;">
+                <a href="index.html" style="color: white; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Home</a>
+                <a href="resume.html" style="color: #60a5fa; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Resume</a>
+                <a href="portfolio.html" style="color: white; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Portfolio</a>
+                <a href="freelance.html" style="color: white; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Freelance</a>
+                <button id="theme-toggle" style="background: rgba(255, 255, 255, 0.1); color: white; border: 1px solid rgba(255, 255, 255, 0.2); padding: 8px 15px; border-radius: 6px; cursor: pointer; font-size: 0.9em; transition: all 0.3s ease;">🌙 Dark Mode</button>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <div class="resume-container">
-        <header>
-            <div class="header-main">
-                <h1>Madaswamy</h1>
-                <p class="job-title">Senior Technical Writer</p>
+    <!-- Resume Header Section -->
+    <div class="resume-header-container">
+        <div class="resume-header">
+            <h1>MADASWAMY</h1>
+            <div class="title">Technical Writer</div>
+            <div class="contact-info">
+                <span>📧 sci.madz@gmail.com</span>
+                <span>📱 8892826369</span>
+                <span>📍 Chennai, India</span>
+                <span>💼 linkedin.com/in/madaswamy-r-b788b81b1</span>
             </div>
-            <a href="Madaswamy_Resume.pdf" download class="download-btn">
-                <i class="fa-solid fa-download"></i> Download PDF
-            </a>
-        </header>
-
-        <div class="resume-body">
-            <aside class="sidebar">
-                <section id="contact">
-                    <h2>CONTACT</h2>
-                    <div class="contact-info">
-                        <p><i class="fa-solid fa-phone"></i> 8892826369</p>
-                        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:sci.madz@gmail.com">sci.madz@gmail.com</a></p>
-                        <p><i class="fa-solid fa-location-dot"></i> Chennai, India</p>
-                        <p><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/madaswamy-r-b788b81b1" target="_blank">linkedin.com/in/madaswamy-r</a></p>
-                        <p><i class="fa-brands fa-github"></i> <a href="https://github.com/Madaswamy14/My-Portfolio/blob/main/index.html" target="_blank">github.com/Madaswamy14</a></p>
-                    </div>
-                </section>
-
-                <section id="skills">
-                    <h2>TECHNICAL SKILLS</h2>
-                    <h3>Documentation Types</h3>
-                    <p>User Guides, Online Help, Installation Guides, Release Notes, API Documentation, Training Videos</p>
-                    <h3>Markup & Languages</h3>
-                    <p>XML, HTML, Markdown</p>
-                    <h3>Authoring & Editing</h3>
-                    <p>Adobe RoboHelp, Adobe FrameMaker, MadCap Flare, MS Office, Confluence, Camtasia, Snagit</p>
-                    <h3>API Tools</h3>
-                    <p>Postman, Swagger/OpenAPI</p>
-                    <h3>Version Control</h3>
-                    <p>Git, GitHub</p>
-                </section>
-
-                <section id="languages">
-                    <h2>LANGUAGES</h2>
-                    <p>English (Fluent)</p>
-                    <p>Tamil (Native)</p>
-                </section>
-            </aside>
-
-            <div class="main-content">
-                <section id="profile">
-                    <h2><i class="fa-solid fa-user"></i> PROFILE</h2>
-                    <p>Senior technical writer with 12 years of experience creating clear, concise, and user-centric documentation that enhances product understanding and adoption.</p>
-                </section>
-
-                <section id="experience">
-                    <h2><i class="fa-solid fa-briefcase"></i> PROFESSIONAL EXPERIENCE</h2>
-                    <div class="job">
-                        <h3>Tech Lead</h3>
-                        <p class="job-details"><strong>Tech Mahindra</strong> | April 2021 - March 2025 | Chennai, India</p>
-                        <ul>
-                            <li>Created, updated, and maintained user guides, online help, API documentation, and release notes for a banking application using Adobe RoboHelp.</li>
-                            <li>Produced videos to explain complex features and improve user experience.</li>
-                            <li>Collaborated with product managers, QA, and SMEs to ensure documentation accuracy and completeness.</li>
-                            <li>Identified content gaps and proactively recommended solutions.</li>
-                        </ul>
-                    </div>
-                    <div class="job">
-                        <h3>Technical Writer</h3>
-                        <p class="job-details"><strong>Flatiron Solutions</strong> | December 2016 - June 2020 | Chennai, India</p>
-                        <ul>
-                            <li>Developed user manuals, online help, and release notes for a Content Management application using MadCap Flare.</li>
-                            <li>Worked closely with stakeholders to meet project timelines and quality expectations.</li>
-                            <li>Improved documentation quality by incorporating customer feedback and support data.</li>
-                        </ul>
-                    </div>
-                    <div class="job">
-                        <h3>Product Executive</h3>
-                        <p class="job-details"><strong>Ramco Systems Limited</strong> | January 2016 - October 2016 | Chennai, India</p>
-                        <ul>
-                            <li>Converted aircraft maintenance manuals from SGML to XML.</li>
-                            <li>Created job cards for aircraft inspection and maintenance activities.</li>
-                        </ul>
-                    </div>
-                    <div class="job">
-                        <h3>Technical Writer</h3>
-                        <p class="job-details"><strong>GGS Information Services India Limited</strong> | February 2015 - December 2015 | Bangalore, India</p>
-                        <ul>
-                            <li>Created and updated S1000D-compliant Component Maintenance Manuals (CMMs) using Adobe FrameMaker.</li>
-                            <li>Provided training and mentorship for new team members.</li>
-                        </ul>
-                    </div>
-                    <div class="job">
-                        <h3>Associate Consultant</h3>
-                        <p class="job-details"><strong>Capgemini Business Services India Limited</strong> | November 2011 - January 2015 | Bangalore, India</p>
-                        <ul>
-                            <li>Created and updated maintenance manuals and illustrated parts catalogs from sources such as BOMs and Engineering Drawings.</li>
-                            <li>Used Adobe FrameMaker, Arbor Text Editor, and SAP for technical authoring.</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section id="education">
-                    <h2><i class="fa-solid fa-graduation-cap"></i> EDUCATION</h2>
-                    <div class="job">
-                        <h3>Bachelor of Engineering</h3>
-                        <p class="job-details"><strong>Madha Engineering College (Anna University)</strong> | 2006-2010 | Chennai, India</p>
-                    </div>
-                </section>
+            <div class="download-section">
+                <button class="download-btn" onclick="downloadResume()">
+                    <i class="fa-solid fa-download"></i>
+                    Download PDF Resume
+                </button>
             </div>
         </div>
     </div>
-    </main>
 
-    <footer>
-        &copy; 2025 Madaswamy Portfolio
-    </footer>
+    <!-- Resume Body Section -->
+    <div class="resume-body-container">
+        <div class="resume-content">
+            <div class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="summary">
+                    Senior Technical Writer with 12 years of experience delivering user-centric documentation for enterprise applications across banking, aerospace, and content management domains. Specialized in API documentation, compliance-driven content, and creating documentation that reduces support overhead while accelerating user adoption. Proven track record of collaborating with cross-functional teams to transform complex technical concepts into clear, actionable content.
+                </p>
+            </div>
 
+            <div class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <strong>Documentation Types</strong>
+                        <span>User Guides, Online Help, Installation Guides, Release Notes, API Documentation, Training Videos, Component Maintenance Manuals</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>Markup & Languages</strong>
+                        <span>XML, HTML, Markdown, SGML, S1000D</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>Authoring Tools</strong>
+                        <span>Adobe RoboHelp, Adobe FrameMaker, MadCap Flare, ArborText Editor, MS Office Suite, Confluence, Camtasia, Snagit</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>API Tools</strong>
+                        <span>Postman, Swagger/OpenAPI</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>Version Control</strong>
+                        <span>Git, GitHub</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>Other Tools</strong>
+                        <span>SAP, Specialized Aviation Software</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title">Tech Lead</span>
+                        <span class="job-date">April 2021 – March 2025</span>
+                    </div>
+                    <div class="company">Tech Mahindra</div>
+                    <div class="location">Chennai, India</div>
+                    <ul class="responsibilities">
+                        <li>Authored and maintained comprehensive documentation suite for enterprise banking application, including user guides, API documentation, release notes, and installation guides using Adobe RoboHelp, ensuring compliance with financial industry standards</li>
+                        <li>Developed training videos to explain complex banking features, improving user comprehension and reducing support queries</li>
+                        <li>Led documentation efforts across multiple product releases, collaborating with product managers, QA teams, support staff, and SMEs to ensure technical accuracy and completeness</li>
+                        <li>Identified critical gaps in existing documentation and proactively implemented solutions to improve content quality and user experience</li>
+                        <li>Ensured all documentation adhered to internal style guides, regulatory standards, and industry best practices</li>
+                        <li>Mentored junior technical writers on documentation standards and tool usage</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title">Technical Writer</span>
+                        <span class="job-date">December 2016 – June 2020</span>
+                    </div>
+                    <div class="company">Flatiron Solutions</div>
+                    <div class="location">Chennai, India</div>
+                    <ul class="responsibilities">
+                        <li>Developed and maintained user manuals, online help systems, and release notes for Content Management application using MadCap Flare</li>
+                        <li>Collaborated closely with product managers, QA engineers, support teams, and SMEs to ensure technical accuracy and content relevance</li>
+                        <li>Partnered with Tech Pubs Team Lead and stakeholders to consistently meet project timelines and quality expectations</li>
+                        <li>Conducted thorough content reviews and updates to maintain technical accuracy, clarity, and usability across all documentation</li>
+                        <li>Enhanced documentation quality by systematically incorporating customer feedback and support team insights</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title">Product Executive</span>
+                        <span class="job-date">January 2016 – October 2016</span>
+                    </div>
+                    <div class="company">Ramco Systems Limited</div>
+                    <div class="location">Chennai, India</div>
+                    <ul class="responsibilities">
+                        <li>Converted aircraft maintenance manuals from SGML to XML format, ensuring data integrity and compliance with aviation standards</li>
+                        <li>Created detailed job cards for aircraft routine inspection and maintenance activities using specialized aviation software</li>
+                        <li>Collaborated with engineering teams to verify technical accuracy and regulatory compliance of all documentation</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title">Technical Writer</span>
+                        <span class="job-date">February 2015 – December 2015</span>
+                    </div>
+                    <div class="company">GGS Information Services India Limited</div>
+                    <div class="location">Bangalore, India</div>
+                    <ul class="responsibilities">
+                        <li>Authored and updated S1000D-compliant Component Maintenance Manuals (CMMs) using Adobe FrameMaker for aerospace clients</li>
+                        <li>Conducted detailed interviews with SMEs to gather technical information and ensure documentation accuracy</li>
+                        <li>Performed peer reviews to maintain consistency, clarity, and adherence to S1000D specifications</li>
+                        <li>Provided training and mentorship to new team members on S1000D standards and documentation best practices</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <span class="job-title">Associate Consultant</span>
+                        <span class="job-date">November 2011 – January 2015</span>
+                    </div>
+                    <div class="company">Capgemini Business Services India Limited</div>
+                    <div class="location">Bangalore, India</div>
+                    <ul class="responsibilities">
+                        <li>Developed and updated maintenance manuals and illustrated parts catalogs from source materials including BOMs, Engineering Drawings, Service Bulletins, and Design Change Notices</li>
+                        <li>Utilized Adobe FrameMaker, ArborText Editor, and SAP for technical authoring, editing, and managing documentation updates</li>
+                        <li>Conducted comprehensive peer reviews to ensure clarity, accuracy, and consistency across all deliverables</li>
+                        <li>Communicated directly with international clients to resolve documentation queries and address technical issues efficiently</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div class="degree">Bachelor of Engineering</div>
+                    <div class="institution">Madha Engineering College (Anna University)</div>
+                    <div class="edu-date">2006 – 2010 | Chennai, India</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Languages</h2>
+                <div class="languages">
+                    <div class="language-item">English (Professional Proficiency)</div>
+                    <div class="language-item">Tamil (Native)</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Certificates</h2>
+                <div class="education-item">
+                    <div class="degree">Technical Writing (Software)</div>
+                    <div class="institution">Tech Writer's Tribe</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Fundamentals of API Documentation</div>
+                    <div class="institution">Tech Writer's Tribe</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">MadCap Flare</div>
+                    <div class="institution">Tech Writer's Tribe</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Markdown and GitHub</div>
+                    <div class="institution">Tech Writer's Tribe</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadResume() {
+            // Create a temporary link element
+            const link = document.createElement('a');
+
+            // Link to the actual PDF file
+            link.href = 'assets/Technical Writer_Madaswamy.pdf';
+            link.download = 'Technical Writer_Madaswamy.pdf';
+            link.target = '_blank'; // Open in new tab as fallback
+
+            // Append to body, click, and remove
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
