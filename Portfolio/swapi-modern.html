@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Retrieve metadata from Star Wars universe or control your application's data access">
+    <meta name="keywords" content="SWAPI, Star Wars API, modern documentation, API reference, REST API, Spotify design, Madaswamy">
+    <meta name="author" content="Madaswamy">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SWAPI - Star Wars API Documentation</title>
+    <link rel="stylesheet" href="swapi-modern-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<!-- Spotify-style Header -->
+<header class="spotify-header">
+    <nav class="header-nav">
+        <div class="nav-left">
+            <a href="../index.html" class="logo">
+                <i class="fa-solid fa-rocket"></i>
+                <span>SWAPI</span>
+            </a>
+        </div>
+        <div class="nav-center">
+            <div class="nav-tabs">
+                <a href="#overview" class="nav-tab active" data-active>Overview</a>
+                <a href="#getting-started" class="nav-tab">Getting started</a>
+                <a href="#concepts" class="nav-tab">Concepts</a>
+                <a href="#reference" class="nav-tab">Reference</a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="../resume.html" class="nav-link">Resume</a>
+            <a href="../portfolio.html" class="nav-link">Portfolio</a>
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<!-- Main Layout -->
+<div class="main-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">SWAPI</h3>
+                <nav class="sidebar-nav">
+                    <a href="#overview" class="sidebar-link" aria-current="page">
+                        <span class="link-content">
+                            <i class="fa-solid fa-info-circle"></i>
+                            <span>Overview</span>
+                        </span>
+                    </a>
+                    <a href="#getting-started" class="sidebar-link">
+                        <span class="link-content">
+                            <i class="fa-solid fa-play"></i>
+                            <span>Getting started</span>
+                        </span>
+                    </a>
+                    <a href="#concepts" class="sidebar-link">
+                        <span class="link-content">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <span>Concepts</span>
+                        </span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Reference</h3>
+                <nav class="sidebar-nav">
+                    <a href="#examples" class="sidebar-link">
+                        <span class="link-content">
+                            <i class="fa-solid fa-code-branch"></i>
+                            <span>Examples</span>
+                        </span>
+                    </a>
+                    <a href="#support" class="sidebar-link">
+                        <span class="link-content">
+                            <i class="fa-solid fa-question-circle"></i>
+                            <span>Support</span>
+                        </span>
+                    </a>
+                    <a href="#legal" class="sidebar-link">
+                        <span class="link-content">
+                            <i class="fa-solid fa-gavel"></i>
+                            <span>Legal</span>
+                        </span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <header class="page-header">
+            <div class="header-content">
+                <h1 class="page-title">
+                    <i class="fa-solid fa-rocket"></i>
+                    <span>Star Wars API</span>
+                </h1>
+                <p class="page-subtitle">Retrieve metadata from Star Wars universe or control your application's data access</p>
+            </div>
+        </header>
+
+        <!-- Overview Section -->
+        <section id="overview" class="overview-section">
+            <div class="overview-content">
+                <p class="overview-text">
+                    Star Wars API enables the creation of applications that can interact with
+                    Star Wars universe data, such as retrieving character metadata, accessing film information, or exploring planets and species.
+                </p>
+            </div>
+        </section>
+
+        <!-- Getting Started Section -->
+        <section id="getting-started" class="content-section">
+            <h2>Getting started</h2>
+            <p>This is where the magic begins! The following steps will help you to get
+            started with your journey towards creating some awesome Star Wars apps using the
+            API:</p>
+
+            <ol class="step-list">
+                <li>
+                    <strong>No registration required</strong> - SWAPI is completely open and free to use.
+                </li>
+                <li>
+                    <strong>Make your first request</strong> - Simply send HTTP requests to our endpoints.
+                    All API requests should be made to the base URL with the appropriate endpoint path.
+                </li>
+                <li>
+                    <strong>Parse the JSON response</strong> - All responses are returned in JSON format
+                    for easy integration with your applications.
+                </li>
+            </ol>
+
+            <p>You can follow the <a href="#quick-start">Quick Start</a> guide to learn how to make
+            your first SWAPI call.</p>
+        </section>
+
+        <!-- Concepts Section -->
+        <section id="concepts" class="content-section">
+            <h2>Concepts</h2>
+            <p>Understanding key concepts will help you make the most of the Star Wars API:</p>
+
+            <ul class="doc-list">
+                <li><strong>Base URL</strong>: All requests are made to https://swapi.dev/api/</li>
+                <li><strong>Resources</strong>: People, Films, Planets, Species, Vehicles, and Starships</li>
+                <li><strong>Pagination</strong>: Large result sets are paginated for better performance</li>
+                <li><strong>Search</strong>: Most resources support search functionality</li>
+                <li><strong>Relationships</strong>: Resources link to related entities via URLs</li>
+            </ul>
+        </section>
+
+        <!-- Reference Section -->
+        <section id="reference" class="content-section">
+            <h2>Reference</h2>
+            <p>The Star Wars API provides comprehensive data across six main resource types:</p>
+
+            <div class="reference-grid">
+                <div class="reference-card">
+                    <h3><i class="fa-solid fa-users"></i> People</h3>
+                    <p>Characters from the Star Wars universe including their physical characteristics, homeworld, and appearances.</p>
+                    <div class="endpoint-examples">
+                        <code>GET /people/</code> - List all people<br>
+                        <code>GET /people/1/</code> - Get Luke Skywalker
+                    </div>
+                </div>
+
+                <div class="reference-card">
+                    <h3><i class="fa-solid fa-film"></i> Films</h3>
+                    <p>Star Wars films including episode details, release dates, and character appearances.</p>
+                    <div class="endpoint-examples">
+                        <code>GET /films/</code> - List all films<br>
+                        <code>GET /films/1/</code> - Get A New Hope
+                    </div>
+                </div>
+
+                <div class="reference-card">
+                    <h3><i class="fa-solid fa-globe"></i> Planets</h3>
+                    <p>Planets and locations from the Star Wars universe with climate, terrain, and population data.</p>
+                    <div class="endpoint-examples">
+                        <code>GET /planets/</code> - List all planets<br>
+                        <code>GET /planets/1/</code> - Get Tatooine
+                    </div>
+                </div>
+
+                <div class="reference-card">
+                    <h3><i class="fa-solid fa-dna"></i> Species</h3>
+                    <p>Different species in the Star Wars universe including physical characteristics and homeworlds.</p>
+                    <div class="endpoint-examples">
+                        <code>GET /species/</code> - List all species<br>
+                        <code>GET /species/1/</code> - Get Human
+                    </div>
+                </div>
+
+                <div class="reference-card">
+                    <h3><i class="fa-solid fa-car"></i> Vehicles</h3>
+                    <p>Vehicles used for transportation including speeders, walkers, and other ground vehicles.</p>
+                    <div class="endpoint-examples">
+                        <code>GET /vehicles/</code> - List all vehicles<br>
+                        <code>GET /vehicles/4/</code> - Get Sand Crawler
+                    </div>
+                </div>
+
+                <div class="reference-card">
+                    <h3><i class="fa-solid fa-rocket"></i> Starships</h3>
+                    <p>Starships and space vessels including technical specifications and pilot information.</p>
+                    <div class="endpoint-examples">
+                        <code>GET /starships/</code> - List all starships<br>
+                        <code>GET /starships/9/</code> - Get Death Star
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples Section -->
+        <section id="examples" class="content-section">
+            <h2>Examples</h2>
+            <p>We've provided step-by-step examples that will guide you through making
+            your first SWAPI calls and integrating Star Wars data into your applications.</p>
+
+            <div class="example-grid">
+                <div class="example-card">
+                    <h3>Quick Start</h3>
+                    <p>Make your first request to get Luke Skywalker's data:</p>
+                    <div class="code-block">
+                        <code>GET https://swapi.dev/api/people/1/</code>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <h3>Search Characters</h3>
+                    <p>Search for characters by name:</p>
+                    <div class="code-block">
+                        <code>GET https://swapi.dev/api/people/?search=luke</code>
+                    </div>
+                </div>
+
+                <div class="example-card">
+                    <h3>Get Film Data</h3>
+                    <p>Retrieve information about Star Wars films:</p>
+                    <div class="code-block">
+                        <code>GET https://swapi.dev/api/films/1/</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section id="support" class="content-section">
+            <h2>Support</h2>
+            <p>If you have any questions or run into any issues while using the Star Wars
+            API, you can find help in the <a href="https://github.com/phalt/swapi" target="_blank">SWAPI GitHub repository</a>. Here, you can
+            connect and get help from other developers.</p>
+        </section>
+
+        <!-- Legal Section -->
+        <section id="legal" class="content-section">
+            <h2>Legal</h2>
+            <p>By using Star Wars API, you accept that this is an educational project and
+            all Star Wars content is owned by Disney/Lucasfilm.</p>
+        </section>
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>Documentation</h3>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#getting-started">Getting started</a></li>
+                    <li><a href="#concepts">Concepts</a></li>
+                    <li><a href="#reference">Reference</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#examples">Examples</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="https://github.com/phalt/swapi" target="_blank">GitHub</a></li>
+                    <li><a href="https://swapi.dev" target="_blank">Official Site</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Portfolio</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../resume.html">Resume</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li><a href="../freelance.html">Freelance</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Madaswamy Portfolio - Modern API Documentation</p>
+            <p>Inspired by Spotify Web API documentation design</p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="../script.js"></script>
+<script>
+// Sidebar expandable functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const expandableButtons = document.querySelectorAll('.sidebar-expandable');
+
+    expandableButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+    });
+
+    // Navigation tab functionality
+    const navTabs = document.querySelectorAll('.nav-tab');
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+    function updateActiveStates(targetId) {
+        // Update nav tabs
+        navTabs.forEach(tab => {
+            tab.removeAttribute('data-active');
+            if (tab.getAttribute('href') === `#${targetId}`) {
+                tab.setAttribute('data-active', '');
+            }
+        });
+
+        // Update sidebar links
+        sidebarLinks.forEach(link => {
+            link.removeAttribute('aria-current');
+            if (link.getAttribute('href') === `#${targetId}`) {
+                link.setAttribute('aria-current', 'page');
+            }
+        });
+    }
+
+    // Handle scroll-based navigation updates
+    const sections = document.querySelectorAll('section[id]');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                updateActiveStates(entry.target.id);
+            }
+        });
+    }, {
+        threshold: 0.5,
+        rootMargin: '-100px 0px -50% 0px'
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Handle click navigation
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                updateActiveStates(targetId);
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

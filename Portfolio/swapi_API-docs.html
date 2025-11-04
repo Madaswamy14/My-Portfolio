@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Star Wars API (SWAPI) documentation covering endpoints, parameters, and response formats.">
+    <meta name="keywords" content="SWAPI, Star Wars API, API documentation, REST API, technical documentation, Madaswamy">
+    <meta name="author" content="Madaswamy">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SWAPI API Reference Document - Madaswamy Portfolio</title>
+    <link rel="stylesheet" href="../styleindex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <h1>Madaswamy - Documentation</h1>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../resume.html">Resume</a>
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../freelance.html">Freelance</a>
+        <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+</header>
+
+<main>
+    <section id="documentation" class="main-section">
+        <div class="page-header">
+            <h2><i class="fa-solid fa-rocket"></i> SWAPI API Reference Document</h2>
+            <p class="subtitle">Star Wars API Documentation</p>
+            <div class="doc-meta">
+                <span class="version"><strong>Version:</strong> 1.0</span>
+                <span class="date"><strong>Date:</strong> October 30, 2025</span>
+            </div>
+        </div>
+
+        <div class="info-block">
+            <div class="doc-intro">
+                <p>The Star Wars API (SWAPI) provides data from the Star Wars universe, such as characters, films, and planets. This document describes how to make API calls to retrieve this data.</p>
+            </div>
+
+            <div class="table-of-contents">
+                <h3><i class="fa-solid fa-list"></i> Table of Contents</h3>
+                <ul>
+                    <li><a href="#overview">1. API Overview</a></li>
+                    <li><a href="#getting-started">2. Getting Started</a></li>
+                    <li class="dropdown-item">
+                        <div class="dropdown-header" onclick="toggleDropdown(this)">
+                            <a href="#api-reference">3. API Reference</a>
+                            <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                        </div>
+                        <ul class="dropdown-content">
+                            <li class="dropdown-item">
+                                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                                    <a href="#people">3.1 People</a>
+                                    <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                                </div>
+                                <ul class="dropdown-content">
+                                    <li><a href="#get-all-people">3.1.1 Get all People</a></li>
+                                    <li><a href="#get-individual-person">3.1.2 Get People</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-block">
+            <h1 id="overview"><i class="fa-solid fa-info-circle"></i> API Overview</h1>
+            <p>The Star Wars API (SWAPI) provides comprehensive data from the Star Wars universe, including characters, films, planets, species, vehicles, and starships.</p>
+        </div>
+
+        <div class="info-block">
+            <h1 id="getting-started"><i class="fa-solid fa-play-circle"></i> Getting Started</h1>
+
+            <div class="concept-cards">
+                <div class="concept-card">
+                    <div class="concept-header">
+                        <i class="fa-solid fa-link"></i>
+                        <h4>Base URL</h4>
+                    </div>
+                    <div class="endpoint">https://swapi.dev/api/</div>
+                </div>
+
+                <div class="concept-card">
+                    <div class="concept-header">
+                        <i class="fa-solid fa-list-check"></i>
+                        <h4>Prerequisites</h4>
+                    </div>
+                    <p>To make API calls, use curl or httpie. Install these tools using <a href="http://curl.haxx.se/">curl</a> or <a href="http://httpie.org/">httpie</a> package manager.</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="concept-header">
+                        <i class="fa-solid fa-key"></i>
+                        <h4>Authentication</h4>
+                    </div>
+                    <p>SWAPI is an open API and does not require authentication or authorization.</p>
+                </div>
+
+                <div class="concept-card">
+                    <div class="concept-header">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <h4>Pricing</h4>
+                    </div>
+                    <p>SWAPI is free to use.</p>
+                </div>
+            </div>
+
+            <div class="api-info">
+                <h4><i class="fa-solid fa-code"></i> Status Codes</h4>
+                <p>SWAPI uses the following response status codes:</p>
+                <div class="status-codes-grid">
+                    <div class="status-item">
+                        <span class="status-code success">200</span>
+                        <span class="status-desc">OK - Request succeeded</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-code error">404</span>
+                        <span class="status-desc">Not Found - Resource not found</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-code warning">429</span>
+                        <span class="status-desc">Too Many Requests - Rate limit applied</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-code error">500</span>
+                        <span class="status-desc">Internal Server Error</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-code error">502</span>
+                        <span class="status-desc">Bad Gateway</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-code error">503</span>
+                        <span class="status-desc">Service Unavailable</span>
+                    </div>
+                </div>
+
+                <div class="note">
+                    <i class="fa-solid fa-info-circle"></i>
+                    <span><strong>Rate Limits:</strong> The system blocks IP addresses that exceed specified rate limits. The rate limit for general requests from an IP address is 10,000 requests per day.</span>
+                </div>
+            </div>
+        </div>
+        <div class="info-block">
+            <h1 id="api-reference"><i class="fa-solid fa-cogs"></i> API Reference</h1>
+
+            <div class="api-section">
+                <h2 id="people"><i class="fa-solid fa-users"></i> People</h2>
+
+                <div class="endpoint-card">
+                    <div class="endpoint-header">
+                        <h3 id="get-all-people">Get all People</h3>
+                        <span class="method get">GET</span>
+                    </div>
+
+                    <p>Retrieves details about all the people in the Star Wars universe.</p>
+
+                    <div class="endpoint-details">
+                        <h4><i class="fa-solid fa-link"></i> Request Endpoint</h4>
+                        <div class="endpoint">https://swapi.dev/api/people</div>
+
+                        <h4><i class="fa-solid fa-question-circle"></i> Query Parameters</h4>
+                        <p>This API does not accept any query parameters.</p>
+                    </div>
+                
+                <h4><i class="fa-solid fa-list-ul"></i> Response Parameters</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Child Parameter</th>
+                            <th>Data Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>count</code></td>
+                            <td>-</td>
+                            <td>integer</td>
+                            <td>Total number of people.</td>
+                        </tr>
+                        <tr>
+                            <td><code>next</code></td>
+                            <td>-</td>
+                            <td>nullable string</td>
+                            <td>URL of the next page. Null if no subsequent page exists.</td>
+                        </tr>
+                        <tr>
+                            <td><code>previous</code></td>
+                            <td>-</td>
+                            <td>nullable string</td>
+                            <td>URL of the previous page. Null if no subsequent page exists.</td>
+                        </tr>
+                        <tr>
+                            <td><code>results</code></td>
+                            <td>-</td>
+                            <td>array of objects</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>name</code></td>
+                            <td>string</td>
+                            <td>Name of the person.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>height</code></td>
+                            <td>string</td>
+                            <td>Height of the person.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>mass</code></td>
+                            <td>string</td>
+                            <td>Mass of the person.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>hair_color</code></td>
+                            <td>string</td>
+                            <td>Hair color of the person.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>skin_color</code></td>
+                            <td>string</td>
+                            <td>Skin color of the person.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>eye_color</code></td>
+                            <td>string</td>
+                            <td>Eye color of the person.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>birth_year</code></td>
+                            <td>string</td>
+                            <td>Birth year of the person.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>gender</code></td>
+                            <td>string</td>
+                            <td>Gender of the person.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>homeworld</code></td>
+                            <td>string</td>
+                            <td>URL of the person's homeworld.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>films</code></td>
+                            <td>array of strings</td>
+                            <td>URLs of films the person appeared in.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>species</code></td>
+                            <td>nullable array of strings</td>
+                            <td>URLs for the species of the person.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>vehicles</code></td>
+                            <td>nullable array of strings</td>
+                            <td>URLs of vehicles the person piloted.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>starships</code></td>
+                            <td>nullable array of strings</td>
+                            <td>URLs of starships the person piloted.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>created</code></td>
+                            <td>string</td>
+                            <td>The date and time the person's record was created.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>edited</code></td>
+                            <td>string</td>
+                            <td>The date and time the person's record was last edited.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><code>url</code></td>
+                            <td>string</td>
+                            <td>URL containing details for the person.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4><i class="fa-solid fa-code"></i> Response Sample</h4>
+                <pre><code>{
+    <span class="json-key">"count"</span>: <span class="json-number">82</span>,
+    <span class="json-key">"next"</span>: <span class="json-string">"https://swapi.dev/api/people/?page=2"</span>,
+    <span class="json-key">"previous"</span>: <span class="json-null">null</span>,
+    <span class="json-key">"results"</span>: [
+        {
+            <span class="json-key">"name"</span>: <span class="json-string">"Luke Skywalker"</span>,
+            <span class="json-key">"height"</span>: <span class="json-string">"172"</span>,
+            <span class="json-key">"mass"</span>: <span class="json-string">"77"</span>,
+            <span class="json-key">"hair_color"</span>: <span class="json-string">"blond"</span>,
+            <span class="json-key">"skin_color"</span>: <span class="json-string">"fair"</span>,
+            <span class="json-key">"eye_color"</span>: <span class="json-string">"blue"</span>,
+            <span class="json-key">"birth_year"</span>: <span class="json-string">"19BBY"</span>,
+            <span class="json-key">"gender"</span>: <span class="json-string">"male"</span>,
+            <span class="json-key">"homeworld"</span>: <span class="json-string">"https://swapi.dev/api/planets/1/"</span>,
+            <span class="json-key">"films"</span>: [
+                <span class="json-string">"https://swapi.dev/api/films/1/"</span>,
+                <span class="json-string">"https://swapi.dev/api/films/2/"</span>,
+                <span class="json-string">"https://swapi.dev/api/films/3/"</span>,
+                <span class="json-string">"https://swapi.dev/api/films/6/"</span>
+            ],
+            <span class="json-key">"species"</span>: [],
+            <span class="json-key">"vehicles"</span>: [
+                <span class="json-string">"https://swapi.dev/api/vehicles/14/"</span>,
+                <span class="json-string">"https://swapi.dev/api/vehicles/30/"</span>
+            ],
+            <span class="json-key">"starships"</span>: [
+                <span class="json-string">"https://swapi.dev/api/starships/12/"</span>,
+                <span class="json-string">"https://swapi.dev/api/starships/22/"</span>
+            ],
+            <span class="json-key">"created"</span>: <span class="json-string">"2014-12-09T13:50:51.644000Z"</span>,
+            <span class="json-key">"edited"</span>: <span class="json-string">"2014-12-20T21:17:56.891000Z"</span>,
+            <span class="json-key">"url"</span>: <span class="json-string">"https://swapi.dev/api/people/1/"</span>
+        }
+    ]
+}</code></pre>
+
+                <div class="success-screenshot">
+                    <h4><i class="fa-solid fa-camera"></i> Success Screenshot</h4>
+                    <div class="screenshot-container">
+                        <img src="images/get all people.png" alt="Success Screenshot for get all the people resources">
+                    </div>
+                </div>
+                
+                <h4><i class="fa-solid fa-code"></i> Response Status Codes</h4>
+                <div class="status-codes-grid">
+                    <div class="status-item">
+                        <span class="status-code success">200</span>
+                        <span class="status-desc">OK - Request succeeded</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-code error">404</span>
+                        <span class="status-desc">Not Found - Resource not found</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="api-section">
+                <div class="endpoint-card">
+                    <div class="endpoint-header">
+                        <h3 id="get-individual-person">Get People</h3>
+                        <span class="method get">GET</span>
+                    </div>
+
+                    <p>Retrieves a specific person by their unique ID.</p>
+
+                    <div class="endpoint-details">
+                        <h4><i class="fa-solid fa-link"></i> Request Endpoint</h4>
+                        <div class="endpoint">https://swapi.dev/api/people/{id}</div>
+                        <p><strong>Example:</strong> <code>https://swapi.dev/api/people/5</code></p>
+
+                        <h4><i class="fa-solid fa-question-circle"></i> Path Parameters</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>Required</th>
+                                    <th>Data Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>id</code></td>
+                                    <td>Yes</td>
+                                    <td>integer</td>
+                                    <td>Unique identifier for the person to retrieve.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                
+                <h4><i class="fa-solid fa-list-ul"></i> Response Parameters</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Data Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>name</code></td>
+                            <td>string</td>
+                            <td>Name of the person.</td>
+                        </tr>
+                        <tr>
+                            <td><code>height</code></td>
+                            <td>string</td>
+                            <td>Height of the person.</td>
+                        </tr>
+                        <tr>
+                            <td><code>mass</code></td>
+                            <td>string</td>
+                            <td>Mass of the person.</td>
+                        </tr>
+                        <tr>
+                            <td><code>hair_color</code></td>
+                            <td>string</td>
+                            <td>Hair color of the person.</td>
+                        </tr>
+                        <tr>
+                            <td><code>skin_color</code></td>
+                            <td>string</td>
+                            <td>Skin color of the person.</td>
+                        </tr>
+                        <tr>
+                            <td><code>eye_color</code></td>
+                            <td>string</td>
+                            <td>Eye color of the person.</td>
+                        </tr>
+                        <tr>
+                            <td><code>birth_year</code></td>
+                            <td>string</td>
+                            <td>Birth year of the person.</td>
+                        </tr>
+                        <tr>
+                            <td><code>gender</code></td>
+                            <td>string</td>
+                            <td>Gender of the person.</td>
+                        </tr>
+                        <tr>
+                            <td><code>homeworld</code></td>
+                            <td>string</td>
+                            <td>URL of the person's homeworld.</td>
+                        </tr>
+                        <tr>
+                            <td><code>films</code></td>
+                            <td>array of strings</td>
+                            <td>URLs of films the person appeared in.</td>
+                        </tr>
+                        <tr>
+                            <td><code>species</code></td>
+                            <td>nullable array of strings</td>
+                            <td>URLs for the species of the person.</td>
+                        </tr>
+                        <tr>
+                            <td><code>vehicles</code></td>
+                            <td>nullable array of strings</td>
+                            <td>URLs of vehicles the person piloted.</td>
+                        </tr>
+                        <tr>
+                            <td><code>starships</code></td>
+                            <td>nullable array of strings</td>
+                            <td>URLs of starships the person piloted.</td>
+                        </tr>
+                        <tr>
+                            <td><code>created</code></td>
+                            <td>string</td>
+                            <td>The date and time the person's record were created.</td>
+                        </tr>
+                        <tr>
+                            <td><code>edited</code></td>
+                            <td>string</td>
+                            <td>The date and time the person's record were last edited.</td>
+                        </tr>
+                        <tr>
+                            <td><code>url</code></td>
+                            <td>string</td>
+                            <td>URL containing details for the person.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4><i class="fa-solid fa-code"></i> Response Sample</h4>
+                <pre><code>{
+    <span class="json-key">"name"</span>: <span class="json-string">"Leia Organa"</span>,
+    <span class="json-key">"height"</span>: <span class="json-string">"150"</span>,
+    <span class="json-key">"mass"</span>: <span class="json-string">"49"</span>,
+    <span class="json-key">"hair_color"</span>: <span class="json-string">"brown"</span>,
+    <span class="json-key">"skin_color"</span>: <span class="json-string">"light"</span>,
+    <span class="json-key">"eye_color"</span>: <span class="json-string">"brown"</span>,
+    <span class="json-key">"birth_year"</span>: <span class="json-string">"19BBY"</span>,
+    <span class="json-key">"gender"</span>: <span class="json-string">"female"</span>,
+    <span class="json-key">"homeworld"</span>: <span class="json-string">"https://swapi.py4e.com/api/planets/2/"</span>,
+    <span class="json-key">"films"</span>: [
+        <span class="json-string">"https://swapi.py4e.com/api/films/1/"</span>,
+        <span class="json-string">"https://swapi.py4e.com/api/films/2/"</span>,
+        <span class="json-string">"https://swapi.py4e.com/api/films/3/"</span>,
+        <span class="json-string">"https://swapi.py4e.com/api/films/6/"</span>,
+        <span class="json-string">"https://swapi.py4e.com/api/films/7/"</span>
+    ],
+    <span class="json-key">"species"</span>: [
+        <span class="json-string">"https://swapi.py4e.com/api/species/1/"</span>
+    ],
+    <span class="json-key">"vehicles"</span>: [
+        <span class="json-string">"https://swapi.py4e.com/api/vehicles/30/"</span>
+    ],
+    <span class="json-key">"starships"</span>: [],
+    <span class="json-key">"created"</span>: <span class="json-string">"2014-12-10T15:20:09.791000Z"</span>,
+    <span class="json-key">"edited"</span>: <span class="json-string">"2014-12-20T21:17:50.315000Z"</span>,
+    <span class="json-key">"url"</span>: <span class="json-string">"https://swapi.py4e.com/api/people/5/"</span>
+}</code></pre>
+                <div class="success-screenshot">
+                    <h4><i class="fa-solid fa-camera"></i> Success Screenshot</h4>
+                    <div class="screenshot-container">
+                        <img src="images/get a person.png" alt="Success Screenshot for Get A Specific People Resource">
+                    </div>
+                </div>
+                <h4><i class="fa-solid fa-code"></i> Response Status Codes</h4>
+                <div class="status-codes-grid">
+                    <div class="status-item">
+                        <span class="status-code success">200</span>
+                        <span class="status-desc">OK - Request succeeded</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-code error">404</span>
+                        <span class="status-desc">Not Found - Person not found</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 Madaswamy Portfolio
+</footer>
+
+<script>
+// Table of Contents Dropdown Functionality
+function toggleDropdown(element) {
+    const dropdownContent = element.nextElementSibling;
+    const icon = element.querySelector('.dropdown-icon');
+
+    if (dropdownContent && dropdownContent.classList.contains('dropdown-content')) {
+        dropdownContent.classList.toggle('show');
+        icon.classList.toggle('rotated');
+    }
+}
+
+// Initialize dropdowns - show API Reference by default, hide People subsection
+document.addEventListener('DOMContentLoaded', function() {
+    const apiReferenceDropdown = document.querySelector('.table-of-contents .dropdown-content');
+    if (apiReferenceDropdown) {
+        apiReferenceDropdown.classList.add('show');
+        const apiReferenceIcon = document.querySelector('.table-of-contents .dropdown-icon');
+        if (apiReferenceIcon) {
+            apiReferenceIcon.classList.add('rotated');
+        }
+    }
+});
+</script>
+<script src="../script.js"></script>
+</body>
+</html>
