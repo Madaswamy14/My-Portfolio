@@ -567,7 +567,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// Back to Top Button Functionality
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Show/hide back to top button based on scroll position
+window.addEventListener('scroll', function() {
+    const backToTopButton = document.getElementById('backToTop');
+    if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('show');
+    } else {
+        backToTopButton.classList.remove('show');
+    }
+});
 </script>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+
 <script src="../script.js"></script>
 </body>
 </html>
