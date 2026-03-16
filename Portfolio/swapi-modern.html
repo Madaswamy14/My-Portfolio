@@ -67,6 +67,24 @@
                             <span>Concepts</span>
                         </span>
                     </a>
+                    <a href="#authentication" class="sidebar-link">
+                        <span class="link-content">
+                            <i class="fa-solid fa-lock"></i>
+                            <span>Authentication</span>
+                        </span>
+                    </a>
+                    <a href="#errors" class="sidebar-link">
+                        <span class="link-content">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <span>Errors</span>
+                        </span>
+                    </a>
+                    <a href="#pagination" class="sidebar-link">
+                        <span class="link-content">
+                            <i class="fa-solid fa-list-ol"></i>
+                            <span>Pagination</span>
+                        </span>
+                    </a>
                 </nav>
             </div>
 
@@ -158,9 +176,40 @@
             </ul>
         </section>
 
-        <!-- Reference Section -->
+        <!-- Authentication Section -->
+        <section id="authentication" class="content-section">
+            <h2>Authentication</h2>
+            <p>The Star Wars API is completely open and does not require authentication. You do not need to register for an API key or send any Authorization headers with your requests.</p>
+            <div class="code-block">
+                <code>// No API key required
+GET https://swapi.dev/api/people/1/</code>
+            </div>
+        </section>
+
+        <!-- Errors Section -->
+        <section id="errors" class="content-section">
+            <h2>Errors</h2>
+            <p>SWAPI uses conventional HTTP response codes to indicate the success or failure of an API request. Codes in the <code>2xx</code> range indicate success. Codes in the <code>4xx</code> range indicate an error that failed given the information provided (e.g., a requested resource was not found).</p>
+            
+            <ul class="doc-list">
+                <li><strong>200 OK</strong>: Everything worked as expected.</li>
+                <li><strong>404 Not Found</strong>: The requested resource doesn't exist.</li>
+                <li><strong>500 Internal Server Error</strong>: Something went wrong on SWAPI's end.</li>
+            </ul>
+        </section>
+
+        <!-- Pagination Section -->
+        <section id="pagination" class="content-section">
+            <h2>Pagination</h2>
+            <p>Large result sets (such as listing all characters) are paginated. By default, SWAPI returns 10 records per page. A collection response includes a <code>count</code>, a <code>next</code> URL, and a <code>previous</code> URL.</p>
+            <div class="code-block">
+                <code>GET https://swapi.dev/api/people/?page=2</code>
+            </div>
+        </section>
+
+        <!-- Endpoints Section -->
         <section id="reference" class="content-section">
-            <h2>Reference</h2>
+            <h2>Endpoints</h2>
             <p>The Star Wars API provides comprehensive data across six main resource types:</p>
 
             <div class="reference-grid">
