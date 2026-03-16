@@ -72,9 +72,9 @@
   margin-bottom: 1.5rem;
 }
 
-.sectionHeader h2 {
+.sectionHeader_Gahl h2 {
   margin: 0.5rem 0 0.8rem;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
 }
 
 .sectionHeader p:last-child {

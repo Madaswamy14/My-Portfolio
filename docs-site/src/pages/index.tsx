@@ -101,7 +101,7 @@ export default function Home(): ReactNode {
         <section className="container">
           <div className={styles.sectionHeader}>
             <p className={styles.sectionKicker}>Portal proof</p>
-            <Heading as="h2">A docs system built for DevEx hiring managers</Heading>
+            <Heading as="h2">Built for DevEx hiring managers</Heading>
             <p>
               This portal demonstrates how I structure developer documentation products: landing experience,
               task-based docs, reference architecture, and implementation-oriented writing.
@@ -121,7 +121,7 @@ export default function Home(): ReactNode {
         <section className={`container ${styles.docsSection}`}>
           <div className={styles.sectionHeader}>
             <p className={styles.sectionKicker}>Core docs</p>
-            <Heading as="h2">Explore the initial documentation set</Heading>
+            <Heading as="h2">Explore the documentation</Heading>
           </div>
 
           <div className={styles.cardGrid}>
