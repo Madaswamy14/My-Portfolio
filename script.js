@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         body.classList.toggle('dark', savedTheme === 'dark');
-        updateToggleButton();
     }
+
+    updateToggleButton();
     
     // Add click event listener to theme toggle button
     themeToggle.addEventListener('click', function() {
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateToggleButton() {
         const isDark = body.classList.contains('dark');
         themeToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+        themeToggle.setAttribute('aria-pressed', isDark);
     }
 });
 
@@ -128,3 +130,48 @@ function showCopyFeedback() {
         }, 300);
     }, 3000);
 }
+
+
+// Back to Top Button Functionality
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Show/hide back to top button based on scroll position
+window.addEventListener('scroll', function() {
+    const backToTopButton = document.getElementById('backToTop');
+    if (backToTopButton) {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    }
+});
+
+
+
+// Resume Specific Functions
+function downloadResume() {
+    // Create a temporary link element
+    const link = document.createElement('a');
+
+    // Link to the actual PDF file
+    link.href = 'assets/Technical Writer_Madaswamy.pdf';
+    link.download = 'Technical Writer_Madaswamy.pdf';
+    link.target = '_blank'; // Open in new tab as fallback
+
+    // Append to body, click, and remove
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+function viewCertificate(certificatePath) {
+    // Open certificate PDF in a new tab
+    window.open(certificatePath, '_blank');
+}
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Technical writing blog by Madaswamy featuring starter articles on API documentation, developer onboarding, and docs workflows with Markdown and Git.">
+    <meta name="keywords" content="technical writing blog, API documentation, developer onboarding, docs as code, markdown, git, Madaswamy">
+    <meta name="author" content="Madaswamy">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blog - Madaswamy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleindex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="dark">
+
+<header>
+    <h1>Madaswamy - Blog</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="resume.html">Resume</a>
+        <a href="freelance.html">Freelance</a>
+        <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+</header>
+
+<main>
+    <section id="blog" class="main-section blog-shell">
+        <div class="page-header">
+            <h2><i class="fa-solid fa-pen-nib"></i> Blog</h2>
+            <p class="subtitle">Starter technical writing articles that reinforce the knowledge topics on the homepage</p>
+        </div>
+
+        <div class="section-intro">
+            <p class="section-kicker">Knowledge &amp; thought leadership</p>
+            <h3 class="section-heading">Three article starters aligned with developer documentation work</h3>
+            <p class="section-subtext">This is a simple static blog page for demonstrating topic authority around API reference content, onboarding flows, and docs-as-code habits.</p>
+        </div>
+
+        <div class="blog-grid">
+            <article class="blog-card" id="useful-api-documentation">
+                <span class="card-tag">API documentation</span>
+                <h3>How to Write Useful API Documentation</h3>
+                <p class="article-meta">Reference writing | Examples | Developer experience</p>
+                <div class="article-section">
+                    <p>Useful API documentation helps developers answer the first practical questions quickly: what the API does, how to authenticate, what a successful request looks like, and how to recover from common errors.</p>
+                </div>
+                <div class="article-section">
+                    <h4>Core points to cover</h4>
+                    <ul class="article-outline">
+                        <li>Start with a short overview and a clear authentication path.</li>
+                        <li>Show realistic request and response examples for common use cases.</li>
+                        <li>Explain parameters, status codes, and error scenarios in plain language.</li>
+                        <li>Organize the page so overview, quick start, and reference work together.</li>
+                    </ul>
+                </div>
+                <div class="article-section">
+                    <h4>Why it matters</h4>
+                    <p>When reference docs are contextual and easy to scan, developers spend less time guessing and more time integrating successfully.</p>
+                </div>
+                <div class="project-links article-actions">
+                    <a href="Portfolio/swapi_API-docs.html" class="view-project-btn">See API Sample</a>
+                    <a href="portfolio.html" class="secondary-btn">Portfolio Case Studies</a>
+                </div>
+            </article>
+
+            <article class="blog-card" id="developer-onboarding-best-practices">
+                <span class="card-tag">Developer onboarding</span>
+                <h3>Developer Onboarding Best Practices</h3>
+                <p class="article-meta">Quick starts | First-run success | Information architecture</p>
+                <div class="article-section">
+                    <p>Developer onboarding content should reduce uncertainty in the first few minutes of product use. Good onboarding documentation gives users a path, not just a pile of links.</p>
+                </div>
+                <div class="article-section">
+                    <h4>What strong onboarding includes</h4>
+                    <ul class="article-outline">
+                        <li>A quick start that ends with a visible success state.</li>
+                        <li>Clear prerequisites and setup steps before deeper reference material.</li>
+                        <li>Concept explanations only where they help users make the next decision.</li>
+                        <li>Links to troubleshooting and next-step documentation after setup.</li>
+                    </ul>
+                </div>
+                <div class="article-section">
+                    <h4>Why it matters</h4>
+                    <p>Teams build trust faster when users can move from sign-up or installation to their first successful workflow without unnecessary friction.</p>
+                </div>
+                <div class="project-links article-actions">
+                    <a href="Portfolio/jira-getting-started.html" class="view-project-btn">See Onboarding Sample</a>
+                    <a href="portfolio.html" class="secondary-btn">Open Portfolio</a>
+                </div>
+            </article>
+
+            <article class="blog-card" id="docs-workflow-markdown-git">
+                <span class="card-tag">Docs workflow</span>
+                <h3>Docs Workflow with Markdown and Git</h3>
+                <p class="article-meta">Docs-as-code | Collaboration | Version control</p>
+                <div class="article-section">
+                    <p>Markdown and Git make documentation easier to review, update, and ship alongside product changes. The tools are simple, but the real value comes from adopting a more engineering-friendly content workflow.</p>
+                </div>
+                <div class="article-section">
+                    <h4>Key workflow habits</h4>
+                    <ul class="article-outline">
+                        <li>Keep source files lightweight and easy to diff in pull requests.</li>
+                        <li>Use version control so content changes are reviewed like code.</li>
+                        <li>Break documentation into reusable guides, tutorials, and reference pages.</li>
+                        <li>Publish from a repeatable structure instead of manual document handoffs.</li>
+                    </ul>
+                </div>
+                <div class="article-section">
+                    <h4>Why it matters</h4>
+                    <p>A docs-as-code workflow helps documentation stay closer to the product, which makes updates easier to manage and team collaboration more natural.</p>
+                </div>
+                <div class="project-links article-actions">
+                    <a href="portfolio.html" class="view-project-btn">Browse Project Samples</a>
+                    <a href="resume.html" class="secondary-btn">View Resume</a>
+                </div>
+            </article>
+        </div>
+
+        <section class="contact-banner blog-cta">
+            <div>
+                <p class="section-kicker">Continue browsing</p>
+                <h3 class="section-heading">Use the blog as context, then review the work samples</h3>
+                <p class="section-subtext">The article starters show topic direction, while the portfolio page shows how that thinking appears in documentation samples.</p>
+            </div>
+            <div class="contact-actions">
+                <a href="portfolio.html" class="view-project-btn">View Portfolio</a>
+                <a href="index.html#contact" class="secondary-btn">Contact</a>
+            </div>
+        </section>
+    </section>
+</main>
+
+<footer>
+    &copy; 2026 Madaswamy Portfolio
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>

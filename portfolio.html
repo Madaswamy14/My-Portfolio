@@ -8,140 +8,401 @@
     <meta name="author" content="Madaswamy">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portfolio - Madaswamy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleindex.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
+<body class="dark">
 
 <header>
     <h1>Madaswamy - Portfolio</h1>
     <nav>
         <a href="index.html">Home</a>
-        <a href="resume.html">Resume</a>
         <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="resume.html">Resume</a>
         <a href="freelance.html">Freelance</a>
         <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
     </nav>
 </header>
 
 <main>
-    <section id="portfolio" class="main-section">
+    <section id="portfolio" class="main-section portfolio-shell">
         <div class="page-header">
             <h2><i class="fa-solid fa-folder-open"></i> Portfolio</h2>
-            <p class="subtitle">Sample projects and code examples</p>
+            <p class="subtitle">Case-study documentation samples focused on developer onboarding, portals, tutorials, and API content</p>
         </div>
 
-        <div class="info-block">
-            <h3><i class="fa-solid fa-book"></i> Documentation Projects</h3>
-            <div class="project">
-                <h4><i class="fa-solid fa-file-alt"></i> Jira Getting Started Guide</h4>
-                <p class="project-meta"><strong>Type:</strong> Technical Documentation | <strong>Format:</strong> HTML Guide</p>
-                <p>A comprehensive getting started guide for Jira, covering core concepts, user interface, project creation, and issue management. Designed for new users to quickly understand and start using Jira effectively.</p>
+        <div class="section-intro portfolio-intro">
+            <p class="section-kicker">Featured case studies</p>
+            <h3 class="section-heading">Documentation systems and case studies built around onboarding, workflows, and developer tasks</h3>
+            <p class="section-subtext">Each sample shows the documentation problem, the information architecture decisions behind the content, and the same work presented both as a standalone HTML sample and as a portal-ready Docusaurus doc.</p>
+        </div>
+
+        <div class="portfolio-case-list">
+            <article class="project case-study-project">
+                <span class="card-tag">Flagship DevEx case study</span>
+                <h4><i class="fa-solid fa-credit-card"></i> Acme Payments Developer Platform</h4>
+                <p class="project-meta"><strong>Type:</strong> Developer Platform Documentation | <strong>Format:</strong> Integrated Portal Case Study</p>
+                <p class="case-study-summary">A flagship payments-platform case study designed to show how quickstart onboarding, authentication, API reference, webhook guidance, and production-readiness concepts work together inside one developer portal.</p>
+
+                <dl class="project-breakdown">
+                    <div>
+                        <dt>Challenge</dt>
+                        <dd>Hiring panels for DevEx roles want evidence of systems thinking, not just isolated pages. The sample needed to prove I can shape the path from first API key to production-ready integration.</dd>
+                    </div>
+                    <div>
+                        <dt>Documentation system</dt>
+                        <dd>Built an integrated Acme Payments docs set with a landing page, quickstart path, authentication guidance, endpoint-focused reference, webhook docs, operational concepts, and developer-journey content.</dd>
+                    </div>
+                    <div>
+                        <dt>Key decisions</dt>
+                        <dd>Structured the portal around the questions developers ask in sequence: how do I start, authenticate, make a payment, handle failures, and go live safely.</dd>
+                    </div>
+                    <div>
+                        <dt>Outcome</dt>
+                        <dd>Gives recruiters a stronger flagship sample that reads like a product-grade developer portal instead of a collection of standalone writing samples.</dd>
+                    </div>
+                </dl>
 
                 <div class="project-highlights">
-                    <span class="highlight">Technical Writing</span>
-                    <span class="highlight">User Documentation</span>
-                    <span class="highlight">HTML/CSS</span>
-                    <span class="highlight">Responsive Design</span>
+                    <span class="highlight">Developer Portal</span>
+                    <span class="highlight">Payments API</span>
+                    <span class="highlight">Production Readiness</span>
+                    <span class="highlight">DevEx Writing</span>
                 </div>
 
-                <div class="project-actions">
-                    <a href="Portfolio/jira-getting-started.html" class="view-project-btn">
-                        <i class="fa-solid fa-external-link-alt"></i> View Guide
+                <div class="project-links">
+                    <a href="developer-portal/docs/acme-payments" class="view-project-btn">
+                        <i class="fa-solid fa-book-open"></i> View in Developer Portal
                     </a>
                 </div>
-            </div>
+            </article>
 
-            <div class="project">
-                <h4><i class="fa-brands fa-facebook"></i> Facebook Events Quick Start Guide</h4>
-                <p class="project-meta"><strong>Type:</strong> User Guide | <strong>Format:</strong> HTML Documentation</p>
-                <p>A comprehensive guide for creating, promoting, and managing Facebook events. Covers event types, privacy settings, promotion strategies, and post-event activities. Designed for experienced Facebook users looking to maximize event engagement.</p>
+            <article class="project case-study-project">
+                <span class="card-tag">API reference system</span>
+                <h4><i class="fa-solid fa-rocket"></i> SWAPI API Reference System</h4>
+                <p class="project-meta"><strong>Type:</strong> Developer Documentation | <strong>Format:</strong> API Reference Case Study + Portal Migration</p>
+                <p class="case-study-summary">A reference-design case study that turns a public REST API into a clearer developer journey with a quickstart, conventions, endpoint detail, screenshots, and a Docusaurus portal version for scalable navigation.</p>
 
-                <div class="project-highlights">
-                    <span class="highlight">Social Media</span>
-                    <span class="highlight">Event Management</span>
-                    <span class="highlight">User Guide</span>
-                    <span class="highlight">Marketing</span>
-                </div>
-
-                <div class="project-actions">
-                    <a href="Portfolio/facebookevents_quick-start-guide.html" class="view-project-btn">
-                        <i class="fa-solid fa-external-link-alt"></i> View Guide
-                    </a>
-                </div>
-            </div>
-
-            <div class="project">
-                <h4><i class="fa-solid fa-rocket"></i> SWAPI API Reference Document</h4>
-                <p class="project-meta"><strong>Type:</strong> API Documentation | <strong>Format:</strong> Technical Reference</p>
-                <p>Comprehensive API documentation for the Star Wars API (SWAPI). Covers endpoints, request/response formats, status codes, and authentication. Includes detailed examples for retrieving character, film, and planet data from the Star Wars universe.</p>
+                <dl class="project-breakdown">
+                    <div>
+                        <dt>Challenge</dt>
+                        <dd>Developers need more than raw endpoint lists. They need an entry point, request conventions, and examples that make a reference page usable in the first five minutes.</dd>
+                    </div>
+                    <div>
+                        <dt>Documentation system</dt>
+                        <dd>Structured the sample around overview, quickstart, key conventions, endpoint reference, and follow-on troubleshooting so the experience supports both scanning and implementation.</dd>
+                    </div>
+                    <div>
+                        <dt>Key decisions</dt>
+                        <dd>Standardized examples to <code>swapi.dev</code>, clarified pagination and search behavior, and mirrored the content inside a portal experience to show system-level documentation thinking.</dd>
+                    </div>
+                    <div>
+                        <dt>Outcome</dt>
+                        <dd>Shows how I write API content that feels implementation-ready while still presenting strong information architecture and premium portal positioning.</dd>
+                    </div>
+                </dl>
 
                 <div class="project-highlights">
                     <span class="highlight">API Documentation</span>
-                    <span class="highlight">Technical Reference</span>
+                    <span class="highlight">Developer Portal</span>
                     <span class="highlight">REST API</span>
-                    <span class="highlight">Developer Guide</span>
+                    <span class="highlight">Docusaurus</span>
                 </div>
 
-                <div class="project-actions">
-                    <a href="Portfolio/swapi_API-docs.html" class="view-project-btn">
-                        <i class="fa-solid fa-external-link-alt"></i> View Documentation
+                <div class="project-links">
+                    <a href="developer-portal/docs/swapi-api-reference-sample" class="view-project-btn">
+                        <i class="fa-solid fa-book-open"></i> View in Developer Portal
                     </a>
+                    <a href="Portfolio/swapi_API-docs.html" class="secondary-btn">View HTML Sample</a>
                 </div>
-            </div>
+            </article>
+
+            <article class="project case-study-project">
+                <span class="card-tag">Onboarding case study</span>
+                <h4><i class="fa-solid fa-file-alt"></i> Jira New-User Onboarding Guide</h4>
+                <p class="project-meta"><strong>Type:</strong> Product Onboarding Documentation | <strong>Format:</strong> Task-Based Guide + Portal Migration</p>
+                <p class="case-study-summary">A first-day Jira onboarding case study designed to reduce product overwhelm by guiding new users from basic concepts to project creation, issue creation, and board-based execution.</p>
+
+                <dl class="project-breakdown">
+                    <div>
+                        <dt>Challenge</dt>
+                        <dd>Feature-rich tools like Jira overwhelm new users when onboarding docs assume product vocabulary, skip context, or bury the first useful workflow too late in the page.</dd>
+                    </div>
+                    <div>
+                        <dt>Documentation system</dt>
+                        <dd>Organized the content into quickstart, core concepts, interface orientation, and first-use tasks so a reader can get productive before learning advanced Jira features.</dd>
+                    </div>
+                    <div>
+                        <dt>Key decisions</dt>
+                        <dd>Kept the language newcomer-friendly, emphasized the minimum concepts that matter first, and migrated the sample into the portal to show how it fits inside a broader documentation set.</dd>
+                    </div>
+                    <div>
+                        <dt>Outcome</dt>
+                        <dd>Demonstrates my ability to turn a complex product into a guided first-run experience with clearer sequencing, lower cognitive load, and better adoption flow.</dd>
+                    </div>
+                </dl>
+
+                <div class="project-highlights">
+                    <span class="highlight">Technical Writing</span>
+                    <span class="highlight">User Onboarding</span>
+                    <span class="highlight">Information Architecture</span>
+                    <span class="highlight">Task-Based Writing</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="developer-portal/docs/jira-getting-started" class="view-project-btn">
+                        <i class="fa-solid fa-book-open"></i> View in Developer Portal
+                    </a>
+                    <a href="Portfolio/jira-getting-started.html" class="secondary-btn">View HTML Sample</a>
+                </div>
+            </article>
+
+            <article class="project case-study-project">
+                <span class="card-tag">Workflow tutorial</span>
+                <h4><i class="fa-brands fa-facebook"></i> Facebook Events Workflow Quickstart</h4>
+                <p class="project-meta"><strong>Type:</strong> Tutorial Documentation | <strong>Format:</strong> Quickstart Guide + Portal Migration</p>
+                <p class="case-study-summary">A workflow-driven tutorial case study that helps event organizers plan, publish, promote, and follow up on a Facebook event with clearer sequencing and reusable next-step guidance.</p>
+
+                <dl class="project-breakdown">
+                    <div>
+                        <dt>Challenge</dt>
+                        <dd>Users may understand event features in theory but still need decision-ready guidance to move from setup to promotion without missing critical planning details.</dd>
+                    </div>
+                    <div>
+                        <dt>Documentation system</dt>
+                        <dd>Reframed the sample around quickstart preparation, event-page concepts, workflow tasks, and follow-up actions so readers can execute the full event lifecycle with less friction.</dd>
+                    </div>
+                    <div>
+                        <dt>Key decisions</dt>
+                        <dd>Added tighter planning guidance, clearer outcomes for each task, and a portal version that positions the sample as part of a broader documentation experience instead of a standalone page.</dd>
+                    </div>
+                    <div>
+                        <dt>Outcome</dt>
+                        <dd>Shows how I turn feature documentation into a repeatable workflow tutorial that supports adoption, confidence, and better task completion.</dd>
+                    </div>
+                </dl>
+
+                <div class="project-highlights">
+                    <span class="highlight">Quickstart Design</span>
+                    <span class="highlight">User Documentation</span>
+                    <span class="highlight">Workflow Design</span>
+                    <span class="highlight">Feature Adoption</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="developer-portal/docs/facebook-events-quickstart" class="view-project-btn">
+                        <i class="fa-solid fa-book-open"></i> View in Developer Portal
+                    </a>
+                    <a href="Portfolio/facebookevents_quick-start-guide.html" class="secondary-btn">View HTML Sample</a>
+                </div>
+            </article>
         </div>
 
-        <div class="info-block">
-            <h3><i class="fa-solid fa-code"></i> Code Projects</h3>
-            <div class="project">
-                <h4><i class="fa-solid fa-clock"></i> Python Alarm Clock</h4>
-                <p class="project-meta"><strong>Technology:</strong> Python | <strong>Libraries:</strong> datetime, playsound</p>
-                <p>This Python-based alarm clock allows users to set a specific time and plays a sound when the time is reached. It's built with the <code>datetime</code> and <code>playsound</code> libraries.</p>
+        <div class="info-block portfolio-supporting-work">
+            <h3><i class="fa-solid fa-code"></i> Technical Automation Tools</h3>
+            <p class="supporting-copy">I build Python tools to automate documentation quality, generation, and maintenance. These scripts demonstrate how I treat documentation as code to improve developer experience.</p>
+
+            <div class="project supporting-project">
+                <h4><i class="fa-solid fa-check-double"></i> Doc Quality Automation</h4>
+                <p class="project-meta"><strong>File:</strong> <a href="doc_quality_checker.py" target="_blank">doc_quality_checker.py</a> | <strong>Libs:</strong> requests, concurrent.futures</p>
+                <p>A recursive, multi-threaded link checker that validates local anchors, relative paths, and remote URLs. Designed for CI/CD pipelines to prevent broken docs.</p>
                 
                 <div class="project-highlights">
+                    <span class="highlight">CI/CD Ready</span>
+                    <span class="highlight">Multi-threading</span>
+                    <span class="highlight">Link Validation</span>
                     <span class="highlight">Python</span>
-                    <span class="highlight">DateTime</span>
-                    <span class="highlight">Audio Playback</span>
+                </div>
+
+                <div class="code-section">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" onclick="showTab('quality-code', this)">Snippet</button>
+                        <button class="tab-button" onclick="showTab('quality-features', this)">Features</button>
+                    </div>
+                    
+                    <div id="quality-code" class="tab-content">
+import concurrent.futures
+import re
+import requests
+from pathlib import Path
+from urllib.parse import unquote, urlparse
+
+def scan_docs(scan_path, check_remote=True, concurrency=10):
+    """Scan documentation and return issues plus a lightweight summary."""
+    input_path = Path(scan_path)
+    markdown_files = list(get_markdown_files(input_path))
+    # ... (Full logic in file) ...
+    
+    if check_remote:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as executor:
+            # Parallel remote link checking
+            pass
+                    </div>
+                    
+                    <div id="quality-features" class="tab-content" style="display: none;">
+• Recursively scans directories for .md/.mdx files
+• Validates local file paths and anchor links (#header)
+• Checks external URLs concurrently for performance
+• Ignores node_modules and hidden directories
+• Returns exit codes suitable for CI pipelines
+                    </div>
+                    
+                    <button class="copy-button" onclick="copyCode('quality-code')">Copy Snippet</button>
+                </div>
+            </div>
+
+            <div class="project supporting-project">
+                <h4><i class="fa-solid fa-file-code"></i> OpenAPI Docs Generator</h4>
+                <p class="project-meta"><strong>File:</strong> <a href="openapi_docs_generator.py" target="_blank">openapi_docs_generator.py</a> | <strong>Libs:</strong> argparse, json, re</p>
+                <p>Parses OpenAPI/Swagger specs (JSON/YAML) to automatically generate Markdown pages with frontmatter, parameter tables, and formatted response examples.</p>
+
+                <div class="project-highlights">
+                    <span class="highlight">Docs-as-Code</span>
+                    <span class="highlight">OpenAPI Parsing</span>
+                    <span class="highlight">Markdown Generation</span>
                     <span class="highlight">Automation</span>
                 </div>
 
                 <div class="code-section">
                     <div class="tab-buttons">
-                        <button class="tab-button active" onclick="showTab('alarm-code', this)">Code</button>
-                        <button class="tab-button" onclick="showTab('alarm-features', this)">Features</button>
+                        <button class="tab-button active" onclick="showTab('openapi-code', this)">Snippet</button>
+                        <button class="tab-button" onclick="showTab('openapi-features', this)">Features</button>
                     </div>
-                    
-                    <div id="alarm-code" class="tab-content">
-import datetime
-import time
-import playsound
 
-alarm_time = "07:30"
-while True:
-    current_time = datetime.datetime.now().strftime("%H:%M")
-    if current_time == alarm_time:
-        playsound.playsound('alarm.mp3')
-        break
-    time.sleep(30)
+                    <div id="openapi-code" class="tab-content">
+def generate_docs(spec, output_dir):
+    """Generate endpoint pages plus an overview page from an OpenAPI spec."""
+    paths = spec.get('paths', {})
+    for path, path_item in paths.items():
+        for method, operation in path_item.items():
+             # Generates individual MD pages with frontmatter
+            metadata = generate_doc_page(
+                path=path, method=method,
+                operation=operation, spec=spec,
+                output_dir=output_dir
+            )
+            operations.append(metadata)
+    return operations
                     </div>
-                    
-                    <div id="alarm-features" class="tab-content" style="display: none;">
-• Simple time-based alarm system
-• Customizable alarm time
-• Audio notification support
-• Lightweight and efficient
-• Easy to modify and extend
+
+                    <div id="openapi-features" class="tab-content" style="display: none;">
+• Converts OpenAPI/Swagger JSON/YAML to Markdown
+• Adds Docusaurus-compatible frontmatter automatically
+• Generates responsive tables for parameters and responses
+• Creates curl examples from schema definitions
                     </div>
-                    
-                    <button class="copy-button" onclick="copyCode('alarm-code')">Copy Code</button>
+
+                    <button class="copy-button" onclick="copyCode('openapi-code')">Copy Snippet</button>
+                </div>
+            </div>
+
+            <div class="project supporting-project">
+                <h4><i class="fa-solid fa-list-check"></i> Release Notes Generator</h4>
+                <p class="project-meta"><strong>File:</strong> <a href="release_notes_generator.py" target="_blank">release_notes_generator.py</a> | <strong>Libs:</strong> subprocess, re</p>
+                <p>Parses Git commit logs using Conventional Commits patterns to generate organized, formatted Markdown changelogs automatically.</p>
+
+                <div class="project-highlights">
+                    <span class="highlight">Git Automation</span>
+                    <span class="highlight">Conventional Commits</span>
+                    <span class="highlight">Changelog Gen</span>
+                    <span class="highlight">Python</span>
+                </div>
+
+                <div class="code-section">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" onclick="showTab('release-code', this)">Snippet</button>
+                        <button class="tab-button" onclick="showTab('release-features', this)">Features</button>
+                    </div>
+
+                    <div id="release-code" class="tab-content">
+def parse_commits(commit_lines):
+    """Parses lines into categories based on Conventional Commits."""
+    categorized = defaultdict(list)
+    for line in commit_lines:
+        match = COMMIT_PATTERN.match(line)
+        if match:
+            c_type, c_scope, c_desc = match.groups()
+            # Groups by type (e.g. 'feat' -> '✨ New Features')
+            header = TYPE_MAP.get(c_type, '🛠 Other Changes')
+            categorized[header].append(c_desc)
+    return categorized
+                    </div>
+
+                    <div id="release-features" class="tab-content" style="display: none;">
+• Parses Git history for Conventional Commit messages
+• Groups changes by type (Features, Fixes, Chores, etc.)
+• Auto-generates Markdown-formatted changelogs
+• Supports date-based versioning for drafts
+                    </div>
+
+                    <button class="copy-button" onclick="copyCode('release-code')">Copy Snippet</button>
+                </div>
+            </div>
+
+            <div class="project supporting-project">
+                <h4><i class="fa-solid fa-camera"></i> Automated Screenshot Tool</h4>
+                <p class="project-meta"><strong>File:</strong> <a href="screenshot_generator.py" target="_blank">screenshot_generator.py</a> | <strong>Libs:</strong> selenium, json</p>
+                <p>Uses Selenium WebDriver to capture and update screenshots for documentation from a list of URLs, supporting headless execution for build servers.</p>
+
+                <div class="project-highlights">
+                    <span class="highlight">Selenium</span>
+                    <span class="highlight">Visual Testing</span>
+                    <span class="highlight">Headless Chrome</span>
+                    <span class="highlight">Automation</span>
+                </div>
+
+                <div class="code-section">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" onclick="showTab('screenshot-code', this)">Snippet</button>
+                        <button class="tab-button" onclick="showTab('screenshot-features', this)">Features</button>
+                    </div>
+
+                    <div id="screenshot-code" class="tab-content">
+def process_screenshots(config_file, output_dir, headless=True):
+    """Reads a JSON config and captures screenshots via Selenium."""
+    driver = setup_driver(headless)
+    with open(config_file) as f:
+        shots = json.load(f)
+    
+    for item in shots:
+        driver.set_window_size(item['width'], item['height'])
+        driver.get(item['url'])
+        driver.save_screenshot(f"{output_dir}/{item['output']}")
+    driver.quit()
+                    </div>
+
+                    <div id="screenshot-features" class="tab-content" style="display: none;">
+• Automated screenshot capture from JSON config
+• Headless mode support for CI/CD pipelines
+• Configurable viewport sizes (mobile/desktop)
+• Batch processing for multiple documentation assets
+                    </div>
+
+                    <button class="copy-button" onclick="copyCode('screenshot-code')">Copy Snippet</button>
                 </div>
             </div>
         </div>
+
+        <section class="contact-banner portfolio-cta">
+            <div>
+                <p class="section-kicker">Next step</p>
+                <h3 class="section-heading">Want the portfolio plus writing context?</h3>
+                <p class="section-subtext">You can browse the starter blog articles for API docs, onboarding, and docs workflow topics, or jump back to the resume for experience details.</p>
+            </div>
+            <div class="contact-actions">
+                <a href="blog.html" class="view-project-btn">Open Blog</a>
+                <a href="resume.html" class="secondary-btn">View Resume</a>
+            </div>
+        </section>
     </section>
 </main>
 
 <footer>
-    &copy; 2025 Madaswamy Portfolio
+    &copy; 2026 Madaswamy Portfolio
 </footer>
 
 <!-- Back to Top Button -->
@@ -150,24 +411,6 @@ while True:
 </button>
 
 <script src="script.js"></script>
-<script>
-// Back to Top Button Functionality
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
 
-// Show/hide back to top button based on scroll position
-window.addEventListener('scroll', function() {
-    const backToTopButton = document.getElementById('backToTop');
-    if (window.pageYOffset > 300) {
-        backToTopButton.classList.add('show');
-    } else {
-        backToTopButton.classList.remove('show');
-    }
-});
-</script>
 </body>
 </html>
