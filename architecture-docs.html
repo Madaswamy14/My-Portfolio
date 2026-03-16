@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Technical deep-dive into a modern payment gateway architecture: sequence flows, component interactions, and fraud detection logic.">
+    <title>Architecture: Modern Payment Gateway | Madaswamy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleindex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="dark">
+
+    <header>
+        <h1>Madaswamy</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Portfolio/swapi-modern.html">API Docs</a>
+            <a href="developer-portal/index.html">Developer Portal</a>
+            <a href="portfolio.html">Case Studies</a>
+            <a href="resume.html">Resume</a>
+            <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="main-section architecture-shell">
+            <div class="page-header">
+                <h2><i class="fa-solid fa-sitemap"></i> Architecture: Modern Payment Gateway</h2>
+                <p class="subtitle">A technical deep-dive into the components, security, and data flow of a high-scale payment processing system.</p>
+            </div>
+
+            <div class="info-block">
+                <h3>Executive Summary</h3>
+                <p>This document details the architectural design of a scalable payment gateway capable of processing thousands of transactions per second. The system prioritizes <strong>data integrity, low latency, and modular fraud prevention</strong>.</p>
+            </div>
+
+            <div class="info-block">
+                <h3>System Overview</h3>
+                <p>The architecture is comprised of five primary layers that handle everything from user input to final bank settlement. Each layer is decoupled to ensure high availability and independent scalability.</p>
+                <img src="payments_architecture_diagram.png" alt="Modern Payment Gateway Architecture Diagram" class="documentation-image">
+            </div>
+
+            <div class="info-block">
+                <h3>Core Components</h3>
+                
+                <h4>1. The Entry Point (Inbound Gateway)</h4>
+                <p>Receives encrypted payload from the merchant SDK. It validates the request format and performs initial rate-limiting before passing the transaction to the orchestration engine.</p>
+                
+                <h4>2. Orchestration Engine</h4>
+                <p>The "brain" of the system. It manages the transaction lifecycle, coordinating between fraud detection, the ledger, and external card networks.</p>
+
+                <h4>3. Real-time Fraud Detection</h4>
+                <p>A low-latency scoring service that analyzes transaction metadata against historical patterns and risk rules (e.g., velocity checks, geolocation mismatches).</p>
+
+                <h4>4. Transaction Ledger</h4>
+                <p>An immutable, double-entry record of every financial movement. This is the source of truth for reconciliation and settlement.</p>
+            </div>
+
+            <div class="info-block">
+                <h3>Transaction Life Cycle</h3>
+                <ol class="step-list">
+                    <li><strong>Authorization:</strong> The customer initiates a payment; funds are reserved at the issuing bank.</li>
+                    <li><strong>Fraud Check:</strong> The system runs 50+ rules in &lt;100ms to determine risk score.</li>
+                    <li><strong>Clearing:</strong> The transaction is confirmed and moved to the internal ledger.</li>
+                    <li><strong>Settlement:</strong> Funds are moved from the issuing bank to the merchant's account (batch process).</li>
+                </ol>
+            </div>
+
+            <div class="info-block">
+                <h3>Security & Compliance</h3>
+                <ul class="doc-list">
+                    <li><strong>PCI-DSS Level 1:</strong> Tier-one compliance for cardholder data environments.</li>
+                    <li><strong>Tokenization:</strong> Sensitive card data never touches the merchant's server.</li>
+                    <li><strong>Mutual TLS (mTLS):</strong> All internal service communication is authenticated and encrypted.</li>
+                </ul>
+            </div>
+
+            <div class="project-links" style="margin-top: 40px; text-align: center;">
+                <a href="portfolio.html" class="btn-link">Back to Case Studies</a>
+                <a href="Portfolio/swapi-modern.html" class="secondary-btn">View API Docs</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Madaswamy | Technical Writer | DevEx Specialist</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

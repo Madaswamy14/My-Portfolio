@@ -139,27 +139,46 @@
 
         <!-- Getting Started Section -->
         <section id="getting-started" class="content-section">
-            <h2>Getting started</h2>
-            <p>This is where the magic begins! The following steps will help you to get
-            started with your journey towards creating some awesome Star Wars apps using the
-            API:</p>
+            <h2>Quickstart</h2>
+            <p>Ready to build? You can start making requests to SWAPI immediately. No API key or registration is required.</p>
+            
+            <div class="code-block">
+                <span class="code-header">Example Request (cURL)</span>
+                <code>curl https://swapi.dev/api/people/1/</code>
+            </div>
 
-            <ol class="step-list">
-                <li>
-                    <strong>No registration required</strong> - SWAPI is completely open and free to use.
-                </li>
-                <li>
-                    <strong>Make your first request</strong> - Simply send HTTP requests to our endpoints.
-                    All API requests should be made to the base URL with the appropriate endpoint path.
-                </li>
-                <li>
-                    <strong>Parse the JSON response</strong> - All responses are returned in JSON format
-                    for easy integration with your applications.
-                </li>
-            </ol>
-
-            <p>You can follow the <a href="#quick-start">Quick Start</a> guide to learn how to make
-            your first SWAPI call.</p>
+            <div class="code-block">
+                <span class="code-header">Example Response</span>
+                <code>{
+  "name": "Luke Skywalker",
+  "height": "172",
+  "mass": "77",
+  "hair_color": "blond",
+  "skin_color": "fair",
+  "eye_color": "blue",
+  "birth_year": "19BBY",
+  "gender": "male",
+  "homeworld": "https://swapi.dev/api/planets/1/",
+  "films": [
+    "https://swapi.dev/api/films/1/",
+    "https://swapi.dev/api/films/2/",
+    "https://swapi.dev/api/films/3/",
+    "https://swapi.dev/api/films/6/"
+  ],
+  "species": [],
+  "vehicles": [
+    "https://swapi.dev/api/vehicles/14/",
+    "https://swapi.dev/api/vehicles/30/"
+  ],
+  "starships": [
+    "https://swapi.dev/api/starships/12/",
+    "https://swapi.dev/api/starships/22/"
+  ],
+  "created": "2014-12-09T13:50:51.644000Z",
+  "edited": "2014-12-20T21:17:56.891000Z",
+  "url": "https://swapi.dev/api/people/1/"
+}</code>
+            </div>
         </section>
 
         <!-- Concepts Section -->
