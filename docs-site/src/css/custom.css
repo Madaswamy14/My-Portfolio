@@ -47,11 +47,14 @@ html[data-theme='dark'] body {
 }
 
 .button.button--secondary {
+  --ifm-button-background-color: rgba(15, 23, 42, 0.65);
+  --ifm-button-border-color: var(--portal-border);
   border-color: var(--portal-border);
   color: var(--ifm-font-color-base);
 }
 
 .button.button--secondary:hover {
+  --ifm-button-background-color: rgba(37, 99, 235, 0.18);
   border-color: var(--ifm-color-primary-light);
   color: var(--ifm-heading-color);
 }
