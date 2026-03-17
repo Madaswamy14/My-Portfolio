@@ -3,7 +3,7 @@ title: Jira Getting Started
 description: Jira documentation structured by topic type — concept overview, task workflow, reference, and common mistakes.
 ---
 
-# Jira Documentation (Structured by Topic Type)
+# Jira Getting Started Guide
 
 ---
 
@@ -11,7 +11,7 @@ description: Jira documentation structured by topic type — concept overview, t
 
 ### What is Jira?
 
-Jira is a **work tracking system** used by software teams to plan, track, and deliver work.
+Jira is a work tracking system used by software teams to plan, track, and deliver work.
 
 It connects:
 
@@ -24,7 +24,7 @@ It connects:
 
 ### Why Jira Matters
 
-Jira acts as a **single source of truth** for:
+Jira acts as a single source of truth for:
 
 - Who is working on what
 - Current progress of tasks
@@ -36,7 +36,7 @@ When used correctly, it improves team visibility, collaboration, and delivery sp
 
 ### Key Idea
 
-Jira is not just a task list. It is a **communication system for work across a team**.
+Jira is not just a task list. It is a communication system for work across a team.
 
 ---
 
@@ -55,8 +55,6 @@ Pick up a task, complete it, and move it through the workflow correctly.
 - Basic understanding of development workflow
 
 ---
-
-### Steps
 
 #### 1. Open Your Board
 
