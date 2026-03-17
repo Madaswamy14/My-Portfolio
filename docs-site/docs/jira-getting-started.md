@@ -1,41 +1,19 @@
 ---
-title: Jira Getting Started
-description: Jira documentation structured by topic type covering concept overview, task workflow, reference, and common mistakes.
+title: Jira Getting Started Guide
+description: Getting Started Guide consist of Jira overview, complete your first Jira workflow, core Jira concepts, and common mistakes.
 ---
 
 # Jira Getting Started Guide
 
 ---
 
-## Concept: Jira Overview
+## Jira Overview
 
-Jira is a work-tracking system that software teams use to plan, track, and deliver work. It connects requirements, work items, code changes, and completed features. 
-
-Jira acts as a single source of truth for assigned work, task progress, and feature status. When used correctly, it improves team visibility, collaboration, and delivery speed. Jira is not just a task list. It is a communication system for work across a team.
+ Jira is a work-tracking system for software teams to plan, track, and deliver work. It connects requirements, work items, code changes, and completed features. Jira acts as a central repository for assigned work, task progress, and feature status. Jira improves team visibility, collaboration, and delivery speed. Jira is not just a task list. It is a communication system for work across a team.
 
 ---
 
-## Task: Complete Your First Jira Workflow
-
-**Goal**: Pick up a task, complete it, and move it through the workflow correctly.
-
-**Prerequisites**: Access to a Jira project, assigned task or access to sprint board, and a basic understanding of development workflow.
-
-**Steps**:
-
-1. Open your board. Navigate to **Scrum Board** for sprint teams or **Kanban Board** for continuous workflow.
-2. Find your task. Locate work using **Assigned to me** or the current sprint.
-3. Review the task. Check the description, acceptance criteria, and dependencies. If unclear, comment and ask for clarification before starting.
-4. Start work. Move the task to **In Progress**. This status indicates ownership and prevents others from duplicating work.
-5. Implement and link code. Create a branch using the ticket ID, open a Pull Request (PR), and link the PR to the Jira ticket.
-6. Request review. Move the task to **Code Review**.
-7. Complete the task. Move the task to **Done** only after the code is merged, the review is approved, and the acceptance criteria are met.
-
-**Result**: Your task is fully tracked from assignment to completion.
-
----
-
-## Reference: Core Jira Concepts
+## Core Jira Concepts
 
 **Epic**: Large feature spanning multiple tasks
 
@@ -57,7 +35,37 @@ In Jira, all of the above are technically referred to as **Issues**.
 
 ---
 
-## Reference: Common Mistakes
+## Complete Your First Jira Workflow
+
+In this topic, you will learn how to select a task, work on it, submit for review, and complete it.
+
+**Prerequisites**: 
+- Access to a Jira project
+- Assigned task or access to sprint board
+- Basic understanding of development workflow
+
+1. Open your board.
+2. Navigate to **Scrum Board** for sprint teams or **Kanban Board** for continuous workflow.
+3. Use **Assigned to me** or the current sprint to find your task.
+4. Review the task. Check the description, acceptance criteria, and dependencies. 
+   >**Note:** If unclear, comment and ask for clarification before starting.
+5. Move the task to **In Progress** and start working. 
+This status indicates ownership and prevents others from duplicating work.
+
+6. Once completed, to submit for review, do the following: 
+   1. Create a branch using the ticket ID
+   2. Open a Pull Request (PR), and link the PR to the Jira ticket.
+   >**Note:** If you are not sure how to create a branch and open a PR, refer to the [Git and GitHub documentation](https://docs.github.com/en/get-started/quickstart/hello-world).
+   3. Request review. Move the task to **Code Review**.
+   
+7. After the review is completed, merge the code to main branch.
+8. Change the task status to **Done**.
+
+Your task is fully tracked from assignment to completion.
+
+---
+
+## Common Mistakes
 
 | Category | Mistake | Impact |
 | --- | --- | --- |
@@ -69,7 +77,7 @@ These mistakes reduce visibility, team coordination, and delivery speed.
 
 ---
 
-## Reference: Real-World Scenarios
+## Real-World Scenarios
 
 **Blocked Task**
 Add a comment explaining the blocker. Tag the relevant teammate. Do not leave the task idle without context.
