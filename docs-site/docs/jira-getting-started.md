@@ -1,209 +1,179 @@
 ---
 title: Jira Getting Started
-description: Get productive with Jira as a developer on a real team — find your work, manage the workflow, and collaborate effectively.
+description: Jira documentation structured by topic type — concept overview, task workflow, reference, and common mistakes.
 ---
 
-# Jira Getting Started Guide (Developer Workflow)
-
-## Overview
-
-This guide helps you get productive with Jira as a **developer on a real team**.
-
-By the end, you'll be able to:
-
-- Find and understand your assigned work
-- Move tasks through the workflow correctly
-- Collaborate with your team using Jira
+# Jira Documentation (Structured by Topic Type)
 
 ---
 
-## Who This Is For
+## Concept: Jira Overview
 
-- Software Developers (Frontend / Backend)
-- QA Engineers
-- New team members onboarding to Jira
+### What is Jira?
+
+Jira is a **work tracking system** used by software teams to plan, track, and deliver work.
+
+It connects:
+
+- Requirements (what to build)
+- Work items (tasks, stories, bugs)
+- Development (code changes)
+- Delivery (completed features)
 
 ---
 
-## Mental Model: How Jira Works
+### Why Jira Matters
 
-Jira is a **work tracking system** used to manage software development.
+Jira acts as a **single source of truth** for:
 
-### Core Concepts
+- Who is working on what
+- Current progress of tasks
+- Status of features in development
 
-| Term | Description |
+When used correctly, it improves team visibility, collaboration, and delivery speed.
+
+---
+
+### Key Idea
+
+Jira is not just a task list. It is a **communication system for work across a team**.
+
+---
+
+## Task: Complete Your First Jira Workflow
+
+### Goal
+
+Pick up a task, complete it, and move it through the workflow correctly.
+
+---
+
+### Prerequisites
+
+- Access to a Jira project
+- Assigned task or access to sprint board
+- Basic understanding of development workflow
+
+---
+
+### Steps
+
+#### 1. Open Your Board
+
+Navigate to:
+
+- Scrum Board — for sprint teams
+- Kanban Board — for continuous workflow
+
+#### 2. Find Your Task
+
+Locate work using **Assigned to me** or the current sprint.
+
+#### 3. Review the Task
+
+Check the description, acceptance criteria, and dependencies. If unclear, comment and ask for clarification before starting.
+
+#### 4. Start Work
+
+Move the task to **In Progress**. This indicates ownership and tells others not to pick it up.
+
+#### 5. Implement and Link Code
+
+1. Create a branch using the ticket ID — example: `feature/JIRA-123-login-api`
+2. Open a Pull Request (PR)
+3. Link the PR to the Jira ticket
+
+#### 6. Request Review
+
+Move the task to **Code Review**.
+
+#### 7. Complete the Task
+
+Move the task to **Done** only after:
+
+- Code is merged
+- Review is approved
+- Acceptance criteria are met
+
+---
+
+### Result
+
+Your task is fully tracked from **assignment → development → completion**.
+
+---
+
+## Reference: Core Jira Concepts
+
+### Issue Types
+
+| Type | Description |
 | --- | --- |
-| **Epic** | Large feature (e.g., "User Authentication") |
-| **Story** | User-level requirement (e.g., "User can log in") |
-| **Task** | Technical work (e.g., "Implement login API") |
-| **Bug** | Something broken that needs fixing |
+| **Epic** | Large feature spanning multiple tasks |
+| **Story** | User-level requirement |
+| **Task** | Technical work |
+| **Bug** | Defect or issue in existing functionality |
 
-### Workflow States (Typical)
+> In Jira, all of the above are technically referred to as **Issues**.
+
+---
+
+### Workflow States
 
 ```
 Backlog → To Do → In Progress → Code Review → Done
 ```
 
-> Jira tracks the lifecycle of work from idea → production.
-
 ---
 
-## Quickstart (5-Minute Workflow)
+### Acceptance Criteria
 
-### 1. Open Your Project
-
-- Navigate to your team's Jira project
-- Go to **Backlog** or **Board**
+Defines what must be true for a task to be considered complete and how success is measured.
 
 ---
-
-### 2. Find Your Assigned Task
-
-Use filters:
-
-- **Assigned to me**
-- Sprint board (current work)
-
-Each task contains:
-
-- Description
-- Acceptance criteria
-- Priority
-- Assignee
-
----
-
-### 3. Understand the Task Before Starting
-
-Before writing any code, check:
-
-- ✅ What is the expected outcome?
-- ✅ Are acceptance criteria clear?
-- ✅ Are dependencies mentioned?
-
-If unclear → comment on the ticket or ask your team.
-
----
-
-### 4. Move Task to "In Progress"
-
-When you start working, change the status to **In Progress**.
-
-This signals:
-- You are actively working on it
-- Others should not pick it up
-
----
-
-### 5. Do the Work and Link Code
-
-While working:
-
-1. Create a branch named after the ticket — example:
-   ```
-   feature/JIRA-123-login-api
-   ```
-2. Link your Pull Request (PR) to the Jira ticket
-
-This creates traceability between code, task, and feature.
-
----
-
-### 6. Move to "Code Review"
-
-After completing your work, change the status to **Code Review**.
-
-This tells reviewers the work is ready for validation.
-
----
-
-### 7. Move to "Done"
-
-Once the PR is approved, code is merged, and QA (if applicable) is complete — move the task to **Done**.
-
----
-
-## Real-World Workflow Example
-
-**Scenario:** You joined a backend team. Your first task is:
-
-> "Implement login API" — ticket JIRA-123
-
-### Flow:
-
-1. Open backlog
-2. Find ticket → JIRA-123
-3. Read acceptance criteria
-4. Move to **In Progress**
-5. Write code + create PR named `feature/JIRA-123-login-api`
-6. Link PR to ticket
-7. Move to **Code Review**
-8. After approval → **Done**
-
----
-
-## Common Mistakes to Avoid
-
-| Mistake | Why It Matters |
-| --- | --- |
-| Moving task to "Done" without merging code | Creates false visibility; work may be incomplete |
-| Not updating status | Team loses visibility into what's in progress |
-| Ignoring acceptance criteria | Code may not match what was requested |
-| Working on unassigned tickets | Causes duplication and confusion |
-| Not linking PR to Jira | Breaks traceability between code and tasks |
-
----
-
-## Team Collaboration Best Practices
-
-- Use comments for updates and blockers
-- Tag teammates when clarification is needed
-- Keep ticket status updated at all times
-- Break large tasks into smaller, trackable ones
-
----
-
-## Advanced Concepts
 
 ### Sprint
 
-A fixed time period (typically 2 weeks) in which the team commits to completing a defined set of tasks.
-
-### Backlog Grooming
-
-The process of refining tasks, adding details, and prioritizing work before a sprint begins.
-
-### Labels and Tags
-
-Used for categorization and filtering — helpful for searching issues across a large project.
+A fixed time period (typically two weeks) where a team completes planned work.
 
 ---
 
-## When to Use Jira vs Other Tools
+### Backlog
 
-Use Jira when:
-
-- Work needs to be tracked across multiple people
-- Tasks move through structured, multi-step workflows
-- You need audit trails or sprint-level reporting
+A prioritized list of upcoming tasks waiting to be assigned to a sprint.
 
 ---
 
-## Summary
+## Reference: Common Mistakes
 
-Jira is not just a task list — it is a **system for managing and communicating work across a team**.
+| Category | Mistake | Why It Matters |
+| --- | --- | --- |
+| Workflow | Moving task to Done before code is merged | Creates false visibility |
+| Workflow | Not updating task status | Team loses visibility |
+| Communication | Not commenting when blocked | Leaves task idle without context |
+| Communication | Not asking for clarification | Code may miss requirements |
+| Process | Ignoring acceptance criteria | Work may not match what was requested |
+| Process | Working on unassigned tasks | Causes duplication and confusion |
+| Process | Not linking PR to Jira | Breaks traceability between code and tasks |
 
-Used correctly, it helps:
-
-- Improve visibility into what is being worked on
-- Reduce confusion about task ownership
-- Ship features faster with less coordination overhead
+These mistakes reduce visibility, team coordination, and delivery speed.
 
 ---
 
-## Next Steps
+## Reference: Real-World Scenarios
 
-- Learn how to create and groom tickets
-- Understand sprint planning and capacity
-- Explore dashboards and reporting
-- Practice using Jira in real workflows with your team
+### Blocked Task
+
+If work is blocked:
+
+1. Add a comment explaining the blocker
+2. Tag the relevant teammate
+3. Do not leave the task idle without context
+
+### Reopened Task
+
+If issues are found after completion, the task moves back to **In Progress**. Fix the issues and repeat the workflow.
+
+### Changing Requirements
+
+If requirements change, update the ticket and align with the team before continuing work.
