@@ -12,7 +12,7 @@ description: Getting Started Guide for Jira Software, from zero to your first sp
 ## 1. Overview
 Jira Software is a project management and issue-tracking platform developed by Atlassian. Originally built for software development teams, it has evolved into a versatile tool used by teams across IT, marketing, HR, and operations to plan work, track progress, and ship results.
 
-This guide walks you through everything you need to get productive in Jira — from signing up to running your first sprint.
+This guide walks you through everything you need to get productive in Jira, from signing up to running your first sprint.
 
 > **📋 Scope:** This guide covers Jira Software (cloud edition). Steps may vary slightly for Jira Work Management or Data Center deployments.
 
@@ -54,32 +54,35 @@ Jira offers four plans. Choose the one that fits your team:
 Once logged in, you will land on the Jira home screen. Here is a breakdown of the key interface areas:
 
 **Top Navigation Bar**
-* **Your Work** – A personalized dashboard showing your assigned issues and recent activity.
-* **Projects** – Browse, search, and switch between all projects you have access to.
-* **Filters** – Save and manage custom JQL (Jira Query Language) searches.
-* **Dashboards** – Create visual dashboards with gadgets for your key metrics.
-* **Teams** – Manage people and workload across your organization.
+* **Your Work** : A personalized dashboard showing your assigned issues and recent activity.
+* **Projects** : Browse, search, and switch between all projects you have access to.
+* **Filters** : Save and manage custom JQL (Jira Query Language) searches.
+* **Dashboards** : Create visual dashboards with gadgets for your key metrics.
+* **Teams** : Manage people and workload across your organization.
 
 **Left Sidebar (Project Context)**
-* **Board** – Visualize active sprint tasks on a Scrum or Kanban board.
-* **Backlog** – Manage the full queue of work not yet in a sprint.
-* **Roadmap** – View the high-level timeline across epics and versions.
-* **Reports** – Access built-in charts like Burndown, Velocity, and Control charts.
-* **Project Settings** – Configure workflows, permissions, and notifications.
+* **Board** : Visualize active sprint tasks on a Scrum or Kanban board.
+* **Backlog** : Manage the full queue of work not yet in a sprint.
+* **Roadmap** : View the high-level timeline across epics and versions.
+* **Reports** : Access built-in charts like Burndown, Velocity, and Control charts.
+* **Project Settings** : Configure workflows, permissions, and notifications.
 
 > **🔍 Note:** The sidebar items vary depending on whether your project uses a Scrum or Kanban template.
 
 ## 5. Creating Your First Project
 ### 5.1 Start a New Project
-1. From the top navigation, click **Projects > Create project**.
-2. Select a project template. For most software teams, choose **Scrum** or **Kanban**.
-3. Enter a Project name (e.g., *My First Project*) and a Project key (e.g., *MFP*). The key is used to prefix all issue IDs.
-4. Set the Access level: **Private** (recommended for new teams) or **Public**.
-5. Click **Create**. Jira creates the project and lands you on the project board.
+1. From the top navigation, click **Projects** and select **Create project**.
+2. Select a project template and choose **Scrum** or **Kanban**.
+> **🔍 Note:** The sidebar items vary depending on whether your project uses a Scrum or Kanban template.
+3. Enter a project name. For example, My First Project.
+4. Enter a project key. For example, MFP. The key is used to prefix all issue IDs.
+5. Set the access level to **Private** (recommended for new teams) or **Public**.
+6. Click **Create**. 
+    Jira creates the project and lands you on the project board.
 
-### 5.2 Scrum vs. Kanban — Which Should You Choose?
+## 5.2 Scrum or Kanban
 
-| Feature | Scrum vs. Kanban |
+| Feature | Scrum or Kanban |
 | --- | --- |
 | Work cadence | Scrum uses time-boxed sprints (1–4 weeks); Kanban has a continuous flow |
 | Best for | Scrum: feature development teams; Kanban: operations and support teams |
@@ -96,26 +99,28 @@ An issue is the fundamental unit of work in Jira. It can represent a story, task
 | --- | --- |
 | Epic | A large body of work that spans multiple sprints and breaks down into stories. |
 | Story | A user-facing feature or requirement written from the end-user perspective. |
-| Task | A unit of work that does not directly map to a user story (e.g., infrastructure). |
+| Task | A unit of work that does not directly map to a user story. For example: infrastructure. |
 | Bug | A defect or unintended behavior that needs to be fixed. |
 | Subtask | A smaller piece of work that belongs to a Story, Task, or Bug. |
 
 ### 6.2 Creating an Issue
 1. Click the **+ Create** button in the top navigation or press `C` on your keyboard.
 2. Select the Project and Issue Type.
-3. Enter a clear Summary (e.g., *"As a user, I can reset my password via email"*).
-4. Fill in optional fields: Description, Assignee, Priority, Labels, Story Points, Sprint, and Epic Link.
-5. Click **Create**. The issue appears in your Backlog or active sprint.
+3. Enter a Summary. For example, As a user, I can reset my password via email.
+> **Note:** Write summaries in plain language that any team member can understand. Avoid abbreviations and acronyms in issue titles.
+4. (Optional) Fill in the fields: Description, Assignee, Priority, Labels, Story Points, Sprint, and Epic Link.
+5. Click **Create**.
+    The issue appears in your Backlog or active sprint.
 
-> **✅ Best Practice:** Write summaries in plain language that any team member can understand. Avoid abbreviations and acronyms in issue titles.
+
 
 ### 6.3 Issue Workflow States
 Every issue moves through a workflow. The default Jira workflow includes these statuses:
 
-* **To Do** – Work has not yet started.
-* **In Progress** – A team member is actively working on the issue.
-* **In Review** – The work is complete and awaiting review or QA.
-* **Done** – The issue is resolved and accepted.
+* **To Do** : Work has not yet started.
+* **In Progress** : A team member is actively working on the issue.
+* **In Review** : The work is complete and awaiting review or QA.
+* **Done** : The issue is resolved and accepted.
 
 You can drag and drop issues between columns on the board to transition their status, or open an issue and use the status dropdown.
 
@@ -123,43 +128,50 @@ You can drag and drop issues between columns on the board to transition their st
 ### 7.1 Populate the Backlog
 Before starting a sprint, build up your backlog:
 
-1. Navigate to your project and click **Backlog** in the left sidebar.
-2. Create all known Stories, Tasks, and Bugs using the **+ Create Issue** shortcut at the bottom of each Epic section.
-3. Estimate effort using Story Points by opening each issue and setting the *Story Points* field.
-4. Prioritize the backlog by dragging issues up and down. The highest-priority items should be at the top.
+1. Navigate to your project.
+2. Click **Backlog** in the left sidebar.
+3. At the bottom of each Epic section, select **+ Create Issue** to create Stories, Tasks, and Bugs.
+4. Open each issue and set the **Story Points** field to estimate effort.
+5. Drag issues up and down to prioritize the backlog. The highest-priority items should be at the top.
 
 ### 7.2 Create and Start a Sprint
 1. In the Backlog view, click **Create Sprint**. A new sprint container appears at the top.
-2. Drag issues from the backlog into the sprint container. Focus on the amount of work your team can realistically complete.
-3. Click **Start Sprint**. A dialog appears asking for Sprint name, Duration (1, 2, 3, or 4 weeks), and Start/End dates.
-4. Click **Start** and your sprint is now active. Switch to the Board view to see all issues.
+2. Drag issues from the backlog into the sprint container. Estimate the amount of work your team can complete.
+3. Click **Start Sprint** and A dialog appears.
+4. Enter Sprint name, Duration, and Start/End dates.
+5. Click **Start**.
+   Your sprint is now active. Switch to the Board view to see all issues.
 
 > **💡 Tip:** Aim to include only as many story points as your team has historically completed per sprint (your velocity). For new teams, start conservatively.
 
 ### 7.3 Complete a Sprint
-1. At the end of the sprint period, click **Complete Sprint** in the Board view.
-2. Jira will prompt you to move any incomplete issues: send them to the Backlog or to the next sprint.
-3. A Sprint Report is automatically generated. Review it with your team in your retrospective.
+1. At the end of the sprint period, in the Board view, click **Complete Sprint**.
+2. Jira will prompt you to move any incomplete issues. You can move them to the Backlog or to the next sprint.
+3. Jira will generate a Sprint Report. Review it with your team in your retrospective.
 
 ## 8. Collaborating with Your Team
 ### 8.1 Inviting Team Members
-1. Go to **Project Settings > People**.
-2. Click **Add people** and enter their email addresses.
+1. Go to **Project Settings** and select **People**.
+2. Click **Add people** and enter the email addresses of the team members you want to invite.
 3. Assign a role: **Viewer**, **Member**, or **Administrator**.
-4. Click **Add**. Invitees receive an email with a link to join the project.
+4. Click **Add**. 
+    Invitees receive an email with a link to join the project.
 
 ### 8.2 Commenting and Mentioning
-* Open any issue and scroll to the **Activity** section at the bottom.
-* Type in the comment box. Use `@mention` to notify a specific team member (e.g., `@Jane Smith`).
-* Use `/mention`, `/image`, `/table`, or `/code` in the description or comments to insert rich content.
+1. Open any issue and scroll to the bottom of the page.
+2. On the **Activity** section, in the comment box, type the description or comments.
+ * To notify a specific team member, for example, `@Jane Smith`, use `@mention`.
+ * To insert rich content, use `/mention`, `/image`, `/table`, or `/code`.
 
 ### 8.3 Watching and Notifications
-* Click the **Watch** icon (eye) on any issue to subscribe to updates.
-* You will receive email notifications whenever the issue is updated, commented on, or transitioned.
-* Configure your notification preferences under **Profile > Notification settings**.
+1. On a issue, click the **Watch** icon (eye) to subscribe to updates.
+2. When an issue is updated, commented, or transitioned you will receive email notifications.
+3. To configure your notification, 
+  1. Go to **Profile**. 
+  2. Select **Notification settings** and choose your preference.
 
 ## 9. Key Reports and Metrics
-Jira's built-in reports give your team insight into velocity, quality, and delivery health.
+Jira built-in reports give your team insight into velocity, quality, and delivery health.
 
 | Report | What It Shows |
 | --- | --- |
@@ -170,7 +182,10 @@ Jira's built-in reports give your team insight into velocity, quality, and deliv
 | Epic Report | Tracks progress toward completing an epic over time. |
 | Control Chart | Measures cycle time for individual issues to identify process efficiency. |
 
-To access reports, click **Reports** in the left sidebar of your project. Select any report from the list on the left side of the Reports page.
+To access reports, 
+1. On the left sidebar of your project, click **Reports**.
+2. On the left side of the Reports page, select the report from the list.
+
 
 ## 10. Keyboard Shortcuts
 Learning these shortcuts will significantly speed up your workflow:
@@ -190,17 +205,17 @@ Learning these shortcuts will significantly speed up your workflow:
 
 | Problem | Solution |
 | --- | --- |
-| Cannot see a project | Ask a project administrator to add you via Project Settings > People. |
+| Cannot see a project | Ask the project administrator to go to **Project Settings** page and select **People** option to add you. |
 | Sprint Start button is greyed out | The backlog sprint container must have at least one issue before starting. |
-| Cannot transition an issue | You may lack the required permission for that workflow transition. Contact your project admin. |
+| Cannot transition an issue | You does not have the required permission for that workflow transition. Contact your project admin. |
 | Assignee dropdown is empty | Only project members can be assigned. Invite the user to the project first. |
 | Reports show no data | Reports require at least one completed sprint. Complete your first sprint to generate data. |
 
 ## 12. Next Steps
-Congratulations — you are ready to manage your first project in Jira! Here are some recommended next steps to deepen your knowledge:
+You are now ready to manage your first project in Jira. Here are some recommended next steps to deepen your knowledge:
 
-* **Explore Automation:** Set up no-code automation rules under **Project Settings > Automation** to auto-assign issues, send notifications, or transition statuses.
-* **Configure Custom Workflows:** Tailor the workflow states to match your team process under **Project Settings > Workflows**.
+* **Explore Automation:** Set up no-code automation rules by using the **Automation** option in **Project Settings** to auto-assign issues, send notifications, or transition statuses.
+* **Configure Custom Workflows:** Verify and customize the workflow states to match your team process using the **Workflows** option in **Project Settings**.
 * **Connect Integrations:** Link Jira with Confluence (for documentation), Bitbucket or GitHub (for code), and Slack (for notifications).
 * **Learn JQL:** Use Jira Query Language to build powerful custom filters and dashboard gadgets.
 * **Set Up Roadmaps:** For Premium users, use Advanced Roadmaps to plan across multiple teams and projects.
@@ -208,4 +223,3 @@ Congratulations — you are ready to manage your first project in Jira! Here are
 > **📚 Resources:** Atlassian's official documentation is available at [https://support.atlassian.com/jira-software-cloud/](https://support.atlassian.com/jira-software-cloud/). The Atlassian Community forum at [https://community.atlassian.com](https://community.atlassian.com) is a great place to ask questions.
 
 ---
-*End of Document — Jira Software Getting Started Guide v1.0*
