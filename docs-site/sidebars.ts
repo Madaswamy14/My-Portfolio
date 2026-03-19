@@ -1,4 +1,4 @@
-import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -86,21 +86,7 @@ const sidebars: SidebarsConfig = {
         'acme-payments/devex-design',
       ],
     },
-    {
-      type: 'category',
-      label: 'Documentation Case Studies',
-      items: [
-        'facebook-events-quickstart',
-        'jira-getting-started',
-        'swapi-api-reference-sample',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Developer Portal System',
-      items: ['quickstart', 'authentication', 'api-reference', 'sdk-guide', 'tutorial'],
-    },
-  ],
+    ,
 };
 
 export default sidebars;

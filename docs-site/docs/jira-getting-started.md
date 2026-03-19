@@ -1,6 +1,7 @@
 ---
 title: Jira Getting Started Guide
 description: Getting Started Guide for Jira Software, from zero to your first sprint.
+draft: true
 ---
 
 # GETTING STARTED GUIDE: Jira Software
