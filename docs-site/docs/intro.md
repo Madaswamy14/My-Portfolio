@@ -22,11 +22,6 @@ This Docusaurus site is a **developer documentation portfolio** designed to show
 - [Facebook Events Quickstart](./facebook-events-quickstart.md)
 - [Jira Getting Started](./jira-getting-started)
 - [SWAPI API Reference](./swapi-api-reference.md)
-- [Quickstart](./quickstart.md)
-- [Authentication](./authentication.md)
-- [API Reference](./api-reference.md)
-- [SDK Guide](./sdk-guide.md)
-- [Tutorial](./tutorial.md)
 
 ## Why this matters for DevEx roles
 
