@@ -1,7 +1,6 @@
 ---
 title: Jira Getting Started Guide
 description: Getting Started Guide for Jira Software, from zero to your first sprint.
-draft: true
 ---
 
 # GETTING STARTED GUIDE: Jira Software
@@ -74,7 +73,6 @@ Once logged in, you will land on the Jira home screen. Here is a breakdown of th
 ### 5.1 Start a New Project
 1. From the top navigation, click **Projects** and select **Create project**.
 2. Select a project template and choose **Scrum** or **Kanban**.
-> **🔍 Note:** The sidebar items vary depending on whether your project uses a Scrum or Kanban template.
 3. Enter a project name. For example, My First Project.
 4. Enter a project key. For example, MFP. The key is used to prefix all issue IDs.
 5. Set the access level to **Private** (recommended for new teams) or **Public**.

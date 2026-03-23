@@ -134,7 +134,7 @@
                 </div>
 
                 <div class="project-links">
-                    <a href="developer-portal/docs/swapi-api-reference-sample" class="view-project-btn">
+                    <a href="developer-portal/docs/swapi-api-reference" class="view-project-btn">
                         <i class="fa-solid fa-book-open"></i> View in Developer Portal
                     </a>
                     <a href="Portfolio/swapi_API-docs.html" class="secondary-btn">View HTML Sample</a>
@@ -222,184 +222,148 @@
             <h3><i class="fa-solid fa-code"></i> Technical Automation Tools</h3>
             <p class="supporting-copy">I build Python tools to automate documentation quality, generation, and maintenance. These scripts demonstrate how I treat documentation as code to improve developer experience.</p>
 
-            <div class="project supporting-project">
-                <h4><i class="fa-solid fa-check-double"></i> Doc Quality Automation</h4>
-                <p class="project-meta"><strong>File:</strong> <a href="doc_quality_checker.py" target="_blank">doc_quality_checker.py</a> | <strong>Libs:</strong> requests, concurrent.futures</p>
-                <p>A recursive, multi-threaded link checker that validates local anchors, relative paths, and remote URLs. Designed for CI/CD pipelines to prevent broken docs.</p>
-                
-                <div class="project-highlights">
-                    <span class="highlight">CI/CD Ready</span>
-                    <span class="highlight">Multi-threading</span>
-                    <span class="highlight">Link Validation</span>
-                    <span class="highlight">Python</span>
-                </div>
+            <div class="portfolio-case-list">
+                <article class="project case-study-project">
+                    <span class="card-tag">Docs quality automation</span>
+                    <h4><i class="fa-solid fa-check-double"></i> Documentation Quality Automation Tool</h4>
+                    <p class="project-meta"><strong>Type:</strong> Documentation Automation | <strong>Format:</strong> Python Validation CLI</p>
+                    <p class="case-study-summary">A Python checker that scans markdown docs for broken links, missing images, and invalid heading references so documentation quality issues are caught before publishing.</p>
 
-                <div class="code-section">
-                    <div class="tab-buttons">
-                        <button class="tab-button active" onclick="showTab('quality-code', this)">Snippet</button>
-                        <button class="tab-button" onclick="showTab('quality-features', this)">Features</button>
-                    </div>
-                    
-                    <div id="quality-code" class="tab-content">
-import concurrent.futures
-import re
-import requests
-from pathlib import Path
-from urllib.parse import unquote, urlparse
+                    <dl class="project-breakdown">
+                        <div>
+                            <dt>Problem</dt>
+                            <dd>Large documentation sets accumulate broken references quickly, and manual review does not scale well enough for release-quality docs operations.</dd>
+                        </div>
+                        <div>
+                            <dt>Automation approach</dt>
+                            <dd>Built a recursive checker that validates local markdown targets, image paths, extensionless doc links, and optional remote URLs with automation-friendly CLI output.</dd>
+                        </div>
+                        <div>
+                            <dt>Outcome</dt>
+                            <dd>Shows how I treat documentation as a testable system and create tooling that fits CI workflows instead of one-off manual QA.</dd>
+                        </div>
+                    </dl>
 
-def scan_docs(scan_path, check_remote=True, concurrency=10):
-    """Scan documentation and return issues plus a lightweight summary."""
-    input_path = Path(scan_path)
-    markdown_files = list(get_markdown_files(input_path))
-    # ... (Full logic in file) ...
-    
-    if check_remote:
-        with concurrent.futures.ThreadPoolExecutor(max_workers=concurrency) as executor:
-            # Parallel remote link checking
-            pass
-                    </div>
-                    
-                    <div id="quality-features" class="tab-content" style="display: none;">
-• Recursively scans directories for .md/.mdx files
-• Validates local file paths and anchor links (#header)
-• Checks external URLs concurrently for performance
-• Ignores node_modules and hidden directories
-• Returns exit codes suitable for CI pipelines
-                    </div>
-                    
-                    <button class="copy-button" onclick="copyCode('quality-code')">Copy Snippet</button>
-                </div>
-            </div>
-
-            <div class="project supporting-project">
-                <h4><i class="fa-solid fa-file-code"></i> OpenAPI Docs Generator</h4>
-                <p class="project-meta"><strong>File:</strong> <a href="openapi_docs_generator.py" target="_blank">openapi_docs_generator.py</a> | <strong>Libs:</strong> argparse, json, re</p>
-                <p>Parses OpenAPI/Swagger specs (JSON/YAML) to automatically generate Markdown pages with frontmatter, parameter tables, and formatted response examples.</p>
-
-                <div class="project-highlights">
-                    <span class="highlight">Docs-as-Code</span>
-                    <span class="highlight">OpenAPI Parsing</span>
-                    <span class="highlight">Markdown Generation</span>
-                    <span class="highlight">Automation</span>
-                </div>
-
-                <div class="code-section">
-                    <div class="tab-buttons">
-                        <button class="tab-button active" onclick="showTab('openapi-code', this)">Snippet</button>
-                        <button class="tab-button" onclick="showTab('openapi-features', this)">Features</button>
+                    <div class="project-highlights">
+                        <span class="highlight">CI/CD Ready</span>
+                        <span class="highlight">Link Validation</span>
+                        <span class="highlight">Markdown QA</span>
+                        <span class="highlight">Python</span>
                     </div>
 
-                    <div id="openapi-code" class="tab-content">
-def generate_docs(spec, output_dir):
-    """Generate endpoint pages plus an overview page from an OpenAPI spec."""
-    paths = spec.get('paths', {})
-    for path, path_item in paths.items():
-        for method, operation in path_item.items():
-             # Generates individual MD pages with frontmatter
-            metadata = generate_doc_page(
-                path=path, method=method,
-                operation=operation, spec=spec,
-                output_dir=output_dir
-            )
-            operations.append(metadata)
-    return operations
+                    <div class="project-links">
+                        <a href="doc_quality_checker.py" target="_blank" class="view-project-btn">
+                            <i class="fa-solid fa-file-code"></i> Review Script
+                        </a>
+                        <a href="tests/test_doc_quality_checker.py" target="_blank" class="secondary-btn">Review Tests</a>
+                    </div>
+                </article>
+
+                <article class="project case-study-project">
+                    <span class="card-tag">API docs automation</span>
+                    <h4><i class="fa-solid fa-file-code"></i> OpenAPI → Developer Docs Generator</h4>
+                    <p class="project-meta"><strong>Type:</strong> DevEx Automation | <strong>Format:</strong> OpenAPI-to-Markdown Generator</p>
+                    <p class="case-study-summary">A generator that reads OpenAPI or Swagger specs and creates structured developer-doc pages with frontmatter, parameter tables, response examples, and overview navigation.</p>
+
+                    <dl class="project-breakdown">
+                        <div>
+                            <dt>Problem</dt>
+                            <dd>API teams often have specs but still need human-readable docs that developers can scan quickly without translating raw schema objects mentally.</dd>
+                        </div>
+                        <div>
+                            <dt>Automation approach</dt>
+                            <dd>Built a parser that resolves spec structure, maps request and response details into readable sections, and outputs Docusaurus-ready markdown for portal publishing.</dd>
+                        </div>
+                        <div>
+                            <dt>Outcome</dt>
+                            <dd>Demonstrates API fluency, docs-as-code thinking, and the ability to bridge engineering source files into better developer experiences.</dd>
+                        </div>
+                    </dl>
+
+                    <div class="project-highlights">
+                        <span class="highlight">OpenAPI Parsing</span>
+                        <span class="highlight">Docs-as-Code</span>
+                        <span class="highlight">Markdown Generation</span>
+                        <span class="highlight">Developer Portals</span>
                     </div>
 
-                    <div id="openapi-features" class="tab-content" style="display: none;">
-• Converts OpenAPI/Swagger JSON/YAML to Markdown
-• Adds Docusaurus-compatible frontmatter automatically
-• Generates responsive tables for parameters and responses
-• Creates curl examples from schema definitions
+                    <div class="project-links">
+                        <a href="openapi_docs_generator.py" target="_blank" class="view-project-btn">
+                            <i class="fa-solid fa-file-code"></i> Review Script
+                        </a>
+                        <a href="tests/test_openapi_docs_generator.py" target="_blank" class="secondary-btn">Review Tests</a>
+                    </div>
+                </article>
+
+                <article class="project case-study-project">
+                    <span class="card-tag">Release automation</span>
+                    <h4><i class="fa-solid fa-list-check"></i> Release Notes Generator</h4>
+                    <p class="project-meta"><strong>Type:</strong> Documentation Operations | <strong>Format:</strong> Commit-to-Changelog Utility</p>
+                    <p class="case-study-summary">A generator that turns conventional commit history into structured markdown release notes so changelogs stay consistent, readable, and faster to publish.</p>
+
+                    <dl class="project-breakdown">
+                        <div>
+                            <dt>Problem</dt>
+                            <dd>Release notes often become inconsistent because updates are assembled manually from scattered commits, tickets, and engineering summaries.</dd>
+                        </div>
+                        <div>
+                            <dt>Automation approach</dt>
+                            <dd>Parsed commit messages into documentation-ready categories so features, fixes, and maintenance work can be grouped automatically into a cleaner narrative.</dd>
+                        </div>
+                        <div>
+                            <dt>Outcome</dt>
+                            <dd>Shows process thinking beyond page authoring by improving how documentation teams publish product change communication at scale.</dd>
+                        </div>
+                    </dl>
+
+                    <div class="project-highlights">
+                        <span class="highlight">Git Automation</span>
+                        <span class="highlight">Conventional Commits</span>
+                        <span class="highlight">Changelog Generation</span>
+                        <span class="highlight">Python</span>
                     </div>
 
-                    <button class="copy-button" onclick="copyCode('openapi-code')">Copy Snippet</button>
-                </div>
-            </div>
+                    <div class="project-links">
+                        <a href="release_notes_generator.py" target="_blank" class="view-project-btn">
+                            <i class="fa-solid fa-file-code"></i> Review Script
+                        </a>
+                    </div>
+                </article>
 
-            <div class="project supporting-project">
-                <h4><i class="fa-solid fa-list-check"></i> Release Notes Generator</h4>
-                <p class="project-meta"><strong>File:</strong> <a href="release_notes_generator.py" target="_blank">release_notes_generator.py</a> | <strong>Libs:</strong> subprocess, re</p>
-                <p>Parses Git commit logs using Conventional Commits patterns to generate organized, formatted Markdown changelogs automatically.</p>
+                <article class="project case-study-project">
+                    <span class="card-tag">Visual docs automation</span>
+                    <h4><i class="fa-solid fa-camera"></i> Automated Screenshot Tool</h4>
+                    <p class="project-meta"><strong>Type:</strong> Documentation Maintenance | <strong>Format:</strong> Browser Automation Utility</p>
+                    <p class="case-study-summary">A Selenium-based capture tool that updates documentation screenshots from a URL list, helping visual assets stay current across product and portal updates.</p>
 
-                <div class="project-highlights">
-                    <span class="highlight">Git Automation</span>
-                    <span class="highlight">Conventional Commits</span>
-                    <span class="highlight">Changelog Gen</span>
-                    <span class="highlight">Python</span>
-                </div>
+                    <dl class="project-breakdown">
+                        <div>
+                            <dt>Problem</dt>
+                            <dd>Screenshot-heavy docs drift quickly when UIs change, and manual recapture work is repetitive, slow, and easy to postpone.</dd>
+                        </div>
+                        <div>
+                            <dt>Automation approach</dt>
+                            <dd>Used browser automation to open configured URLs, apply viewport settings, and export updated images in batches for repeatable docs maintenance.</dd>
+                        </div>
+                        <div>
+                            <dt>Outcome</dt>
+                            <dd>Demonstrates practical documentation operations work that keeps visual guidance accurate without making every UI update a manual rewrite project.</dd>
+                        </div>
+                    </dl>
 
-                <div class="code-section">
-                    <div class="tab-buttons">
-                        <button class="tab-button active" onclick="showTab('release-code', this)">Snippet</button>
-                        <button class="tab-button" onclick="showTab('release-features', this)">Features</button>
+                    <div class="project-highlights">
+                        <span class="highlight">Selenium</span>
+                        <span class="highlight">Visual QA</span>
+                        <span class="highlight">Headless Automation</span>
+                        <span class="highlight">Docs Maintenance</span>
                     </div>
 
-                    <div id="release-code" class="tab-content">
-def parse_commits(commit_lines):
-    """Parses lines into categories based on Conventional Commits."""
-    categorized = defaultdict(list)
-    for line in commit_lines:
-        match = COMMIT_PATTERN.match(line)
-        if match:
-            c_type, c_scope, c_desc = match.groups()
-            # Groups by type (e.g. 'feat' -> '✨ New Features')
-            header = TYPE_MAP.get(c_type, '🛠 Other Changes')
-            categorized[header].append(c_desc)
-    return categorized
+                    <div class="project-links">
+                        <a href="screenshot_generator.py" target="_blank" class="view-project-btn">
+                            <i class="fa-solid fa-file-code"></i> Review Script
+                        </a>
                     </div>
-
-                    <div id="release-features" class="tab-content" style="display: none;">
-• Parses Git history for Conventional Commit messages
-• Groups changes by type (Features, Fixes, Chores, etc.)
-• Auto-generates Markdown-formatted changelogs
-• Supports date-based versioning for drafts
-                    </div>
-
-                    <button class="copy-button" onclick="copyCode('release-code')">Copy Snippet</button>
-                </div>
-            </div>
-
-            <div class="project supporting-project">
-                <h4><i class="fa-solid fa-camera"></i> Automated Screenshot Tool</h4>
-                <p class="project-meta"><strong>File:</strong> <a href="screenshot_generator.py" target="_blank">screenshot_generator.py</a> | <strong>Libs:</strong> selenium, json</p>
-                <p>Uses Selenium WebDriver to capture and update screenshots for documentation from a list of URLs, supporting headless execution for build servers.</p>
-
-                <div class="project-highlights">
-                    <span class="highlight">Selenium</span>
-                    <span class="highlight">Visual Testing</span>
-                    <span class="highlight">Headless Chrome</span>
-                    <span class="highlight">Automation</span>
-                </div>
-
-                <div class="code-section">
-                    <div class="tab-buttons">
-                        <button class="tab-button active" onclick="showTab('screenshot-code', this)">Snippet</button>
-                        <button class="tab-button" onclick="showTab('screenshot-features', this)">Features</button>
-                    </div>
-
-                    <div id="screenshot-code" class="tab-content">
-def process_screenshots(config_file, output_dir, headless=True):
-    """Reads a JSON config and captures screenshots via Selenium."""
-    driver = setup_driver(headless)
-    with open(config_file) as f:
-        shots = json.load(f)
-    
-    for item in shots:
-        driver.set_window_size(item['width'], item['height'])
-        driver.get(item['url'])
-        driver.save_screenshot(f"{output_dir}/{item['output']}")
-    driver.quit()
-                    </div>
-
-                    <div id="screenshot-features" class="tab-content" style="display: none;">
-• Automated screenshot capture from JSON config
-• Headless mode support for CI/CD pipelines
-• Configurable viewport sizes (mobile/desktop)
-• Batch processing for multiple documentation assets
-                    </div>
-
-                    <button class="copy-button" onclick="copyCode('screenshot-code')">Copy Snippet</button>
-                </div>
+                </article>
             </div>
         </div>
 

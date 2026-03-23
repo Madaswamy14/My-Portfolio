@@ -106,7 +106,7 @@ const config: Config = {
           items: [
             {
               label: 'SWAPI API Reference',
-              to: '/docs/swapi-api-reference-sample',
+              to: '/docs/swapi-api-reference',
             },
             {
               label: 'Facebook Events',

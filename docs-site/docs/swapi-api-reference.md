@@ -77,7 +77,7 @@ GET https://swapi.dev/api/
 ## 4. People Endpoint
 The People resource returns data about individual characters in the Star Wars universe.
 
-### 4.1 GET /api/people/{id}/
+### 4.1 `GET /api/people/{id}/`
 Returns a single person resource identified by their integer ID.
 
 **Path Parameter**
@@ -135,7 +135,7 @@ GET https://swapi.dev/api/people/1/
 ## 5. Films Endpoint
 The Films resource provides metadata for each of the seven Star Wars theatrical films covered by SWAPI (Episodes I–VII).
 
-### 5.1 GET /api/films/{id}/
+### 5.1 `GET /api/films/{id}/`
 
 **Response Schema**
 | Field | Type & Description |
@@ -158,7 +158,7 @@ The Films resource provides metadata for each of the seven Star Wars theatrical 
 ## 6. Planets Endpoint
 The Planets resource provides environmental and geographical data for planets featured in the Star Wars films.
 
-### 6.1 GET /api/planets/{id}/
+### 6.1 `GET /api/planets/{id}/`
 
 **Response Schema**
 | Field | Type & Description |
@@ -179,7 +179,7 @@ The Planets resource provides environmental and geographical data for planets fe
 ## 7. Starships Endpoint
 The Starships resource describes spacecraft capable of atmospheric and interstellar travel featured in the Star Wars films.
 
-### 7.1 GET /api/starships/{id}/
+### 7.1 `GET /api/starships/{id}/`
 
 **Response Schema**
 | Field | Type & Description |

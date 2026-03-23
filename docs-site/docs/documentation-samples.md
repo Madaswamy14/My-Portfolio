@@ -25,11 +25,11 @@ A developer portal case study for a fictional payments platform covering onboard
 
 A workflow tutorial focused on planning, publishing, promoting, and following up on a Facebook event.
 
-### [Jira Getting Started](./jira-getting-started.md)
+### [Jira Getting Started](./jira-getting-started)
 
 A first-day onboarding guide that helps new users understand projects, issues, and boards quickly.
 
-### [SWAPI API Reference Sample](./swapi-api-reference-sample.md)
+### [SWAPI API Reference](./swapi-api-reference.md)
 
 An API reference case study that combines quickstart, conventions, endpoint detail, and troubleshooting guidance.
 

@@ -86,7 +86,7 @@ const sidebars: SidebarsConfig = {
         'acme-payments/devex-design',
       ],
     },
-    ,
+  ],
 };
 
 export default sidebars;

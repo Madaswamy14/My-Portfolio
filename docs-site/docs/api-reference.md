@@ -62,5 +62,5 @@ curl --request GET \
 - `404` when the resource does not exist
 - `5xx` when the public API is temporarily unavailable
 
-For the fuller migrated case study, review the [SWAPI API Reference Sample](./swapi-api-reference-sample.md).
+For the fuller migrated case study, review the [SWAPI API Reference](./swapi-api-reference.md).
 Good reference content helps developers scan quickly while still giving them enough context to implement confidently.

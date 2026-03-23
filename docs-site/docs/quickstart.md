@@ -33,4 +33,4 @@ A successful first request should help the user answer three questions quickly:
 - It removes unnecessary auth friction from the first-run flow.
 - It gives the reader a clean handoff into conventions and detailed reference content.
 
-Next, review the [SWAPI API Reference Sample](./swapi-api-reference-sample.md) for the full migrated case study or open [API Reference](./api-reference.md) to see the reusable reference pattern.
+Next, review the [SWAPI API Reference](./swapi-api-reference.md) for the full migrated case study or open [API Reference](./api-reference.md) to see the reusable reference pattern.
