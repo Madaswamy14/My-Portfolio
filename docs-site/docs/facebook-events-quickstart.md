@@ -311,11 +311,11 @@ To create,
 7. Review your group information and click **Create**.
 The group will be created and you will be taken to the group dashboard.
 
-## 13. Manage Facebook Pages
+## 12. Manage Facebook Pages
 
 Facebook Pages are public profiles for businesses, brands, celebrities, and organizations.
 
-### 13.1 Find Facebook Pages
+### 12.1 Find Facebook Pages
 This procedure explains how to find Facebook pages.
 **Prerequisites:**
 * A Facebook account.
@@ -329,7 +329,7 @@ To find Facebook pages, use one of the below options:
 * **View All** : In the Pages section, click **View All** to view all the pages you follow.
 You have successfully found Facebook pages.
 
-### 13.2 Follow Facebook Pages
+### 12.2 Follow Facebook Pages
 This procedure explains how to follow Facebook pages.
 **Prerequisites:**
 * A Facebook account.
@@ -341,7 +341,7 @@ To follow,
 4. Click **Follow**.
 The page will be added to your list of followed pages. You will see updates from the page in your feed.
 
-### 13.3 Create a Facebook Page
+### 12.3 Create a Facebook Page
 This procedure explains how to create a Facebook page.
 **Prerequisites:**
 * A Facebook account.
@@ -355,10 +355,10 @@ To create,
 6. Review your page information and click **Create**.
 The page will be created and you will be taken to the page dashboard.
 
-## 14. Manage Facebook Events
+## 13. Manage Facebook Events
 Facebook Events are a way to announce and celebrate events, from birthday parties to charity fundraisers.
 
-### 14.1 Find Facebook Events
+### 13.1 Find Facebook Events
 This procedure explains how to find Facebook events.
 **Prerequisites:**
 * A Facebook account.
@@ -372,7 +372,7 @@ To find Facebook events, use one of the below options:
 * **View All** : In the Events section, click **View All** to view all the events you are interested in.
 You have successfully found Facebook events.
 
-### 14.2 Attend Facebook Events
+### 13.2 Attend Facebook Events
 This procedure explains how to attend Facebook events.
 **Prerequisites:**
 * A Facebook account.
@@ -385,7 +385,7 @@ To attend,
 4. Click **Going**.
 You will be added to the list of attendees.
 
-### 14.3 Create a Facebook Event
+### 13.3 Create a Facebook Event
 This procedure explains how to create a Facebook event.
 **Prerequisites:**
 * A Facebook account.
@@ -399,7 +399,7 @@ To create,
 6. Review your event information and click **Create**.
 The event will be created and you will be taken to the event dashboard.
 
-## 15. Troubleshoot Common Issues
+## 14. Troubleshoot Common Issues
 This procedure explains how to troubleshoot common issues.
 
 The following table lists common issues and their solutions.
@@ -414,7 +414,7 @@ The following table lists common issues and their solutions.
 | Excessive notifications | Go to **Settings** and select **Notifications** to customize or reduce the notification types you receive. |
 | Unauthorized login | Go to **Settings** and select **Security and Login** then choose **Where You’re Logged In**. Log out of any unrecognized sessions and change your password immediately. |
 
-## 16. Stay Safe on Facebook
+## 15. Stay Safe on Facebook
 
 **Important:** Facebook will never ask for your password in email or Messenger. Do not trust messages that ask for your sign in information.
 
