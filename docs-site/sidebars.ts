@@ -15,7 +15,9 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   portalSidebar: [
     'intro',
-    'documentation-samples',
+    'facebook-events-quickstart',
+    'jira-getting-started',
+    'swapi-api-reference',
     {
       type: 'category',
       label: 'Acme Payments Developer Platform',

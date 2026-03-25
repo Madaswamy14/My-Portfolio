@@ -1,708 +1,423 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-facebook-events-quickstart" data-has-hydrated="false">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Quick Start Guide</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            color: #1c1e21;
-        }
-
-        h1,
-        h2,
-        h3 {
-            color: #1877f2;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 1.5rem;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f0f2f5;
-            font-weight: 600;
-        }
-
-        ul,
-        ol {
-            margin-bottom: 1.5rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        .tip {
-            background-color: #f0f2f5;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid #ddd;
-            margin: 2rem 0;
-        }
-
-        a {
-            color: #1877f2;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Facebook Quick Start Guide | Madaswamy Developer Portal</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://madaswamy14.github.io/My-Portfolio/developer-portal/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://madaswamy14.github.io/My-Portfolio/developer-portal/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://madaswamy14.github.io/My-Portfolio/developer-portal/docs/facebook-events-quickstart"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Facebook Quick Start Guide | Madaswamy Developer Portal"><meta data-rh="true" name="description" content="Set up your profile, connect with people, and get the most out of Facebook in minutes."><meta data-rh="true" property="og:description" content="Set up your profile, connect with people, and get the most out of Facebook in minutes."><link data-rh="true" rel="icon" href="/My-Portfolio/developer-portal/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://madaswamy14.github.io/My-Portfolio/developer-portal/docs/facebook-events-quickstart"><link data-rh="true" rel="alternate" href="https://madaswamy14.github.io/My-Portfolio/developer-portal/docs/facebook-events-quickstart" hreflang="en"><link data-rh="true" rel="alternate" href="https://madaswamy14.github.io/My-Portfolio/developer-portal/docs/facebook-events-quickstart" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Facebook Quick Start Guide","item":"https://madaswamy14.github.io/My-Portfolio/developer-portal/docs/facebook-events-quickstart"}]}</script><link rel="stylesheet" href="/My-Portfolio/developer-portal/assets/css/styles.290fd527.css">
+<script src="/My-Portfolio/developer-portal/assets/js/runtime~main.5274fe04.js" defer="defer"></script>
+<script src="/My-Portfolio/developer-portal/assets/js/main.9d9eb9d3.js" defer="defer"></script>
 </head>
-
-<body>
-
-    <h1>Facebook Quick Start Guide</h1>
-    <p><strong>Version 1.0 | Audience: New Users</strong></p>
-
-    <h2>1. Introduction</h2>
-    <p>Facebook provides a digital space for people to build communities and stay in touch. You can share stories and photos with friends and family members. The platform helps you find local events and groups that match your interests. It offers powerful tools for businesses to reach new audiences. An account is the primary way for users to access these social features.</p>
-    <p>This quickstart guide will help you to create your Facebook Account, set up your profile, and connect with people.</p>
-
-    <h2>2. Prerequisites</h2>
-    <p>Ensure you have the following items:</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Requirement</th>
-                <th>Detail</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Device</td>
-                <td>Smartphone with iOS 16+ or Android 8+, tablet, or desktop computer</td>
-            </tr>
-            <tr>
-                <td>Browser</td>
-                <td>Chrome 90+, Firefox 90+, Edge 90+, or Safari 14+</td>
-            </tr>
-            <tr>
-                <td>Email or phone</td>
-                <td>A valid email address or mobile phone number for registration</td>
-            </tr>
-            <tr>
-                <td>Age</td>
-                <td>Users must be thirteen years of age or older to join Facebook</td>
-            </tr>
-            <tr>
-                <td>Internet connection</td>
-                <td>Stable Wi-Fi or mobile-data connection</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>3. Create a Facebook Account</h2>
-
-    <h3>3.1 Sign Up on the Web</h3>
-    <p>This procedure explains how to create a Facebook account on the web.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A web browser such as Google Chrome, Mozilla Firefox, or Apple Safari.</li>
-        <li>An email address or mobile phone number to use for account verification.</li>
-    </ul>
-    <p>To create,</p>
-    <ol>
-        <li>Open your browser and go to <a href="https://www.facebook.com">https://www.facebook.com</a>.</li>
-        <li>On the home page, select <strong>Create new account</strong>.</li>
-        <li>Enter your first name and last name.</li>
-        <li>Enter your mobile number or email address.</li>
-        <li>Enter a strong password. The password must be at least 8 characters, mixing letters, numbers, and symbols.</li>
-        <li>Select your date of birth.</li>
-        <li>Select your gender.</li>
-        <li>Select <strong>Sign Up</strong>.</li>
-        <li>Check your email or phone for a confirmation code from Facebook.</li>
-        <li>On the verification screen, enter the confirmation code.</li>
-    </ol>
-    <p>You have successfully created a Facebook account.</p>
-
-    <h3>3.2 Confirm Your Identity</h3>
-    <p>This procedure explains how to verify your identity when you create a Facebook account.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-        <li>Access to the email address or phone number used for account registration.</li>
-    </ul>
-    <p>To verify,</p>
-    <ul>
-        <li><strong>Email confirmation</strong> : In your email inbox select the link in the message from Facebook.</li>
-        <li><strong>SMS code</strong> : On your cell phone check for the 6-digit code and enter it on the screen.</li>
-        <li><strong>Photo ID</strong> : If requested upload a government-issued ID to the verification portal.</li>
-    </ul>
-
-    <div class="tip">
-        <p><strong>Note:</strong> Facebook encrypts your password and never displays it to other users.</p>
-    </div>
-    <p>You have now verified your identity and created your account.</p>
-
-    <h2>4. Set Up Your Profile</h2>
-    <p>Set up your profile to personalize your Facebook experience, help friends find you, and build trust within your network.</p>
-
-    <h3>4.1 Add a Profile Photo</h3>
-    <p>This procedure explains how to add a profile photo to your Facebook account.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-        <li>An image file of a photo to use as your profile picture.</li>
-    </ul>
-       
-    <p>To add,</p>
-    <ol>
-        <li>At the top of any page, click your profile icon.</li>
-        <li>Click <strong>Add Profile Picture</strong>.</li>
-        <li>To upload an image, do one of the following: 
-            <ul>
-                <li>From your device, choose <strong>Upload Photo</strong>.</li>
-                <li>To use your camera, choose <strong>Take Photo</strong>.</li>
-            </ul>
-            <div class="tip">
-                <p><strong>Note:</strong> Use a clear, front-facing photo so friends can easily recognize you. Profile photos are always public.</p>
-            </div>
-        </li>
-        <li>Drag the image to reposition it within the cropping area, and click <strong>Save</strong>.</li>
-    </ol>
-    <p>You have successfully added your profile photo.</p>
-
-    <h3>4.2 Add a Cover Photo</h3>
-    <p>This procedure explains how to add a cover photo to your Facebook account.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-        <li>An image file of a photo to use as your cover picture.</li>
-    </ul>
-    <p>To add,</p>
-    <ol>
-        <li>Navigate to your profile page, on the large banner area click the camera icon.</li>
-        <li>Select <strong>Upload Photo</strong> or choose from your existing Facebook photos.</li>
-        <li>Reposition the image and click <strong>Save Changes</strong>.</li>
-    </ol>
-    <p>You have successfully added your cover photo.</p>
-
-    <h3>4.3 Complete Your Bio</h3>
-    <p>This procedure explains how to complete your profile.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-    </ul>
-    <p>To complete,</p>
-    <ol>
-        <li>On your profile page, click <strong>Edit profile</strong>.</li>
-        <li>Complete the profile by filling in the following sections:</li>
-    </ol>
-    <table>
-        <thead>
-            <tr>
-                <th>Section</th>
-                <th>What to include</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Work</td>
-                <td>Current employer, job title, and previous positions</td>
-            </tr>
-            <tr>
-                <td>Education</td>
-                <td>High school, college, or university attended</td>
-            </tr>
-            <tr>
-                <td>Current city</td>
-                <td>Where you live now</td>
-            </tr>
-            <tr>
-                <td>Hometown</td>
-                <td>Where you grew up</td>
-            </tr>
-            <tr>
-                <td>Relationship status</td>
-                <td>Single, in a relationship, married, etc. (optional)</td>
-            </tr>
-            <tr>
-                <td>Bio</td>
-                <td>A short description of yourself (up to 101 characters)</td>
-            </tr>
-            <tr>
-                <td>Pronouns</td>
-                <td>How you identify (optional, visible to friends or everyone)</td>
-            </tr>
-            <tr>
-                <td>Websites and social links</td>
-                <td>Personal websites like LinkedIn and Instagram.</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="tip">
-        <p><strong>Note:</strong> Each profile field has its own privacy control. You choose who sees each piece of information.</p>
-    </div>
-    <p>You have successfully completed your profile.</p>
-
-    <h2>5. Privacy and Security Management</h2>
-    <p>Managing privacy settings helps you to control who can see your content. Review privacy settings before adding friends or posting content to manage visibility. Proper configuration ensures that only intended audiences view personal data. This process protects the user from unwanted interactions and data mining. Users must understand how each setting affects their profile presence. Careful management of these controls is a fundamental part of account maintenance.</p>
-    <p>Benefits of managing privacy settings:</p>
-    <ul>
-        <li>Prevent unauthorized content viewing.</li>
-        <li>Control digital footprint and identity.</li>
-        <li>Reduce spam and harassment likelihood.</li>
-    </ul>
-    <h3>5.1 Access Privacy Settings</h3>
-    <p>This procedure explains how to access your privacy settings.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-    </ul>
-    <p>To access,
-    <ol>
-        <li>On the top right corner, click the down-arrow icon.</li>
-        <li>Go to <strong>Settings & Privacy</strong>and select <strong>Settings</strong>.</li>
-        <li>On the left pane, click <strong>Privacy</strong>.</li>
-    </ol>
-    <p>You have successfully accessed your privacy settings.</p>
-
-    <h3>5.2 Privacy Control Settings and Recommended Values</h3>
-    <p>This procedure explains how to configure your privacy settings.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-    </ul>
-    <p>The following table lists key privacy controls and recommended values.</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Setting</th>
-                <th>Menu</th>
-                <th>Recommended Value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Future post visibility</td>
-                <td>On the left pane, click <strong></strong>Privacy</strong> and select <strong>Your Activity</strong>.</td>
-                <td>Friends</td>
-            </tr>
-            <tr>
-                <td>Friend request settings</td>
-                <td>On the left pane, click <strong></strong>Privacy</strong> and select <strong>How People Find You</strong>.</td>
-                <td>Friends of Friends</td>
-            </tr>
-            <tr>
-                <td>Email lookup visibility</td>
-                <td>On the left pane, click <strong></strong>Privacy</strong> and select <strong>How People Find You</strong>.</td>
-                <td>Friends</td>
-            </tr>
-            <tr>
-                <td>Phone number lookup visibility</td>
-                <td>On the left pane, click <strong></strong>Privacy</strong> and select <strong>How People Find You</strong>.</td>
-                <td>Friends</td>
-            </tr>
-            <tr>
-                <td>Search engine linking to profile</td>
-                <td>On the left pane, click <strong></strong>Privacy</strong> and select <strong>How People Find You</strong>.</td>
-                <td>Off</td>
-            </tr>
-            <tr>
-                <td>Profile picture visibility</td>
-                <td>On the left pane, click <strong></strong>Your Profile</strong> and select <strong>Edit</strong>.</td>
-                <td>Friends</td>
-            </tr>
-        </tbody>
-    </table>
-    <p>You have successfully configured your privacy settings.</p>
-
-    <h3>5.3 Enable Two-Factor Authentication (2FA)</h3>
-    <p>This procedure explains how to enable two-factor authentication (2FA).</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-    </ul>
-    <p>To enable,
-    <ol>
-        <li>Go to <strong>Settings &gt; Security and Login</strong>.</li>
-        <li>Under <strong>Two-Factor Authentication</strong>, click <strong>Edit</strong>.</li>
-        <li>Select your preferred method: <strong>Authentication App</strong> (recommended) or <strong>SMS</strong>.
-        </li>
-        <li>Follow the prompts to complete setup.</li>
-    </ol>
-    <p>You have successfully enabled two-factor authentication.</p>
-
-    <h2>6. Find Friends</h2>
-    <p>This procedure explains how to find friends on Facebook.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-    </ul>
-    <p>To find friends, use one of the below options:</p>
-    <ul>
-        <li><strong>Search Bar</strong> : At the top of the page, use the search bar to search for friends by name.</li>
-        <li><strong>People You May Know</strong> : On the friends page, click <strong>Suggestions</strong>. Facebook suggests connections based on mutual friends and shared information.</li>
-    </ul>
-    <p>You have successfully found friends.</p>
-
-    <h2>7. Manage Friend Requests</h2>
-    <h3>7.1 Accept a request</h3>
-    <p>This procedure explains how to accept a friend request.</p>
-    <div>
-        <p><strong>Note:</strong> Add only individuals whom you know. Accepting unknown friend requests can expose your posts and personal information to strangers.</p>
-    </div>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-        <li>A friend request.</li>
-    </ul>
-<p>To accept,</p>
-<ol>
-        <li>On the top navigation, click the Friends icon.</li>
-        <li>Click <strong>Requests</strong>.</li>
-        <li>On the <strong>Requests</strong> screen, against the request you want to accept, click <strong>Confirm</strong>.</li>
-</ol>
-<p>The person will get a notification that you accepted their request and are now friends.</p>
-
-<h3>7.2 Decline a request</h3>
-<p>This procedure explains how to decline a friend request.</p>
-<p>Prerequisites:</p>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/My-Portfolio/developer-portal/"><div class="navbar__logo"><img src="/My-Portfolio/developer-portal/img/logo.svg" alt="Developer Portal Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/My-Portfolio/developer-portal/img/logo.svg" alt="Developer Portal Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Developer Portal</b></a><a class="navbar__item navbar__link" href="/My-Portfolio/developer-portal/docs/intro">Overview</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://madaswamy14.github.io/My-Portfolio/index.html" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Portfolio<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a href="https://github.com/madaswamy14" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/My-Portfolio/developer-portal/docs/intro"><span title="Developer Portal Overview" class="linkLabel_WmDU">Developer Portal Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/My-Portfolio/developer-portal/docs/facebook-events-quickstart"><span title="Facebook Quick Start Guide" class="linkLabel_WmDU">Facebook Quick Start Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/My-Portfolio/developer-portal/docs/jira-getting-started"><span title="Jira Getting Started Guide" class="linkLabel_WmDU">Jira Getting Started Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/My-Portfolio/developer-portal/docs/swapi-api-reference"><span title="SWAPI API Reference &amp; Developer Guide" class="linkLabel_WmDU">SWAPI API Reference &amp; Developer Guide</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/My-Portfolio/developer-portal/docs/acme-payments"><span title="Acme Payments Developer Platform" class="categoryLinkLabel_W154">Acme Payments Developer Platform</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/My-Portfolio/developer-portal/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Facebook Quick Start Guide</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Facebook Quick Start Guide</h1></header>
+<p><strong>Version 1.0 | Audience: New Users</strong></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-introduction">1. Introduction<a href="#1-introduction" class="hash-link" aria-label="Direct link to 1. Introduction" title="Direct link to 1. Introduction" translate="no">​</a></h2>
+<p>Facebook is the one of the worlds largest social networking platform, with over three billion monthly active users. It lets you connect with friends and family, discover and share content, join interest-based communities, follow public figures and businesses, and stay informed about events in your world.</p>
+<p>This quickstart guide will help you to create your Facebook Account, set up your profile, and connect with people.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-prerequisites">2. Prerequisites<a href="#2-prerequisites" class="hash-link" aria-label="Direct link to 2. Prerequisites" title="Direct link to 2. Prerequisites" translate="no">​</a></h2>
+<p>Ensure you have the following items:</p>
+<table><thead><tr><th>Requirement</th><th>Detail</th></tr></thead><tbody><tr><td>Device</td><td>Smartphone with iOS 16+ or Android 8+, tablet, or desktop computer</td></tr><tr><td>Browser</td><td>Chrome 90+, Firefox 90+, Edge 90+, or Safari 14+</td></tr><tr><td>Email or phone</td><td>A valid email address or mobile phone number for registration</td></tr><tr><td>Age</td><td>Users must be thirteen years of age or older to join Facebook</td></tr><tr><td>Internet connection</td><td>Stable Wi-Fi or mobile-data connection</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-create-a-facebook-account">3. Create a Facebook Account<a href="#3-create-a-facebook-account" class="hash-link" aria-label="Direct link to 3. Create a Facebook Account" title="Direct link to 3. Create a Facebook Account" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-sign-up-on-the-web">3.1 Sign Up on the Web<a href="#31-sign-up-on-the-web" class="hash-link" aria-label="Direct link to 3.1 Sign Up on the Web" title="Direct link to 3.1 Sign Up on the Web" translate="no">​</a></h3>
+<p>This procedure explains how to create a Facebook account on the web.</p>
+<p><strong>Prerequisites:</strong></p>
 <ul>
-        <li>A Facebook account.</li>
-        <li>A friend request.</li>
+<li class="">A web browser such as Google Chrome, Mozilla Firefox, or Apple Safari.</li>
+<li class="">An email address or mobile phone number to use for account verification.</li>
 </ul>
-<p>To decline,</p>
+<p>To create,</p>
 <ol>
-        <li>On the top navigation, click the Friends icon.</li>
-        <li>Click <strong>Requests</strong>.</li>
-        <li>On the <strong>Requests</strong> screen, against the request you want to decline, click <strong>Delete Request</strong>.</li>
+<li class="">Open your browser and go to <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="">https://www.facebook.com</a>.</li>
+<li class="">On the home page, select <strong>Create new account</strong>.</li>
+<li class="">Enter your first name and last name.</li>
+<li class="">Enter your mobile number or email address.</li>
+<li class="">Enter a strong password. The password must be at least 8 characters, mixing letters, numbers, and symbols.</li>
+<li class="">Select your date of birth.</li>
+<li class="">Select your gender.</li>
+<li class="">Select <strong>Sign Up</strong>.</li>
+<li class="">Check your email or phone for a confirmation code from Facebook.</li>
+<li class="">On the verification screen, enter the confirmation code.
+You have successfully created a Facebook account</li>
 </ol>
-<p>The request will be removed and the person will not get a notification.</p>
-
-<h3>7.3 Remove a friend</h3>
-<p>This procedure explains how to remove a friend.</p>
-<p>Prerequisites:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-confirm-your-identity">3.2 Confirm Your Identity<a href="#32-confirm-your-identity" class="hash-link" aria-label="Direct link to 3.2 Confirm Your Identity" title="Direct link to 3.2 Confirm Your Identity" translate="no">​</a></h3>
+<p>This procedure explains how to verify your identity when you create a Facebook account.</p>
+<p><strong>Prerequisites:</strong></p>
 <ul>
-        <li>A Facebook account.</li>
-        <li>A friend.</li>
+<li class="">A Facebook account.</li>
+<li class="">Access to the email address or phone number used for account registration.</li>
 </ul>
-<p>To remove,</p>
+<p>To verify,</p>
+<ul>
+<li class=""><strong>Email confirmation</strong> : In your email inbox select the link in the message from Facebook.</li>
+<li class=""><strong>SMS code</strong> : On your cell phone check for the 6-digit code and enter it on the screen.</li>
+<li class=""><strong>Photo ID</strong> : If requested upload a government-issued ID to the verification portal.</li>
+</ul>
+<p><strong>Note:</strong> Facebook encrypts your password and never displays it to other users.
+You have now verified your identity and created your account.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-set-up-your-profile">4. Set Up Your Profile<a href="#4-set-up-your-profile" class="hash-link" aria-label="Direct link to 4. Set Up Your Profile" title="Direct link to 4. Set Up Your Profile" translate="no">​</a></h2>
+<p>Set up your profile to personalize your Facebook experience, help friends find you, and build trust within your network.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="41-add-a-profile-photo">4.1 Add a Profile Photo<a href="#41-add-a-profile-photo" class="hash-link" aria-label="Direct link to 4.1 Add a Profile Photo" title="Direct link to 4.1 Add a Profile Photo" translate="no">​</a></h3>
+<p>This procedure explains how to add a profile photo to your Facebook account.</p>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+<li class="">An image file of a photo to use as your profile picture.</li>
+</ul>
+<p>To add,</p>
 <ol>
-        <li>On the top of the screen, in the search bar, enter the name of a friend.</li>
-        <li>Select the friend from the search results.</li>
-        <li>Click on the friend name. The profile page of friend will open.</li>
-        <li>On the top navigation, click <strong>Friends</strong>.</li>
-        <li>On the pop-up window, click <strong>Unfriend</strong>.</li>
-        <li>Click <strong>OK</strong>.</li>
+<li class="">
+<p>At the top of any page, click your profile icon.</p>
+</li>
+<li class="">
+<p>Click <strong>Add Profile Picture</strong>.</p>
+</li>
+<li class="">
+<p>To upload an image, do one of the following:</p>
+<ul>
+<li class="">From your device, choose <strong>Upload Photo</strong>.</li>
+<li class="">To use your camera, choose <strong>Take Photo</strong>.
+<strong>Note:</strong> Use a clear, front-facing photo so friends can easily recognize you. Profile photos are always public.</li>
+</ul>
+</li>
+<li class="">
+<p>Drag the image to reposition it within the cropping area, and click <strong>Save</strong>.
+You have successfully added your profile photo.</p>
+</li>
 </ol>
-<p>The person will no longer appear in your friend list. The person will not get a notification.</p>
-
-
-    <h2>8. Understand Your News Feed</h2>
-    <p>The News Feed is the main page that appears after you log in. Use the News Feed to view friend posts, followed Pages, joined Groups, and sponsored content.The Facebook algorithm ranks content by your interactions. Posts from people you engage with most appear higher in the feed.
-</p>
-
-    <h3>9. Create a Post</h3>
-    <p>This procedure explains how to create a post.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-    </ul>
-    <p>To create a post,</p>
-    <ol>
-        <li>On the top of your News Feed or profile, click the <strong>What is on your mind?</strong> box.</li>
-        <li>Enter your text. You can also add one or more of the following:
-            <ul>
-                <li><strong>Photo/Video</strong> : Upload media from your device</li>
-                <li><strong>Feeling/Activity</strong> : Share your mood or what you are doing</li>
-                <li><strong>Tag People</strong> : Mention friends so they are linked in the post</li>
-                <li><strong>Check In</strong> : Share your current location</li>
-                <li><strong>Background Color</strong> : Add a colored background to text-only posts</li>
-            </ul>
-        </li>
-        <li>Select your audience: Friends, Public, Only Me, or a custom list.</li>
-        <li>Click <strong>Post</strong>.</li>
-    </ol>
-    <p>The post will be published and visible to your selected audience.</p>
-
-    <h3>10. Understand Post Privacy Options</h3>
-    <p>This procedure explains how to understand post privacy options.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-    </ul>
-    <p>The following table lists post privacy options.</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Audience Setting</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Public</td>
-                <td>Anyone on or off Facebook, including people not logged in</td>
-            </tr>
-            <tr>
-                <td>Friends</td>
-                <td>Only your confirmed Facebook friends</td>
-            </tr>
-            <tr>
-                <td>Friends except</td>
-                <td>All friends minus specific people you exclude</td>
-            </tr>
-            <tr>
-                <td>Specific friends</td>
-                <td>Only the people you manually select</td>
-            </tr>
-            <tr>
-                <td>Only me</td>
-                <td>Visible only to you. Useful for drafts or private notes</td>
-            </tr>
-            <tr>
-                <td>Custom</td>
-                <td>Combine any of the above with include/exclude logic</td>
-            </tr>
-        </tbody>
-    </table>
-    <p>You have successfully understood post privacy options.</p>
-
-    <h2>11. Manage Facebook Groups</h2>
-    <p>Facebook Groups are community spaces built around shared interests, causes, or affiliations.</p>
-    <h3>11.1 Find Facebook Groups</h3>
-    <p>This procedure explains how to find Facebook groups.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-    </ul>
-    <p>To find Facebook groups, use one of the below options:</p>
-    <ul>
-        <li><strong>Groups Menu</strong> : On the left pane, click <strong>Groups</strong>.</li>
-        <li><strong>Search Bar</strong> : At the top of the page, use the search bar to search for groups by name or
-            topic.</li>
-        <li><strong>Discover</strong> : In the Groups section, click <strong>Discover</strong> to browse categories like Suggested for You or Popular Near You.</li>
-    </ul>
-    <p>You have successfully found Facebook groups.</p>
-
-    <h3>11.2 Join Facebook Groups</h3>
-    <p>This procedure explains how to join Facebook groups.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-        <li>A Facebook group.</li>
-    </ul>
-    <p>To join,
-    <ol>
-        <li>On the left pane, click <strong>Groups</strong>.</li>
-        <li>(optional) On the top of the page, use the search bar to search for groups by name or topic.</li> 
-        <li>Click on the group you want to join. If it's a public group, to its page, you can see posts and the group description.</li>
-        <li>Click <strong>Join</strong>.
-                 <div class="tip">
-    <p><strong>Notes:</strong> If the group is public, you will be added immediately. If it is private or closed, your request will be sent to the admins for approval.</p>
-        <p><strong>Notes:</strong> If you are joining as a Facebook Page, you will be asked to select whether to join as your personal profile or your Page. Not all groups allow Pages to join. This depends on the groups settings.</p>
-    </div>
-            </li></ol>
-    <p>The group will be added to your list of joined groups. You will see posts from the group in your feed.</p>
-
-      <h3>11.3 Create a Group</h3>
-      <p>This procedure explains how to create a group.</p>
-      <p>Prerequisites:</p>
-      <ul>
-        <li>A Facebook account.</li>
-      </ul>
-      <p>To create,
-      <ol>  <li>On the left pane, click <strong>Groups</strong>.</li>
-        <li>At the top of the page, click <strong>Create Group</strong>.</li>
-        <li>Enter the group name and select <strong>Next</strong>.</li>
-        <li>Select a group type and click <strong>Next</strong>.</li>
-        <li>Enter a group description and click <strong>Next</strong>.</li>
-        <li>Choose who can post and click <strong>Next</strong>.</li>
-        <li>Review your group information and click <strong>Create</strong>.</li>
-    </ol>
-    <p>The group will be created and you will be taken to the group dashboard.</p>
-
-    <h2>13. Manage Facebook Pages</h2>
-    <p>Facebook Pages are public profiles for businesses, brands, celebrities, and organizations.</p>
-
-    <h3>13.1 Find Facebook Pages</h3>
-    <p>This procedure explains how to find Facebook pages.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-    </ul>
-    <p>To find Facebook pages, use one of the below options:</p>
-    <ul>
-        <li><strong>Search Bar</strong> : At the top of the page, use the search bar to search for pages by name or topic.</li>
-        <li><strong>Discover</strong> : In the Pages section, click <strong>Discover</strong> to browse categories like Suggested for You or Popular Near You.</li>
-        <li><strong>Browse</strong> : In the Pages section, click <strong>Browse</strong> to view pages by category or directory.</li>
-        <li><strong>Saved</strong> : In the Pages section, click <strong>Saved</strong> to view pages you have saved for later.</li>
-        <li><strong>View All</strong> : In the Pages section, click <strong>View All</strong> to view all the pages you follow.</li>
-    </ul>
-    <p>You have successfully found Facebook pages.</p>
-
-    <h3>13.2 Follow Facebook Pages</h3>
-    <p>This procedure explains how to follow Facebook pages.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-        <li>A Facebook page.</li>
-    </ul>
-    <p>To follow,
-    <ol>
-        <li>On the left pane, click <strong>Pages</strong>.</li>
-        <li>(optional) On the top of the page, use the search bar to search for pages by name or topic.</li>
-        <li>Click on the page you want to follow. The page will open.</li>
-        <li>Click <strong>Follow</strong>.</li>
-    </ol>
-    <p>The page will be added to your list of followed pages. You will see updates from the page in your feed.</p>
-
-    <h3>13.3 Create a Facebook Page</h3>
-    <p>This procedure explains how to create a Facebook page.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-    </ul>
-    <p>To create,
-    <ol>
-        <li>On the left pane, click <strong>Pages</strong>.</li>
-        <li>At the top of the page, click <strong>Create Page</strong>.</li>
-        <li>Enter the page name and select <strong>Next</strong>.</li>
-        <li>Select a page category and click <strong>Next</strong>.</li>
-        <li>Enter a page description and click <strong>Next</strong>.</li>
-        <li>Review your page information and click <strong>Create</strong>.</li>
-    </ol>
-    <p>The page will be created and you will be taken to the page dashboard.</p>
-
-    <h2>14. Manage Facebook Events</h2>
-    <p>Facebook Events are a way to announce and celebrate events, from birthday parties to charity fundraisers.</p>
-
-    <h3>14.1 Find Facebook Events</h3>
-    <p>This procedure explains how to find Facebook events.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-    </ul>
-    <p>To find Facebook events, use one of the below options:</p>
-    <ul>
-        <li><strong>Search Bar</strong> : At the top of the page, use the search bar to search for events by name or topic.</li>
-        <li><strong>Discover</strong> : In the Events section, click <strong>Discover</strong> to browse categories like Suggested for You or Popular Near You.</li>
-        <li><strong>Browse</strong> : In the Events section, click <strong>Browse</strong> to view events by category or directory.</li>
-        <li><strong>Saved</strong> : In the Events section, click <strong>Saved</strong> to view events you have saved for later.</li>
-        <li><strong>View All</strong> : In the Events section, click <strong>View All</strong> to view all the events you are interested in.</li>
-    </ul>
-    <p>You have successfully found Facebook events.</p>
-
-    <h3>14.2 Attend Facebook Events</h3>
-    <p>This procedure explains how to attend Facebook events.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-        <li>A Facebook event.</li>
-    </ul>
-    <p>To attend,
-    <ol>
-        <li>On the left pane, click <strong>Events</strong>.</li>
-        <li>(optional) On the top of the page, use the search bar to search for events by name or topic.</li>
-        <li>Click on the event you want to attend. The event page will open.</li>
-        <li>Click <strong>Going</strong>.</li>
-    </ol>
-    <p>You will be added to the list of attendees.</p>
-
-    <h3>14.3 Create a Facebook Event</h3>
-    <p>This procedure explains how to create a Facebook event.</p>
-    <p>Prerequisites:</p>
-    <ul>
-        <li>A Facebook account.</li>
-    </ul>
-    <p>To create,
-    <ol>
-        <li>On the left pane, click <strong>Events</strong>.</li>
-        <li>At the top of the page, click <strong>Create Event</strong>.</li>
-        <li>Enter the event name and select <strong>Next</strong>.</li>
-        <li>Select the event type and click <strong>Next</strong>.</li>
-        <li>Enter the event description and click <strong>Next</strong>.</li>
-        <li>Review your event information and click <strong>Create</strong>.</li>
-    </ol>
-    <p>The event will be created and you will be taken to the event dashboard.</p>
-
-    <h2>15. Troubleshoot Common Issues</h2>
-    <p>This procedure explains how to troubleshoot common issues.</p>
-    <p>The following table lists common issues and their solutions.</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Problem</th>
-                <th>Solution</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Forgot your password</td>
-                <td>On the login page, select <strong>Forgot Password</strong>. Enter your email or phone, and select the reset link to continue.</td>
-            </tr>
-            <tr>
-                <td>Locked account</td>
-                <td>The system locks accounts for policy violations or shows suspicious activity. Go to facebook.com/login/identify to begin the account recovery process.</td>
-            </tr>
-            <tr>
-                <td>Unable to find a friend</td>
-                <td>Ask your friend to  check their privacy settings to ensure others can search for them.</td>
-            </tr>
-            <tr>
-                <td>Missing post from feed</td>
-                <td>A post may be missing if it was deleted or if the audience settings excluded you. Ask the poster directly for help.</td>
-            </tr>
-            <tr>
-                <td>Irrelevant News Feed</td>
-                <td>Use the three-dot menu on posts to select <strong>Hide Post</strong> or <strong>Snooze [Name]</strong> for 30 days to improve feed relevance.</td>
-            </tr>
-            <tr>
-                <td>Excessive notifications</td>
-                <td>Go to <strong>Settings</strong> and select <strong>Notifications</strong> to customize or reduce the notification types you receive.</td>
-            </tr>
-            <tr>
-                <td>Unauthorized login</td>
-                <td>Go to <strong>Settings</strong> and select <strong>Security and Login</strong> then choose <strong>Where You’re Logged In</strong>. Log out of any unrecognized sessions and change your password immediately.</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>16. Stay Safe on Facebook</h2>
-    <div class="tip">
-        <p><strong>Important:</strong> Facebook will never ask for your password in email or Messenger. Do not trust messages that ask for your sign in information.</p>
-    </div>
-
-    <p>Follow these best practices to keep your account and personal information safe:</p>
-    <ul>
-        <li>Use a unique strong password and change it ever 6 to 12 months.</li>
-        <li>Enable two-factor authentication. Refer to Section 5.3.</li>
-        <li>Review your active sessions regularly. Refer to Section 5.4.</li>
-        <li>Do not click links in messages that the user did not request.</li>
-        <li>Report suspicious accounts, spam, or inappropriate content using the three-dot menu on any post or profile.</li>
-        <li>Be cautious about sharing your phone number, home address, or daily routine publicly.</li>
-        <li>Use the Privacy Checkup tool  to audit your settings every few months. Refer to Section 5.5.</li>
-    </ul>
-
-
-    <hr>
-
-
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="42-add-a-cover-photo">4.2 Add a Cover Photo<a href="#42-add-a-cover-photo" class="hash-link" aria-label="Direct link to 4.2 Add a Cover Photo" title="Direct link to 4.2 Add a Cover Photo" translate="no">​</a></h3>
+<p>This procedure explains how to add a cover photo to your Facebook account.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+<li class="">An image file of a photo to use as your cover picture.</li>
+</ul>
+<p>To add,</p>
+<ol>
+<li class="">Navigate to your profile page, on the large banner area click the camera icon.</li>
+<li class="">Select <strong>Upload Photo</strong> or choose from your existing Facebook photos.</li>
+<li class="">Reposition the image and click <strong>Save Changes</strong>.
+You have successfully added your cover photo.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="43-complete-your-bio">4.3 Complete Your Bio<a href="#43-complete-your-bio" class="hash-link" aria-label="Direct link to 4.3 Complete Your Bio" title="Direct link to 4.3 Complete Your Bio" translate="no">​</a></h3>
+<p>This procedure explains how to complete your profile.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+</ul>
+<p>To complete,</p>
+<ol>
+<li class="">On your profile page, click <strong>Edit profile</strong>.</li>
+<li class="">Complete the profile by filling in the following sections:</li>
+</ol>
+<table><thead><tr><th>Section</th><th>What to include</th></tr></thead><tbody><tr><td>Work</td><td>Current employer, job title, and previous positions</td></tr><tr><td>Education</td><td>High school, college, or university attended</td></tr><tr><td>Current city</td><td>Where you live now</td></tr><tr><td>Hometown</td><td>Where you grew up</td></tr><tr><td>Relationship status</td><td>Single, in a relationship, married, etc. (optional)</td></tr><tr><td>Bio</td><td>A short description of yourself (up to 101 characters)</td></tr><tr><td>Pronouns</td><td>How you identify (optional, visible to friends or everyone)</td></tr><tr><td>Websites and social links</td><td>Personal websites like LinkedIn and Instagram.</td></tr></tbody></table>
+<p><strong>Note:</strong> Each profile field has its own privacy control. You choose who sees each piece of information.
+You have successfully completed your profile.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-manage-privacy-and-security-settings">5. Manage Privacy and Security Settings<a href="#5-manage-privacy-and-security-settings" class="hash-link" aria-label="Direct link to 5. Manage Privacy and Security Settings" title="Direct link to 5. Manage Privacy and Security Settings" translate="no">​</a></h2>
+<p>Managing privacy settings helps you to control who can see your content. Review privacy settings before adding friends or posting content to manage visibility. Proper configuration ensures that only intended audiences view personal data. This process protects the user from unwanted interactions and data mining. Users must understand how each setting affects their profile presence. Careful management of these controls is a fundamental part of account maintenance.</p>
+<p>Benefits of managing privacy settings:</p>
+<ul>
+<li class="">Prevent unauthorized content viewing.</li>
+<li class="">Control digital footprint and identity.</li>
+<li class="">Reduce spam and harassment likelihood.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="51-access-privacy-settings">5.1 Access Privacy Settings<a href="#51-access-privacy-settings" class="hash-link" aria-label="Direct link to 5.1 Access Privacy Settings" title="Direct link to 5.1 Access Privacy Settings" translate="no">​</a></h3>
+<p>This procedure explains how to access your privacy settings.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.
+To access,</li>
+</ul>
+<ol>
+<li class="">On the top right corner, click the down-arrow icon.</li>
+<li class="">Go to <strong>Settings &amp; Privacy</strong> and select <strong>Settings</strong>.</li>
+<li class="">On the left pane, click <strong>Privacy</strong>.
+You have successfully accessed your privacy settings.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="52-privacy-control-settings-and-recommended-values">5.2 Privacy Control Settings and Recommended Values<a href="#52-privacy-control-settings-and-recommended-values" class="hash-link" aria-label="Direct link to 5.2 Privacy Control Settings and Recommended Values" title="Direct link to 5.2 Privacy Control Settings and Recommended Values" translate="no">​</a></h3>
+<p>This procedure explains how to configure your privacy settings.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.
+The following table lists key privacy controls and recommended values.
+| Setting | Menu | Recommended Value |
+| --- | --- | --- |
+| Future post visibility | On the left pane, click <strong>Privacy</strong> and select <strong>Your Activity</strong> | Friends |
+| Friend request settings | On the left pane, click <strong>Privacy</strong> and select <strong>How People Find You</strong> | Friends of Friends |
+| Email lookup visibility | On the left pane, click <strong>Privacy</strong> and select <strong>How People Find You</strong> | Friends |
+| Phone number lookup visibility | On the left pane, click <strong>Privacy</strong> and select <strong>How People Find You</strong> | Friends |
+| Search engine linking to profile | On the left pane, click <strong>Privacy</strong> and select <strong>How People Find You</strong> | Off |
+| Profile picture visibility | On the left pane, click <strong>Your Profile</strong> and select <strong>Edit</strong> | Friends |
+You have successfully configured your privacy settings.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="53-enable-two-factor-authentication-2fa">5.3 Enable Two-Factor Authentication (2FA)<a href="#53-enable-two-factor-authentication-2fa" class="hash-link" aria-label="Direct link to 5.3 Enable Two-Factor Authentication (2FA)" title="Direct link to 5.3 Enable Two-Factor Authentication (2FA)" translate="no">​</a></h3>
+<p>This procedure explains how to enable two-factor authentication (2FA).
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.
+To enable,</li>
+</ul>
+<ol>
+<li class="">Go to <strong>Settings &gt; Security and Login</strong>.</li>
+<li class="">Under <strong>Two-Factor Authentication</strong>, click <strong>Edit</strong>.</li>
+<li class="">Select your preferred method: <strong>Authentication App</strong> (recommended) or <strong>SMS</strong>.</li>
+<li class="">Follow the prompts to complete setup.
+You have successfully enabled two-factor authentication.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-find-friends">6. Find Friends<a href="#6-find-friends" class="hash-link" aria-label="Direct link to 6. Find Friends" title="Direct link to 6. Find Friends" translate="no">​</a></h2>
+<p>This procedure explains how to find friends on Facebook.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+</ul>
+<p>To find friends, use one of the below options:</p>
+<ul>
+<li class=""><strong>Search Bar</strong> : At the top of the page, use the search bar to search for friends by name.</li>
+<li class=""><strong>People You May Know</strong> : On the friends page, click <strong>Suggestions</strong>. Facebook suggests connections based on mutual friends and shared information.</li>
+</ul>
+<p>You have successfully found friends.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-manage-friend-requests">7. Manage Friend Requests<a href="#7-manage-friend-requests" class="hash-link" aria-label="Direct link to 7. Manage Friend Requests" title="Direct link to 7. Manage Friend Requests" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="71-accept-a-request">7.1 Accept a request<a href="#71-accept-a-request" class="hash-link" aria-label="Direct link to 7.1 Accept a request" title="Direct link to 7.1 Accept a request" translate="no">​</a></h3>
+<p>This procedure explains how to accept a friend request.
+<strong>Note:</strong> Add only individuals whom you know. Accepting unknown friend requests can expose your posts and personal information to strangers.</p>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+<li class="">A friend request.
+To accept,</li>
+</ul>
+<ol>
+<li class="">On the top navigation, click the Friends icon.</li>
+<li class="">On the Friends page, in the left pane, click <strong>Requests</strong>.</li>
+<li class="">On the <strong>Requests</strong> screen, against the request you want to accept, click <strong>Confirm</strong>.
+The person will get a notification that you accepted their request and are now friends.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="72-decline-a-request">7.2 Decline a request<a href="#72-decline-a-request" class="hash-link" aria-label="Direct link to 7.2 Decline a request" title="Direct link to 7.2 Decline a request" translate="no">​</a></h3>
+<p>This procedure explains how to decline a friend request.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+<li class="">A friend request.
+To decline,</li>
+</ul>
+<ol>
+<li class="">On the top navigation, click the Friends icon.</li>
+<li class="">On the Friends page, in the left pane, click <strong>Requests</strong>.</li>
+<li class="">On the <strong>Requests</strong> screen, under the &quot;Pending&quot; section, find the request you want to decline.</li>
+<li class="">Click <strong>Delete Request</strong>.
+The request will be removed and the person will not get a notification.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="73-remove-a-friend">7.3 Remove a friend<a href="#73-remove-a-friend" class="hash-link" aria-label="Direct link to 7.3 Remove a friend" title="Direct link to 7.3 Remove a friend" translate="no">​</a></h3>
+<p>This procedure explains how to remove a friend.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+<li class="">A friend.
+To remove,</li>
+</ul>
+<ol>
+<li class="">On the top of the screen, in the search bar, enter the name of a friend.</li>
+<li class="">Select the friend from the search results.</li>
+<li class="">Click on the friend name. The profile page of friend will open.</li>
+<li class="">On the top navigation, click <strong>Friends</strong>.</li>
+<li class="">On the pop-up window, click <strong>Unfriend</strong>.</li>
+<li class="">Click <strong>OK</strong>.
+The person will no longer appear in your friend list. The person will not get a notification.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="8-understand-your-news-feed">8. Understand Your News Feed<a href="#8-understand-your-news-feed" class="hash-link" aria-label="Direct link to 8. Understand Your News Feed" title="Direct link to 8. Understand Your News Feed" translate="no">​</a></h2>
+<p>The News Feed is the main page that appears after you log in. Use the News Feed to view friend posts, followed Pages, joined Groups, and sponsored content.The Facebook algorithm ranks content by your interactions. Posts from people you engage with most appear higher in the feed.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="9-create-a-post">9. Create a Post<a href="#9-create-a-post" class="hash-link" aria-label="Direct link to 9. Create a Post" title="Direct link to 9. Create a Post" translate="no">​</a></h2>
+<p>This procedure explains how to create a post.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+</ul>
+<p>To create,</p>
+<ol>
+<li class="">On the top of your News Feed or profile, click the <strong>What is on your mind?</strong> box.</li>
+<li class="">Enter your text. You can also add one or more of the following:<!-- -->
+<ul>
+<li class=""><strong>Photo/Video</strong> : Upload media from your device</li>
+<li class=""><strong>Feeling/Activity</strong> : Share your mood or what you are doing</li>
+<li class=""><strong>Tag People</strong> : Mention friends so they are linked in the post</li>
+<li class=""><strong>Check In</strong> : Share your current location</li>
+<li class=""><strong>Background Color</strong> : Add a colored background to text-only posts</li>
+</ul>
+</li>
+<li class="">Select your audience: Friends, Public, Only Me, or a custom list.</li>
+<li class="">Click <strong>Post</strong>.
+The post will be published and visible to your selected audience.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="10-understand-post-privacy-options">10. Understand Post Privacy Options<a href="#10-understand-post-privacy-options" class="hash-link" aria-label="Direct link to 10. Understand Post Privacy Options" title="Direct link to 10. Understand Post Privacy Options" translate="no">​</a></h2>
+<p>This procedure explains how to understand post privacy options.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.
+The following table lists post privacy options.</li>
+</ul>
+<table><thead><tr><th>Audience Setting</th><th>Description</th></tr></thead><tbody><tr><td>Public</td><td>Anyone on or off Facebook, including people not logged in</td></tr><tr><td>Friends</td><td>Only your confirmed Facebook friends</td></tr><tr><td>Friends except</td><td>All friends minus specific people you exclude</td></tr><tr><td>Specific friends</td><td>Only the people you manually select</td></tr><tr><td>Only me</td><td>Visible only to you. Useful for drafts or private notes</td></tr><tr><td>Custom</td><td>Combine any of the above with include/exclude logic</td></tr><tr><td>You have successfully understood post privacy options.</td><td></td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="11-manage-facebook-groups">11. Manage Facebook Groups<a href="#11-manage-facebook-groups" class="hash-link" aria-label="Direct link to 11. Manage Facebook Groups" title="Direct link to 11. Manage Facebook Groups" translate="no">​</a></h2>
+<p>Facebook Groups are community spaces built around shared interests, causes, or affiliations.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="111-find-facebook-groups">11.1 Find Facebook Groups<a href="#111-find-facebook-groups" class="hash-link" aria-label="Direct link to 11.1 Find Facebook Groups" title="Direct link to 11.1 Find Facebook Groups" translate="no">​</a></h3>
+<p>This procedure explains how to find Facebook groups.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+</ul>
+<p>To find Facebook groups, use one of the below options:</p>
+<ul>
+<li class=""><strong>Groups Menu</strong> : On the left pane, click <strong>Groups</strong>.</li>
+<li class=""><strong>Search Bar</strong> : At the top of the page, use the search bar to search for groups by name or topic.</li>
+<li class=""><strong>Discover</strong> : In the Groups section, click <strong>Discover</strong> to browse categories like Suggested for You or Popular Near You.
+You have successfully found Facebook groups.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="112-join-facebook-groups">11.2 Join Facebook Groups<a href="#112-join-facebook-groups" class="hash-link" aria-label="Direct link to 11.2 Join Facebook Groups" title="Direct link to 11.2 Join Facebook Groups" translate="no">​</a></h3>
+<p>This procedure explains how to join Facebook groups.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+<li class="">A Facebook group.
+To join,</li>
+</ul>
+<ol>
+<li class="">On the left pane, click <strong>Groups</strong>.</li>
+<li class="">(optional) On the top of the page, use the search bar to search for groups by name or topic.</li>
+<li class="">Click on the group you want to join. If it&#x27;s a public group, to its page, you can see posts and the group description.</li>
+<li class="">Click <strong>Join</strong>.
+<strong>Notes:</strong> If the group is public, you will be added immediately. If it is private or closed, your request will be sent to the admins for approval.
+<strong>Notes:</strong> If you are joining as a Facebook Page, you will be asked to select whether to join as your personal profile or your Page. Not all groups allow Pages to join. This depends on the groups settings.
+The group will be added to your list of joined groups. You will see posts from the group in your feed.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="113-create-a-group">11.3 Create a Group<a href="#113-create-a-group" class="hash-link" aria-label="Direct link to 11.3 Create a Group" title="Direct link to 11.3 Create a Group" translate="no">​</a></h3>
+<p>This procedure explains how to create a group.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+</ul>
+<p>To create,</p>
+<ol>
+<li class="">On the left pane, click <strong>Groups</strong>.</li>
+<li class="">At the top of the page, click <strong>Create Group</strong>.</li>
+<li class="">Enter the group name and select <strong>Next</strong>.</li>
+<li class="">Select a group type and click <strong>Next</strong>.</li>
+<li class="">Enter a group description and click <strong>Next</strong>.</li>
+<li class="">Choose who can post and click <strong>Next</strong>.</li>
+<li class="">Review your group information and click <strong>Create</strong>.
+The group will be created and you will be taken to the group dashboard.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="13-manage-facebook-pages">13. Manage Facebook Pages<a href="#13-manage-facebook-pages" class="hash-link" aria-label="Direct link to 13. Manage Facebook Pages" title="Direct link to 13. Manage Facebook Pages" translate="no">​</a></h2>
+<p>Facebook Pages are public profiles for businesses, brands, celebrities, and organizations.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="131-find-facebook-pages">13.1 Find Facebook Pages<a href="#131-find-facebook-pages" class="hash-link" aria-label="Direct link to 13.1 Find Facebook Pages" title="Direct link to 13.1 Find Facebook Pages" translate="no">​</a></h3>
+<p>This procedure explains how to find Facebook pages.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+</ul>
+<p>To find Facebook pages, use one of the below options:</p>
+<ul>
+<li class=""><strong>Search Bar</strong> : At the top of the page, use the search bar to search for pages by name or topic.</li>
+<li class=""><strong>Discover</strong> : In the Pages section, click <strong>Discover</strong> to browse categories like Suggested for You or Popular Near You.</li>
+<li class=""><strong>Browse</strong> : In the Pages section, click <strong>Browse</strong> to view pages by category or directory.</li>
+<li class=""><strong>Saved</strong> : In the Pages section, click <strong>Saved</strong> to view pages you have saved for later.</li>
+<li class=""><strong>View All</strong> : In the Pages section, click <strong>View All</strong> to view all the pages you follow.
+You have successfully found Facebook pages.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="132-follow-facebook-pages">13.2 Follow Facebook Pages<a href="#132-follow-facebook-pages" class="hash-link" aria-label="Direct link to 13.2 Follow Facebook Pages" title="Direct link to 13.2 Follow Facebook Pages" translate="no">​</a></h3>
+<p>This procedure explains how to follow Facebook pages.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+<li class="">A Facebook page.
+To follow,</li>
+</ul>
+<ol>
+<li class="">On the left pane, click <strong>Pages</strong>.</li>
+<li class="">(optional) On the top of the page, use the search bar to search for pages by name or topic.</li>
+<li class="">Click on the page you want to follow. The page will open.</li>
+<li class="">Click <strong>Follow</strong>.
+The page will be added to your list of followed pages. You will see updates from the page in your feed.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="133-create-a-facebook-page">13.3 Create a Facebook Page<a href="#133-create-a-facebook-page" class="hash-link" aria-label="Direct link to 13.3 Create a Facebook Page" title="Direct link to 13.3 Create a Facebook Page" translate="no">​</a></h3>
+<p>This procedure explains how to create a Facebook page.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+</ul>
+<p>To create,</p>
+<ol>
+<li class="">On the left pane, click <strong>Pages</strong>.</li>
+<li class="">At the top of the page, click <strong>Create Page</strong>.</li>
+<li class="">Enter the page name and select <strong>Next</strong>.</li>
+<li class="">Select a page category and click <strong>Next</strong>.</li>
+<li class="">Enter a page description and click <strong>Next</strong>.</li>
+<li class="">Review your page information and click <strong>Create</strong>.
+The page will be created and you will be taken to the page dashboard.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="14-manage-facebook-events">14. Manage Facebook Events<a href="#14-manage-facebook-events" class="hash-link" aria-label="Direct link to 14. Manage Facebook Events" title="Direct link to 14. Manage Facebook Events" translate="no">​</a></h2>
+<p>Facebook Events are a way to announce and celebrate events, from birthday parties to charity fundraisers.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="141-find-facebook-events">14.1 Find Facebook Events<a href="#141-find-facebook-events" class="hash-link" aria-label="Direct link to 14.1 Find Facebook Events" title="Direct link to 14.1 Find Facebook Events" translate="no">​</a></h3>
+<p>This procedure explains how to find Facebook events.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+</ul>
+<p>To find Facebook events, use one of the below options:</p>
+<ul>
+<li class=""><strong>Search Bar</strong> : At the top of the page, use the search bar to search for events by name or topic.</li>
+<li class=""><strong>Discover</strong> : In the Events section, click <strong>Discover</strong> to browse categories like Suggested for You or Popular Near You.</li>
+<li class=""><strong>Browse</strong> : In the Events section, click <strong>Browse</strong> to view events by category or directory.</li>
+<li class=""><strong>Saved</strong> : In the Events section, click <strong>Saved</strong> to view events you have saved for later.</li>
+<li class=""><strong>View All</strong> : In the Events section, click <strong>View All</strong> to view all the events you are interested in.
+You have successfully found Facebook events.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="142-attend-facebook-events">14.2 Attend Facebook Events<a href="#142-attend-facebook-events" class="hash-link" aria-label="Direct link to 14.2 Attend Facebook Events" title="Direct link to 14.2 Attend Facebook Events" translate="no">​</a></h3>
+<p>This procedure explains how to attend Facebook events.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+<li class="">A Facebook event.
+To attend,</li>
+</ul>
+<ol>
+<li class="">On the left pane, click <strong>Events</strong>.</li>
+<li class="">(optional) On the top of the page, use the search bar to search for events by name or topic.</li>
+<li class="">Click on the event you want to attend. The event page will open.</li>
+<li class="">Click <strong>Going</strong>.
+You will be added to the list of attendees.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="143-create-a-facebook-event">14.3 Create a Facebook Event<a href="#143-create-a-facebook-event" class="hash-link" aria-label="Direct link to 14.3 Create a Facebook Event" title="Direct link to 14.3 Create a Facebook Event" translate="no">​</a></h3>
+<p>This procedure explains how to create a Facebook event.
+<strong>Prerequisites:</strong></p>
+<ul>
+<li class="">A Facebook account.</li>
+</ul>
+<p>To create,</p>
+<ol>
+<li class="">On the left pane, click <strong>Events</strong>.</li>
+<li class="">At the top of the page, click <strong>Create Event</strong>.</li>
+<li class="">Enter the event name and select <strong>Next</strong>.</li>
+<li class="">Select the event type and click <strong>Next</strong>.</li>
+<li class="">Enter the event description and click <strong>Next</strong>.</li>
+<li class="">Review your event information and click <strong>Create</strong>.
+The event will be created and you will be taken to the event dashboard.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="15-troubleshoot-common-issues">15. Troubleshoot Common Issues<a href="#15-troubleshoot-common-issues" class="hash-link" aria-label="Direct link to 15. Troubleshoot Common Issues" title="Direct link to 15. Troubleshoot Common Issues" translate="no">​</a></h2>
+<p>This procedure explains how to troubleshoot common issues.</p>
+<p>The following table lists common issues and their solutions.</p>
+<table><thead><tr><th>Problem</th><th>Solution</th></tr></thead><tbody><tr><td>Forgot your password</td><td>On the login page, select <strong>Forgot Password</strong>. Enter your email or phone, and select the reset link to continue.</td></tr><tr><td>Locked account</td><td>The system locks accounts for policy violations or shows suspicious activity. Go to facebook.com/login/identify to begin the account recovery process.</td></tr><tr><td>Unable to find a friend</td><td>Ask your friend to  check their privacy settings to ensure others can search for them.</td></tr><tr><td>Missing post from feed</td><td>A post may be missing if it was deleted or if the audience settings excluded you. Ask the poster directly for help.</td></tr><tr><td>Irrelevant News Feed</td><td>Use the three-dot menu on posts to select <strong>Hide Post</strong> or <strong>Snooze [Name]</strong> for 30 days to improve feed relevance.</td></tr><tr><td>Excessive notifications</td><td>Go to <strong>Settings</strong> and select <strong>Notifications</strong> to customize or reduce the notification types you receive.</td></tr><tr><td>Unauthorized login</td><td>Go to <strong>Settings</strong> and select <strong>Security and Login</strong> then choose <strong>Where You’re Logged In</strong>. Log out of any unrecognized sessions and change your password immediately.</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="16-stay-safe-on-facebook">16. Stay Safe on Facebook<a href="#16-stay-safe-on-facebook" class="hash-link" aria-label="Direct link to 16. Stay Safe on Facebook" title="Direct link to 16. Stay Safe on Facebook" translate="no">​</a></h2>
+<p><strong>Important:</strong> Facebook will never ask for your password in email or Messenger. Do not trust messages that ask for your sign in information.</p>
+<p>Follow these best practices to keep your account and personal information safe:</p>
+<ul>
+<li class="">Use a unique strong password and change it ever 6 to 12 months.</li>
+<li class="">Enable two-factor authentication. Refer to Section 5.3.</li>
+<li class="">Review your active sessions regularly. Refer to Section 5.4.</li>
+<li class="">Do not click links in messages that the user did not request.</li>
+<li class="">Report suspicious accounts, spam, or inappropriate content using the three-dot menu on any post or profile.</li>
+<li class="">Be cautious about sharing your phone number, home address, or daily routine publicly.</li>
+<li class="">Use the Privacy Checkup tool  to audit your settings every few months. Refer to Section 5.5.</li>
+</ul>
+<hr></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/madaswamy14/My-Portfolio/tree/main/docs-site/docs/facebook-events-quickstart.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/My-Portfolio/developer-portal/docs/intro"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Developer Portal Overview</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/My-Portfolio/developer-portal/docs/jira-getting-started"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Jira Getting Started Guide</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-introduction" class="table-of-contents__link toc-highlight">1. Introduction</a></li><li><a href="#2-prerequisites" class="table-of-contents__link toc-highlight">2. Prerequisites</a></li><li><a href="#3-create-a-facebook-account" class="table-of-contents__link toc-highlight">3. Create a Facebook Account</a><ul><li><a href="#31-sign-up-on-the-web" class="table-of-contents__link toc-highlight">3.1 Sign Up on the Web</a></li><li><a href="#32-confirm-your-identity" class="table-of-contents__link toc-highlight">3.2 Confirm Your Identity</a></li></ul></li><li><a href="#4-set-up-your-profile" class="table-of-contents__link toc-highlight">4. Set Up Your Profile</a><ul><li><a href="#41-add-a-profile-photo" class="table-of-contents__link toc-highlight">4.1 Add a Profile Photo</a></li><li><a href="#42-add-a-cover-photo" class="table-of-contents__link toc-highlight">4.2 Add a Cover Photo</a></li><li><a href="#43-complete-your-bio" class="table-of-contents__link toc-highlight">4.3 Complete Your Bio</a></li></ul></li><li><a href="#5-manage-privacy-and-security-settings" class="table-of-contents__link toc-highlight">5. Manage Privacy and Security Settings</a><ul><li><a href="#51-access-privacy-settings" class="table-of-contents__link toc-highlight">5.1 Access Privacy Settings</a></li><li><a href="#52-privacy-control-settings-and-recommended-values" class="table-of-contents__link toc-highlight">5.2 Privacy Control Settings and Recommended Values</a></li><li><a href="#53-enable-two-factor-authentication-2fa" class="table-of-contents__link toc-highlight">5.3 Enable Two-Factor Authentication (2FA)</a></li></ul></li><li><a href="#6-find-friends" class="table-of-contents__link toc-highlight">6. Find Friends</a></li><li><a href="#7-manage-friend-requests" class="table-of-contents__link toc-highlight">7. Manage Friend Requests</a><ul><li><a href="#71-accept-a-request" class="table-of-contents__link toc-highlight">7.1 Accept a request</a></li><li><a href="#72-decline-a-request" class="table-of-contents__link toc-highlight">7.2 Decline a request</a></li><li><a href="#73-remove-a-friend" class="table-of-contents__link toc-highlight">7.3 Remove a friend</a></li></ul></li><li><a href="#8-understand-your-news-feed" class="table-of-contents__link toc-highlight">8. Understand Your News Feed</a></li><li><a href="#9-create-a-post" class="table-of-contents__link toc-highlight">9. Create a Post</a></li><li><a href="#10-understand-post-privacy-options" class="table-of-contents__link toc-highlight">10. Understand Post Privacy Options</a></li><li><a href="#11-manage-facebook-groups" class="table-of-contents__link toc-highlight">11. Manage Facebook Groups</a><ul><li><a href="#111-find-facebook-groups" class="table-of-contents__link toc-highlight">11.1 Find Facebook Groups</a></li><li><a href="#112-join-facebook-groups" class="table-of-contents__link toc-highlight">11.2 Join Facebook Groups</a></li><li><a href="#113-create-a-group" class="table-of-contents__link toc-highlight">11.3 Create a Group</a></li></ul></li><li><a href="#13-manage-facebook-pages" class="table-of-contents__link toc-highlight">13. Manage Facebook Pages</a><ul><li><a href="#131-find-facebook-pages" class="table-of-contents__link toc-highlight">13.1 Find Facebook Pages</a></li><li><a href="#132-follow-facebook-pages" class="table-of-contents__link toc-highlight">13.2 Follow Facebook Pages</a></li><li><a href="#133-create-a-facebook-page" class="table-of-contents__link toc-highlight">13.3 Create a Facebook Page</a></li></ul></li><li><a href="#14-manage-facebook-events" class="table-of-contents__link toc-highlight">14. Manage Facebook Events</a><ul><li><a href="#141-find-facebook-events" class="table-of-contents__link toc-highlight">14.1 Find Facebook Events</a></li><li><a href="#142-attend-facebook-events" class="table-of-contents__link toc-highlight">14.2 Attend Facebook Events</a></li><li><a href="#143-create-a-facebook-event" class="table-of-contents__link toc-highlight">14.3 Create a Facebook Event</a></li></ul></li><li><a href="#15-troubleshoot-common-issues" class="table-of-contents__link toc-highlight">15. Troubleshoot Common Issues</a></li><li><a href="#16-stay-safe-on-facebook" class="table-of-contents__link toc-highlight">16. Stay Safe on Facebook</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/My-Portfolio/developer-portal/docs/intro">Overview</a></li><li class="footer__item"><a class="footer__link-item" href="/My-Portfolio/developer-portal/docs/documentation-samples">Documentation Samples</a></li><li class="footer__item"><a class="footer__link-item" href="/My-Portfolio/developer-portal/docs/jira-getting-started">Jira Getting Started</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Explore</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/My-Portfolio/developer-portal/docs/swapi-api-reference">SWAPI API Reference</a></li><li class="footer__item"><a class="footer__link-item" href="/My-Portfolio/developer-portal/docs/facebook-events-quickstart">Facebook Events</a></li><li class="footer__item"><a class="footer__link-item" href="/My-Portfolio/developer-portal/docs/quickstart">Quickstart</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://madaswamy14.github.io/My-Portfolio/index.html" target="_blank" rel="noopener noreferrer" class="footer__link-item">Portfolio Homepage<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/madaswamy14" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Profile<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Madaswamy. Built with Docusaurus.</div></div></div></footer></div>
 </body>
-
 </html>

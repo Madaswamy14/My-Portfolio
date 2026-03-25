@@ -63,13 +63,6 @@ const config: Config = {
           label: 'Overview',
         },
         {
-          to: '/docs/documentation-samples',
-          label: 'Sample Docs',
-          position: 'left',
-        },
-        {to: '/docs/quickstart', label: 'Quickstart', position: 'left'},
-        {to: '/docs/api-reference', label: 'API Reference', position: 'left'},
-        {
           href: 'https://madaswamy14.github.io/My-Portfolio/index.html',
           label: 'Portfolio',
           position: 'right',
