@@ -315,26 +315,26 @@ def scan_docs(scan_path, check_remote=True, concurrency=10, timeout=5):
 
 def print_report(issues, summary, check_remote):
     """Print a human-friendly CLI report."""
-    print(f"📚 Files scanned: {summary['files_scanned']}")
-    print(f"🔗 Remote links found: {summary['remote_links_found']}")
+    print(f"[INFO] Files scanned: {summary['files_scanned']}")
+    print(f"[INFO] Remote links found: {summary['remote_links_found']}")
     if check_remote:
-        print(f"🌍 Unique remote links checked: {summary['unique_remote_links_checked']}")
+        print(f"[INFO] Unique remote links checked: {summary['unique_remote_links_checked']}")
     else:
-        print('🌍 Remote link checks skipped (--skip-remote)')
+        print('[INFO] Remote link checks skipped (--skip-remote)')
 
     print("\n" + "=" * 56)
     if not issues:
-        print('✅ No broken links, missing images, or invalid references found!')
+        print('[OK] No broken links, missing images, or invalid references found!')
         return
 
-    print(f"❌ Found {len(issues)} documentation issues\n")
+    print(f"[ERROR] Found {len(issues)} documentation issues\n")
     for issue_type, count in sorted(summary['issue_breakdown'].items()):
         print(f"- {issue_type}: {count}")
     print('')
 
     issues.sort(key=lambda issue: (str(issue['file']), issue['line'], issue['target']))
     for file_path, grouped_issues in groupby(issues, key=lambda issue: issue['file']):
-        print(f"📄 {file_path}")
+        print(f"[FILE] {file_path}")
         for issue in grouped_issues:
             print(
                 f"   Line {issue['line']}: [{issue['type']}] "
@@ -356,7 +356,7 @@ def main():
         print(f'Error: Path not found: {scan_target}')
         sys.exit(1)
 
-    print(f'🔍 Scanning documentation in: {scan_target}')
+    print(f'[INFO] Scanning documentation in: {scan_target}')
     try:
         issues, summary = scan_docs(
             scan_path=scan_target,

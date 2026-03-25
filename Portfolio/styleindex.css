@@ -753,7 +753,7 @@ body.dark .copy-button:hover {
 }
 
 .service-card li::before {
-    content: '✓';
+    content: '-';
     position: absolute;
     left: 0;
     color: var(--accent-light);

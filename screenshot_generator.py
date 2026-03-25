@@ -56,7 +56,7 @@ def process_screenshots(config_file, output_dir, headless=True):
     out_path = Path(output_dir)
     out_path.mkdir(parents=True, exist_ok=True)
 
-    print(f"📸 Starting screenshot session ({len(shots)} items)...")
+    print(f"[INFO] Starting screenshot session ({len(shots)} items)...")
     driver = setup_driver(headless)
 
     try:
@@ -84,7 +84,7 @@ def process_screenshots(config_file, output_dir, headless=True):
             
     finally:
         driver.quit()
-        print("✅ Session complete.")
+        print("[OK] Session complete.")
 
 
 def generate_sample_config(path):

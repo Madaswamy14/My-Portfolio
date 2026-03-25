@@ -3,7 +3,7 @@ title: SWAPI API Reference & Developer Guide
 description: A complete API reference for SWAPI, including endpoints, schemas, parameters, and code examples.
 ---
 
-# ⭐ SWAPI ⭐
+# SWAPI
 ## The Star Wars API
 ### API Reference & Developer Guide
 
@@ -17,7 +17,7 @@ SWAPI (The Star Wars API) is an open-source, read-only REST API that provides st
 
 This document provides a complete API reference including endpoint descriptions, request/response schemas, query parameters, error codes, and code examples.
 
-> ℹ️ **About SWAPI:** SWAPI is free to use, requires no API key or authentication, and returns all data in JSON format. All data is sourced from the official Star Wars canon films (Episodes I–VII).
+> **About SWAPI:** SWAPI is free to use, requires no API key or authentication, and returns all data in JSON format. All data is sourced from the official Star Wars canon films (Episodes I–VII).
 
 ## 2. Quick Reference
 ### 2.1 API Specifications
@@ -221,7 +221,7 @@ All list endpoints wrap results in a standard pagination envelope:
   "results": [ ... ]
 }
 ```
-> 💡 **Tip:** To retrieve all records, start at page 1 and keep following the 'next' URL until it returns `null`. Each page contains up to 10 results.
+> **Tip:** To retrieve all records, start at page 1 and keep following the 'next' URL until it returns `null`. Each page contains up to 10 results.
 
 ## 9. Error Responses
 SWAPI uses standard HTTP status codes to communicate success and failure. All error responses return a JSON object with a `detail` field describing the error.
@@ -288,7 +288,7 @@ curl -X GET "https://swapi.dev/api/starships/?page=2" -H "Accept: application/js
 *   All URLs in response bodies are fully-qualified and can be used directly for linked-resource lookups.
 *   Use HTTPS exclusively. The API does not support plain HTTP.
 
-> ⚠️ **Read-Only API:** SWAPI supports `GET` requests only. `POST`, `PUT`, `PATCH`, and `DELETE` requests will return a `405 Method Not Allowed` response.
+> **Read-only API:** SWAPI supports `GET` requests only. `POST`, `PUT`, `PATCH`, and `DELETE` requests will return a `405 Method Not Allowed` response.
 
 ---
 *End of Document — SWAPI API Reference v1.0 — swapi.dev*

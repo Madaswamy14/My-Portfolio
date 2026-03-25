@@ -1526,7 +1526,7 @@ body.dark .status-item .status-code {
 }
 
 .service-card li::before {
-    content: '✓';
+    content: '-';
     position: absolute;
     left: 0;
     color: var(--accent-light);

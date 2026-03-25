@@ -14,7 +14,7 @@ Jira Software is a project management and issue-tracking platform developed by A
 
 This guide walks you through everything you need to get productive in Jira, from signing up to running your first sprint.
 
-> **📋 Scope:** This guide covers Jira Software (cloud edition). Steps may vary slightly for Jira Work Management or Data Center deployments.
+> **Scope:** This guide covers Jira Software (cloud edition). Steps may vary slightly for Jira Work Management or Data Center deployments.
 
 ## 2. Prerequisites
 Before you begin, confirm the following:
@@ -38,7 +38,7 @@ Follow these steps to create your Jira account:
 5. Set a strong password (minimum 8 characters, including at least one number and one symbol).
 6. Complete the short onboarding survey to help Atlassian tailor your experience.
 
-> **💡 Tip:** Use your work email address. Atlassian uses your email domain to automatically link you to existing workspaces at your organization.
+> **Tip:** Use your work email address. Atlassian uses your email domain to automatically link you to existing workspaces at your organization.
 
 ### 3.2 Choosing a Plan
 Jira offers four plans. Choose the one that fits your team:
@@ -67,7 +67,7 @@ Once logged in, you will land on the Jira home screen. Here is a breakdown of th
 * **Reports** : Access built-in charts like Burndown, Velocity, and Control charts.
 * **Project Settings** : Configure workflows, permissions, and notifications.
 
-> **🔍 Note:** The sidebar items vary depending on whether your project uses a Scrum or Kanban template.
+> **Note:** The sidebar items vary depending on whether your project uses a Scrum or Kanban template.
 
 ## 5. Creating Your First Project
 ### 5.1 Start a New Project
@@ -141,7 +141,7 @@ Before starting a sprint, build up your backlog:
 5. Click **Start**.
    Your sprint is now active. Switch to the Board view to see all issues.
 
-> **💡 Tip:** Aim to include only as many story points as your team has historically completed per sprint (your velocity). For new teams, start conservatively.
+> **Tip:** Aim to include only as many story points as your team has historically completed per sprint (your velocity). For new teams, start conservatively.
 
 ### 7.3 Complete a Sprint
 1. At the end of the sprint period, in the Board view, click **Complete Sprint**.
@@ -219,6 +219,6 @@ You are now ready to manage your first project in Jira. Here are some recommende
 * **Learn JQL:** Use Jira Query Language to build powerful custom filters and dashboard gadgets.
 * **Set Up Roadmaps:** For Premium users, use Advanced Roadmaps to plan across multiple teams and projects.
 
-> **📚 Resources:** Atlassian's official documentation is available at [https://support.atlassian.com/jira-software-cloud/](https://support.atlassian.com/jira-software-cloud/). The Atlassian Community forum at [https://community.atlassian.com](https://community.atlassian.com) is a great place to ask questions.
+> **Resources:** Atlassian's official documentation is available at [https://support.atlassian.com/jira-software-cloud/](https://support.atlassian.com/jira-software-cloud/). The Atlassian Community forum at [https://community.atlassian.com](https://community.atlassian.com) is a great place to ask questions.
 
 ---

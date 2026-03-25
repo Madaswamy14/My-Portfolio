@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
         updateToggleButton();
     });
     
-    // Update button text and icon based on current theme
+    // Update button text based on current theme
     function updateToggleButton() {
         const isDark = body.classList.contains('dark');
-        themeToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+        themeToggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
         themeToggle.setAttribute('aria-pressed', isDark);
     }
 });

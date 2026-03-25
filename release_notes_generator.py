@@ -11,16 +11,16 @@ COMMIT_PATTERN = re.compile(r'^(\w+)(?:\(([^)]+)\))?:\s*(.+)$')
 
 # Mapping commit types to human-readable section headers
 TYPE_MAP = {
-    'feat': '✨ New Features',
-    'fix': '🐛 Bug Fixes',
-    'docs': '📚 Documentation',
-    'style': '💎 Styles',
-    'refactor': '♻️ Code Refactoring',
-    'perf': '🚀 Performance Improvements',
-    'test': '✅ Tests',
-    'chore': '🔧 Chores',
-    'build': '👷 Build System',
-    'ci': '💚 CI/CD'
+    'feat': 'New Features',
+    'fix': 'Bug Fixes',
+    'docs': 'Documentation',
+    'style': 'Styles',
+    'refactor': 'Code Refactoring',
+    'perf': 'Performance Improvements',
+    'test': 'Tests',
+    'chore': 'Chores',
+    'build': 'Build System',
+    'ci': 'CI/CD'
 }
 
 def get_git_log(repo_path, range_spec):
@@ -57,7 +57,7 @@ def parse_commits(commit_lines):
             c_type, c_scope, c_desc = match.groups()
             
             # Use the mapped title or fallback to "Other"
-            header = TYPE_MAP.get(c_type, '🛠 Other Changes')
+            header = TYPE_MAP.get(c_type, 'Other Changes')
             
             # Format: **scope:** description (if scope exists)
             if c_scope:
@@ -68,7 +68,7 @@ def parse_commits(commit_lines):
             categorized[header].append(entry)
         else:
             # Commits that don't follow the convention go to "Other"
-            categorized['🛠 Other Changes'].append(line)
+            categorized['Other Changes'].append(line)
             
     return categorized
 
@@ -79,11 +79,11 @@ def generate_markdown(version, categories):
     
     # Order keys based on importance
     priority_order = [
-        '✨ New Features', 
-        '🐛 Bug Fixes', 
-        '🚀 Performance Improvements', 
-        '📚 Documentation',
-        '♻️ Code Refactoring'
+        'New Features', 
+        'Bug Fixes', 
+        'Performance Improvements', 
+        'Documentation',
+        'Code Refactoring'
     ]
     
     # Add priority items first
@@ -119,14 +119,14 @@ def main():
     # Determine range
     git_range = f"{args.start}..{args.end}" if args.start else args.end
     
-    print(f"📖 Reading git log from {args.repo} ({git_range})...")
+    print(f"[INFO] Reading git log from {args.repo} ({git_range})...")
     raw_commits = get_git_log(args.repo, git_range)
     
     categories = parse_commits(raw_commits)
     markdown = generate_markdown(args.version, categories)
     
     Path(args.output).write_text(markdown, encoding='utf-8')
-    print(f"✅ Release notes generated: {args.output}")
+    print(f"[OK] Release notes generated: {args.output}")
 
 if __name__ == "__main__":
     main()
