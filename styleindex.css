@@ -3187,7 +3187,7 @@ body.devex-home .homepage-shell {
 }
 
 body.devex-home .homepage-section {
-    margin-top: 72px;
+    margin-top: 60px;
 }
 
 body.devex-home .homepage-section:first-of-type {
@@ -3197,9 +3197,9 @@ body.devex-home .homepage-section:first-of-type {
 body.devex-home .hero-panel {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.88fr);
-    gap: 32px;
+    gap: 28px;
     align-items: stretch;
-    padding: 34px;
+    padding: 30px;
     border-radius: 30px;
     border: 1px solid var(--devex-border);
     background:
@@ -3218,6 +3218,7 @@ body.devex-home.dark .hero-panel {
 body.devex-home .hero-copy {
     position: relative;
     z-index: 1;
+    max-width: 640px;
 }
 
 body.devex-home .eyebrow,
@@ -3252,9 +3253,9 @@ body.devex-home .stat-number {
 
 body.devex-home .hero-title {
     margin: 18px 0 16px;
-    max-width: 12ch;
-    font-size: clamp(3rem, 5vw, 4.9rem);
-    line-height: 0.98;
+    max-width: 13ch;
+    font-size: clamp(2.9rem, 4.4vw, 4.25rem);
+    line-height: 1.01;
     letter-spacing: -0.05em;
     color: var(--devex-text);
 }
@@ -3274,9 +3275,9 @@ body.devex-home .hero-visual-metric span {
 
 body.devex-home .hero-summary {
     max-width: 60ch;
-    font-size: 1.08rem;
-    line-height: 1.75;
-    margin-bottom: 24px;
+    font-size: 1.02rem;
+    line-height: 1.68;
+    margin-bottom: 20px;
 }
 
 body.devex-home .proof-badges,
@@ -3286,16 +3287,16 @@ body.devex-home .contact-actions,
 body.devex-home .credential-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
 }
 
 body.devex-home .proof-badge {
-    padding: 10px 14px;
+    padding: 9px 12px;
     border-radius: 999px;
     border: 1px solid var(--devex-border);
-    background: var(--devex-pill-bg);
+    background: rgba(255, 255, 255, 0.02);
     color: var(--devex-pill-text);
-    font-size: 0.92rem;
+    font-size: 0.86rem;
     font-weight: 600;
 }
 
@@ -3308,7 +3309,7 @@ body.devex-home a.proof-badge:focus-visible {
 }
 
 body.devex-home .cta-group {
-    margin-top: 28px;
+    margin-top: 24px;
 }
 
 body.devex-home .download-btn,
@@ -3327,17 +3328,23 @@ body.devex-home .credential-link {
     transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
-body.devex-home .download-btn,
-body.devex-home .view-project-btn {
+body.devex-home .download-btn {
     background: linear-gradient(135deg, var(--devex-primary-start) 0%, var(--devex-primary-end) 100%);
     color: #ffffff !important;
     box-shadow: 0 16px 36px var(--devex-primary-shadow);
 }
 
+body.devex-home .view-project-btn {
+    border-color: var(--devex-border);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--devex-text) !important;
+    box-shadow: none;
+}
+
 body.devex-home .secondary-btn,
 body.devex-home .credential-link {
     border-color: var(--devex-border);
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.02);
     color: var(--devex-text) !important;
 }
 
@@ -3345,10 +3352,11 @@ body.devex-home .download-btn:hover,
 body.devex-home .secondary-btn:hover,
 body.devex-home .view-project-btn:hover,
 body.devex-home .credential-link:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     text-decoration: none;
 }
 
+body.devex-home .view-project-btn:hover,
 body.devex-home .secondary-btn:hover,
 body.devex-home .credential-link:hover {
     background: var(--devex-panel-strong);
@@ -3433,21 +3441,21 @@ body.devex-home .hero-visual-metric strong {
 }
 
 body.devex-home .section-intro {
-    margin-bottom: 26px;
-    max-width: 760px;
+    margin-bottom: 22px;
+    max-width: 620px;
 }
 
 body.devex-home .section-heading {
     margin: 14px 0 10px;
-    font-size: clamp(1.9rem, 2.5vw, 2.85rem);
-    line-height: 1.05;
+    font-size: clamp(1.85rem, 2.2vw, 2.55rem);
+    line-height: 1.08;
     letter-spacing: -0.04em;
     color: var(--devex-text);
 }
 
 body.devex-home .section-subtext {
     margin: 0;
-    line-height: 1.75;
+    line-height: 1.68;
 }
 
 body.devex-home .stat-grid,
@@ -3457,7 +3465,7 @@ body.devex-home .sample-grid,
 body.devex-home .stack-grid,
 body.devex-home .credibility-grid {
     display: grid;
-    gap: 20px;
+    gap: 18px;
 }
 
 body.devex-home .stat-grid {
@@ -3476,7 +3484,7 @@ body.devex-home .flagship-grid {
 body.devex-home .sample-grid,
 body.devex-home .stack-grid,
 body.devex-home .credibility-grid {
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 body.devex-home .stat-card,
@@ -3488,10 +3496,10 @@ body.devex-home .credibility-card,
 body.devex-home .portal-showcase-copy,
 body.devex-home .portal-showcase-visual,
 body.devex-home .contact-banner {
-    border-radius: 24px;
+    border-radius: 22px;
     border: 1px solid var(--devex-border);
     background: var(--devex-panel);
-    box-shadow: var(--devex-card-shadow);
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
 }
 
 body.devex-home .stat-card,
@@ -3523,7 +3531,7 @@ body.devex-home .stat-label {
 }
 
 body.devex-home .proof-shot-card {
-    padding: 16px;
+    padding: 18px;
 }
 
 body.devex-home .proof-shot-card img {
@@ -3540,9 +3548,9 @@ body.devex-home .flagship-card h4,
 body.devex-home .sample-card h4,
 body.devex-home .stack-card h4,
 body.devex-home .credibility-card h4 {
-    margin: 14px 0 10px;
+    margin: 12px 0 8px;
     color: var(--devex-text);
-    font-size: 1.22rem;
+    font-size: 1.16rem;
     letter-spacing: -0.02em;
 }
 
@@ -3551,8 +3559,8 @@ body.devex-home .proof-shot-card h4 {
 }
 
 body.devex-home .card-summary {
-    margin-bottom: 18px;
-    line-height: 1.7;
+    margin-bottom: 16px;
+    line-height: 1.62;
 }
 
 body.devex-home .project-feature-list {
@@ -3757,6 +3765,13 @@ body.devex-home .contact-banner {
         var(--devex-panel);
 }
 
+body.devex-home.dark .proof-badge,
+body.devex-home.dark .view-project-btn,
+body.devex-home.dark .secondary-btn,
+body.devex-home.dark .credential-link {
+    background: rgba(255, 255, 255, 0.03);
+}
+
 body.devex-home.dark .contact-banner {
     background:
         linear-gradient(135deg, rgba(124, 58, 237, 0.14) 0%, rgba(56, 189, 248, 0.12) 100%),
@@ -3797,6 +3812,10 @@ body.devex-home .back-to-top {
     body.devex-home .stat-grid,
     body.devex-home .screenshot-proof-grid,
     body.devex-home .flagship-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    body.devex-home .credibility-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
