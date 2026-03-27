@@ -1,23 +1,19 @@
 ---
-title: Facebook Quick Start Guide
+title: Facebook Quickstart Guide
 description: Set up your profile, connect with people, and get the most out of Facebook in minutes.
 ---
 
+# Facebook Quickstart Guide
 
-# Facebook Quick Start Guide
-
-**Version 1.0 | Audience: New Users**
+**Version:** 1.0  
+**Audience:** New Users  
 
 ## 1. Introduction
-
 Facebook is the one of the worlds largest social networking platform, with over three billion monthly active users. It lets you connect with friends and family, discover and share content, join interest-based communities, follow public figures and businesses, and stay informed about events in your world.
-
 This quickstart guide will help you to create your Facebook Account, set up your profile, and connect with people.
 
 ## 2. Prerequisites
-
 Ensure you have the following items:
-
 | Requirement | Detail |
 | --- | --- |
 | Device | Smartphone with iOS 16+ or Android 8+, tablet, or desktop computer |
@@ -27,17 +23,12 @@ Ensure you have the following items:
 | Internet connection | Stable Wi-Fi or mobile-data connection |
 
 ## 3. Create a Facebook Account
-
 ### 3.1 Sign Up on the Web
 This procedure explains how to create a Facebook account on the web.
-
 **Prerequisites:**
-
 * A web browser such as Google Chrome, Mozilla Firefox, or Apple Safari.
 * An email address or mobile phone number to use for account verification.
-
 To create,
-
 1. Open your browser and go to https://www.facebook.com.
 2. On the home page, select **Create new account**.
 3. Enter your first name and last name.
@@ -52,28 +43,20 @@ You have successfully created a Facebook account
 
 ### 3.2 Confirm Your Identity
 This procedure explains how to verify your identity when you create a Facebook account.
-
 **Prerequisites:**
-
 * A Facebook account.
 * Access to the email address or phone number used for account registration.
-
 To verify,
-
 * **Email confirmation** : In your email inbox select the link in the message from Facebook.
 * **SMS code** : On your cell phone check for the 6-digit code and enter it on the screen.
 * **Photo ID** : If requested upload a government-issued ID to the verification portal.
-
 **Note:** Facebook encrypts your password and never displays it to other users.
 You have now verified your identity and created your account.
 
 ## 4. Set Up Your Profile
-
 Set up your profile to personalize your Facebook experience, help friends find you, and build trust within your network.
-
 ### 4.1 Add a Profile Photo
 This procedure explains how to add a profile photo to your Facebook account.
-
 **Prerequisites:**
 * A Facebook account.
 * An image file of a photo to use as your profile picture.
@@ -364,7 +347,6 @@ This procedure explains how to find Facebook events.
 * A Facebook account.
 
 To find Facebook events, use one of the below options:
-
 * **Search Bar** : At the top of the page, use the search bar to search for events by name or topic.
 * **Discover** : In the Events section, click **Discover** to browse categories like Suggested for You or Popular Near You.
 * **Browse** : In the Events section, click **Browse** to view events by category or directory.
@@ -378,7 +360,6 @@ This procedure explains how to attend Facebook events.
 * A Facebook account.
 * A Facebook event.
 To attend,
-
 1. On the left pane, click **Events**.
 2. (optional) On the top of the page, use the search bar to search for events by name or topic.
 3. Click on the event you want to attend. The event page will open.
@@ -389,7 +370,6 @@ You will be added to the list of attendees.
 This procedure explains how to create a Facebook event.
 **Prerequisites:**
 * A Facebook account.
-
 To create,
 1. On the left pane, click **Events**.
 2. At the top of the page, click **Create Event**.
@@ -401,9 +381,7 @@ The event will be created and you will be taken to the event dashboard.
 
 ## 14. Troubleshoot Common Issues
 This procedure explains how to troubleshoot common issues.
-
 The following table lists common issues and their solutions.
-
 | Problem | Solution |
 | --- | --- |
 | Forgot your password | On the login page, select **Forgot Password**. Enter your email or phone, and select the reset link to continue. |

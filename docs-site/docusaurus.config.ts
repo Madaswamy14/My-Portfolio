@@ -92,22 +92,13 @@ const config: Config = {
               label: 'Jira Getting Started',
               to: '/docs/jira-getting-started',
             },
-          ],
-        },
-        {
-          title: 'Explore',
-          items: [
             {
-              label: 'SWAPI API Reference',
-              to: '/docs/swapi-api-reference',
-            },
-            {
-              label: 'Facebook Events',
+              label: 'Facebook Quickstart Guide',
               to: '/docs/facebook-events-quickstart',
             },
             {
-              label: 'Quickstart',
-              to: '/docs/quickstart',
+              label: 'SWAPI API Reference',
+              to: '/docs/swapi-api-reference',
             },
           ],
         },

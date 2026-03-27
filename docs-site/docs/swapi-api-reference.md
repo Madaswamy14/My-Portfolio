@@ -1,33 +1,27 @@
 ---
-title: SWAPI API Reference & Developer Guide
+title: SWAPI API Reference Documentation
 description: A complete API reference for SWAPI, including endpoints, schemas, parameters, and code examples.
 ---
 
-# SWAPI
-## The Star Wars API
-### API Reference & Developer Guide
+# SWAPI API Reference Documentation
 
 **URL:** https://swapi.dev
 
-**Version 1.0 | REST API | JSON | No Authentication Required**
-**Audience: Developers & Technical Writers**
+**Version:** 1.0  
+**Audience:** Developers & Technical Writers  
 
 ## 1. Introduction
-SWAPI (The Star Wars API) is an open-source, read-only REST API that provides structured data from the Star Wars universe — including characters, films, planets, species, vehicles, and starships. It is widely used as a learning resource for REST API consumption, documentation practice, and front-end prototyping.
-
+SWAPI (The Star Wars API) is an open-source, read-only REST API that provides structured data from the Star Wars universe. It provides data on various entities including characters, films, planets, species, vehicles, and starships. It is widely used as a learning resource for REST API consumption, documentation practice, and front-end prototyping.
 This document provides a complete API reference including endpoint descriptions, request/response schemas, query parameters, error codes, and code examples.
-
-> **About SWAPI:** SWAPI is free to use, requires no API key or authentication, and returns all data in JSON format. All data is sourced from the official Star Wars canon films (Episodes I–VII).
 
 ## 2. Quick Reference
 ### 2.1 API Specifications
-
 | Property | Value |
 | --- | --- |
 | Base URL | `https://swapi.dev/api/` |
 | Protocol | HTTPS only |
 | Data Format | JSON (`application/json`) |
-| Authentication | None — fully public |
+| Authentication | None |
 | Rate Limit | 10,000 requests per day per IP |
 | Pagination | 10 results per page (configurable) |
 | HTTP Methods | `GET` only (read-only API) |
@@ -291,4 +285,3 @@ curl -X GET "https://swapi.dev/api/starships/?page=2" -H "Accept: application/js
 > **Read-only API:** SWAPI supports `GET` requests only. `POST`, `PUT`, `PATCH`, and `DELETE` requests will return a `405 Method Not Allowed` response.
 
 ---
-*End of Document — SWAPI API Reference v1.0 — swapi.dev*

@@ -19,7 +19,7 @@ This Docusaurus site is a **developer documentation portfolio** designed to show
 
 - [Documentation Samples](./documentation-samples.md)
 - [Acme Payments Developer Platform](./acme-payments/intro.md)
-- [Facebook Events Quickstart](./facebook-events-quickstart.md)
+- [Facebook Quickstart Guide](./facebook-events-quickstart.md)
 - [Jira Getting Started](./jira-getting-started)
 - [SWAPI API Reference](./swapi-api-reference.md)
 
@@ -36,4 +36,4 @@ This portal is intentionally structured like that kind of system, and the Acme P
 - **Content focus:** onboarding, workflow docs, reference systems, SDK guidance
 - **Portfolio connection:** linked from the GitHub Pages homepage
 
-Start with [Documentation Samples](./documentation-samples.md) to review the migrated case studies, or open [Quickstart](./quickstart.md) to see the first-run flow.
+Start with [Documentation Samples](./documentation-samples.md) to review the migrated case studies, or open [Quickstart](./facebook-events-quickstart.md) to see the first-run flow.

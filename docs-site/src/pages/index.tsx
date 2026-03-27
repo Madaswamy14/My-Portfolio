@@ -13,9 +13,9 @@ const capabilityCards = [
       'A first-run setup sequence designed to help developers reach value with minimal friction.',
   },
   {
-    title: 'Authentication guidance',
+    title: 'Getting Started Guide',
     description:
-      'Clear token, header, and security patterns written in the style hiring teams expect from DevEx writers.',
+      'A task-based onboarding guide that helps new users set up Jira, learn key workflows, and reach first success faster.',
   },
   {
     title: 'API reference model',
@@ -26,24 +26,24 @@ const capabilityCards = [
 
 const docCards = [
   {
-    title: 'Quickstart',
-    description: 'Start here for the fastest path from account setup to a successful first request.',
-    to: '/docs/quickstart',
+    title: 'Getting Started Guide',
+    description: 'See how a task-based onboarding guide helps new users set up Jira, navigate workflows, and reach first success faster.',
+    to: '/docs/jira-getting-started',
   },
   {
-    title: 'Authentication',
-    description: 'See how bearer tokens, headers, and security guidance are documented for implementation use.',
-    to: '/docs/authentication',
+    title: 'Facebook Quickstart Guide',
+    description: 'Follow a workflow-based guide for setting up Facebook, creating a profile, and managing pages and events with clear step-by-step instructions.',
+    to: '/docs/facebook-events-quickstart',
   },
   {
-    title: 'API Reference',
-    description: 'Review endpoint patterns, parameters, example payloads, and error responses.',
-    to: '/docs/api-reference',
+    title: 'API Reference Overview',
+    description: 'Review the Acme Payments reference overview for endpoint structure, authentication context, and implementation-ready guidance.',
+    to: '/docs/acme-payments/api-reference/overview',
   },
   {
-    title: 'SDK Guide',
-    description: 'Show how SDK onboarding, install flows, and reusable examples can be structured.',
-    to: '/docs/sdk-guide',
+    title: 'SWAPI API Reference',
+    description: 'Explore a structured REST API reference with resources, parameters, responses, and example-driven developer guidance.',
+    to: '/docs/swapi-api-reference',
   },
 ];
 
@@ -64,9 +64,6 @@ function HomepageHeader() {
             <Link className="button button--primary button--lg" to="/docs/intro">
               View portal overview
             </Link>
-            <Link className="button button--secondary button--lg" to="/docs/quickstart">
-              Open quickstart
-            </Link>
             <Link
               className="button button--secondary button--lg"
               href="https://madaswamy14.github.io/My-Portfolio/index.html">
@@ -79,8 +76,8 @@ function HomepageHeader() {
           <p className={styles.panelLabel}>Included documentation surfaces</p>
           <ul className={styles.panelList}>
             <li>API reference architecture</li>
-            <li>Authentication guidance</li>
-            <li>SDK onboarding examples</li>
+            <li>Task-based getting started guides</li>
+            <li>Workflow-based quickstarts</li>
             <li>Tutorial-style implementation flow</li>
           </ul>
         </div>
@@ -95,7 +92,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={siteConfig.title}
-      description="Docusaurus-based developer portal portfolio with quickstarts, auth docs, API reference structure, and SDK documentation examples.">
+      description="Docusaurus-based developer portal portfolio with quickstarts, getting started guides, API reference structure, and workflow-based documentation examples.">
       <HomepageHeader />
       <main className={styles.mainContent}>
         <section className="container">
