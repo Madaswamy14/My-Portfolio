@@ -15,34 +15,34 @@
 <p>Observability is part of the product experience. Developers need to understand what happened, why it happened, and what to do next when payments or webhooks fail.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-to-capture-on-every-api-request">What to capture on every API request<a href="#what-to-capture-on-every-api-request" class="hash-link" aria-label="Direct link to What to capture on every API request" title="Direct link to What to capture on every API request" translate="no">​</a></h2>
 <ul>
-<li class="">log the Acme <code>request_id</code> returned with each response</li>
-<li class="">capture the endpoint, HTTP status, latency, and environment</li>
-<li class="">store idempotency keys for write operations so retries can be traced safely</li>
-<li class="">correlate failed requests to customer, payment, or refund identifiers</li>
+<li class="">Log the Acme <code>request_id</code> returned with each response</li>
+<li class="">Capture the endpoint, HTTP status, latency, and environment</li>
+<li class="">Store idempotency keys for write operations so retries can be traced safely</li>
+<li class="">Correlate failed requests to customer, payment, or refund identifiers</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="monitor-webhook-delivery-health">Monitor webhook delivery health<a href="#monitor-webhook-delivery-health" class="hash-link" aria-label="Direct link to Monitor webhook delivery health" title="Direct link to Monitor webhook delivery health" translate="no">​</a></h2>
 <ul>
-<li class="">store every webhook <code>event.id</code> before processing</li>
-<li class="">record signature verification results and delivery timestamps</li>
-<li class="">alert on repeated delivery failures or growing retry backlogs</li>
-<li class="">separate acknowledgement latency from downstream business logic time</li>
+<li class="">Store every webhook <code>event.id</code> before processing</li>
+<li class="">Record signature verification results and delivery timestamps</li>
+<li class="">Alert on repeated delivery failures or growing retry backlogs</li>
+<li class="">Separate acknowledgement latency from downstream business logic time</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="build-dashboards-for-the-developer-lifecycle">Build dashboards for the developer lifecycle<a href="#build-dashboards-for-the-developer-lifecycle" class="hash-link" aria-label="Direct link to Build dashboards for the developer lifecycle" title="Direct link to Build dashboards for the developer lifecycle" translate="no">​</a></h2>
 <p>At minimum, create dashboards for:</p>
 <ol>
-<li class="">authentication failures and <code>401</code> spikes</li>
-<li class="">validation and <code>4xx</code> trends by endpoint</li>
+<li class="">Authentication failures and <code>401</code> spikes</li>
+<li class="">Validation and <code>4xx</code> trends by endpoint</li>
 <li class=""><code>5xx</code> errors and latency regressions</li>
-<li class="">webhook retry counts and dead-letter events</li>
-<li class="">refunds and payment investigations opened by support</li>
+<li class="">Webhook retry counts and dead-letter events</li>
+<li class="">Refunds and payment investigations opened by support</li>
 </ol>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="launch-checklist">Launch checklist<a href="#launch-checklist" class="hash-link" aria-label="Direct link to Launch checklist" title="Direct link to Launch checklist" translate="no">​</a></h2>
 <ul class="contains-task-list containsTaskList_mC6p">
-<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->request IDs appear in API error logs and support tickets</li>
-<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->webhook delivery failures trigger an alert</li>
-<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->dashboards distinguish sandbox from production traffic</li>
-<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->developers can trace a payment from request to webhook completion</li>
-<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->incident runbooks link to <a class="" href="/My-Portfolio/developer-portal/docs/acme-payments/developer-journey/webhooks">Webhooks Journey</a> and <a class="" href="/My-Portfolio/developer-portal/docs/acme-payments/developer-journey/production-checklist">Production Checklist</a></li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Request IDs appear in API error logs and support tickets</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Webhook delivery failures trigger an alert</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Dashboards distinguish sandbox from production traffic</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Developers can trace a payment from request to webhook completion</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Incident runbooks link to <a class="" href="/My-Portfolio/developer-portal/docs/acme-payments/developer-journey/webhooks">Webhooks Journey</a> and <a class="" href="/My-Portfolio/developer-portal/docs/acme-payments/developer-journey/production-checklist">Production Checklist</a></li>
 </ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/madaswamy14/My-Portfolio/tree/main/docs-site/docs/acme-payments/developer-journey/monitoring-observability.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/My-Portfolio/developer-portal/docs/acme-payments/developer-journey/error-handling"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Error Handling Journey</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/My-Portfolio/developer-portal/docs/acme-payments/developer-journey/production-checklist"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Production Checklist</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#what-to-capture-on-every-api-request" class="table-of-contents__link toc-highlight">What to capture on every API request</a></li><li><a href="#monitor-webhook-delivery-health" class="table-of-contents__link toc-highlight">Monitor webhook delivery health</a></li><li><a href="#build-dashboards-for-the-developer-lifecycle" class="table-of-contents__link toc-highlight">Build dashboards for the developer lifecycle</a></li><li><a href="#launch-checklist" class="table-of-contents__link toc-highlight">Launch checklist</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/My-Portfolio/developer-portal/docs/intro">Overview</a></li><li class="footer__item"><a class="footer__link-item" href="/My-Portfolio/developer-portal/docs/documentation-samples">Documentation Samples</a></li><li class="footer__item"><a class="footer__link-item" href="/My-Portfolio/developer-portal/docs/jira-getting-started">Jira Getting Started</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Explore</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/My-Portfolio/developer-portal/docs/swapi-api-reference">SWAPI API Reference</a></li><li class="footer__item"><a class="footer__link-item" href="/My-Portfolio/developer-portal/docs/facebook-events-quickstart">Facebook Events</a></li><li class="footer__item"><a class="footer__link-item" href="/My-Portfolio/developer-portal/docs/quickstart">Quickstart</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://madaswamy14.github.io/My-Portfolio/index.html" target="_blank" rel="noopener noreferrer" class="footer__link-item">Portfolio Homepage<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/madaswamy14" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Profile<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Madaswamy. Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>

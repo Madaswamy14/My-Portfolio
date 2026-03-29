@@ -63,7 +63,7 @@ const config: Config = {
           label: 'Overview',
         },
         {
-          href: 'https://madaswamy14.github.io/My-Portfolio/index.html',
+          href: 'https://madaswamy14.github.io/My-Portfolio/portfolio.html',
           label: 'Portfolio',
           position: 'right',
         },
@@ -107,7 +107,7 @@ const config: Config = {
           items: [
             {
               label: 'Portfolio Homepage',
-              href: 'https://madaswamy14.github.io/My-Portfolio/index.html',
+              href: 'https://madaswamy14.github.io/My-Portfolio/portfolio.html',
             },
             {
               label: 'GitHub Profile',

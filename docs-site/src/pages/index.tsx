@@ -66,7 +66,7 @@ function HomepageHeader() {
             </Link>
             <Link
               className="button button--secondary button--lg"
-              href="https://madaswamy14.github.io/My-Portfolio/index.html">
+              href="https://madaswamy14.github.io/My-Portfolio/portfolio.html">
               Back to portfolio
             </Link>
           </div>
