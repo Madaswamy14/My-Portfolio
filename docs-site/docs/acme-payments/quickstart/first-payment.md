@@ -1,23 +1,23 @@
 ---
-title: Accept Your First Payment
+title: Create a Payment
 description: Complete the fastest path from sandbox credentials to a successful payment.
 ---
 
-# Accept Your First Payment
+# Create a Payment
 
 This quickstart shows how to create your first payment using the Acme Payments API.
 
 ## What you will do
 
-1. create an API key
-2. install the SDK or use raw HTTP
-3. create a customer
-4. create a payment
-5. optionally issue a refund
+1. Create an API key
+2. Install the SDK or use raw HTTP
+3. Create a customer
+4. Create a payment
+5. Issue a refund
 
-## Step 1 — Get your API key
+## Get your API key
 
-Create a sandbox key from the Acme dashboard.
+Get an API key from the Acme dashboard. You can use the sandbox key or create a new key.
 
 Example test key:
 
@@ -27,7 +27,7 @@ Send it in the `Authorization` header:
 
 `Authorization: Bearer sk_test_51ABC123XYZ`
 
-## Step 2 — Install the SDK
+## Install the SDK
 
 You can call the API directly or use an SDK.
 
@@ -43,7 +43,7 @@ npm install acme-payments
 pip install acme-payments
 ```
 
-## Step 3 — Create a customer
+## Create a customer
 
 ```bash
 curl https://api.acmepayments.com/v1/customers \
@@ -67,7 +67,7 @@ Example response:
 
 Save the `id` for the payment request.
 
-## Step 4 — Create a payment
+## Create a payment
 
 ```bash
 curl https://api.acmepayments.com/v1/payments \
@@ -91,7 +91,7 @@ Example response:
 }
 ```
 
-## Step 5 — Issue a refund
+## Issue a refund
 
 ```bash
 curl https://api.acmepayments.com/v1/refunds \

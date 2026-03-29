@@ -9,15 +9,15 @@ Use a sandbox API key to test the Acme Payments API safely.
 
 ## Before you begin
 
-- create a developer account in the Acme dashboard
-- switch to the sandbox environment
-- create an application named `dev-portal-demo`
+- Create a developer account in the Acme dashboard
+- Switch to the sandbox environment
+- Create an application named `dev-portal-demo`
 
 ## Generate credentials
 
-1. Open **Developers > API Keys**.
-2. Select **Create key**.
-3. Copy the secret key and store it in your secret manager or backend environment variables.
+1. Open **Developers > API Keys**
+2. Select **Create key**
+3. Copy the secret key and store it in your secret manager or backend environment variables
 
 ## What success looks like
 
