@@ -11,12 +11,12 @@ This page explains the developer experience strategy behind the portal, not just
 
 The portal is organized around the developer journey:
 
-- discover the API
-- get authenticated quickly
-- make the first successful call
-- handle errors and webhooks
-- monitor integration health and support incidents
-- prepare for production use
+- Discover the API.
+- Get authenticated quickly.
+- Make the first successful call.
+- Handle errors and webhooks.
+- Monitor integration health and support incidents.
+- Prepare for production use.
 
 ## API documentation
 
@@ -30,12 +30,12 @@ Quickstarts, tutorials, and concept pages complement the reference by showing re
 
 This portal section is meant to demonstrate DevEx thinking:
 
-- content architecture
-- onboarding design
-- reference strategy
-- request safety and webhook guidance
-- production-readiness guidance
-- observability guidance across the developer lifecycle
+- Content architecture.
+- Onboarding design.
+- Reference strategy.
+- Request safety and webhook guidance.
+- Production-readiness guidance.
+- Observability guidance across the developer lifecycle.
 
 ## Related sections
 

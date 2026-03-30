@@ -146,11 +146,11 @@ This procedure explains how to enable two-factor authentication (2FA).
 **Prerequisites:**
 * A Facebook account.
 To enable,
-
-1. Go to **Settings > Security and Login**.
-2. Under **Two-Factor Authentication**, click **Edit**.
-3. Select your preferred method: **Authentication App** (recommended) or **SMS**.
-4. Follow the prompts to complete setup.
+1. On the top right corner, click the down-arrow icon.
+2. Go to **Settings & Privacy** and select **Settings**.
+3. Under **Two-Factor Authentication**, click **Edit**.
+4. Select your preferred method: **Authentication App** (recommended) or **SMS**.
+5. Follow the prompts to complete setup.
 You have successfully enabled two-factor authentication.
 
 ## 6. Find Friends

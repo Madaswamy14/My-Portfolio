@@ -9,17 +9,17 @@ This portal section is structured to reflect a realistic developer experience pl
 
 ## Content model
 
-- `docs/acme-payments/` holds onboarding, reference, tutorial, concept, and architecture content
-- quickstart pages create the fastest path to first success
-- API reference pages document the core payments, customers, and refunds endpoints
-- developer-journey pages extend the docs from first call to production readiness
+- `docs/acme-payments/` holds onboarding, reference, tutorial, concept, and architecture content.
+- Quickstart pages create the fastest path to first success.
+- API reference pages document the core payments, customers, and refunds endpoints.
+- Developer-journey pages extend the docs from first call to production readiness.
 
 ## Publishing flow
 
-1. update docs or API contract
-2. refresh endpoint examples and reference content
-3. review changes in preview
-4. publish the static site
+1. Update docs or API contract.
+2. Refresh endpoint examples and reference content.
+3. Review changes in preview.
+4. Publish the static site.
 
 ## Why this structure works
 

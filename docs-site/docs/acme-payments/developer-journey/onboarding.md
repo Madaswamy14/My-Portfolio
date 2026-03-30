@@ -11,10 +11,10 @@ The onboarding phase should get a developer from curiosity to a successful authe
 
 By the end of onboarding, a developer should have:
 
-- a sandbox account
-- an API key
-- a clear understanding of the core resources
-- one successful request made against the API
+- A sandbox account.
+- An API key.
+- A clear understanding of the core resources.
+- One successful request made against the API.
 
 ## Recommended steps
 
@@ -25,7 +25,7 @@ By the end of onboarding, a developer should have:
 
 ## Onboarding checklist
 
-- [ ] create sandbox credentials
-- [ ] verify the `Authorization` header format
-- [ ] make one successful request
-- [ ] save the customer and payment IDs from test responses
+- [ ] Create sandbox credentials.
+- [ ] Verify the `Authorization` header format.
+- [ ] Make one successful request.
+- [ ] Save the customer and payment IDs from test responses.

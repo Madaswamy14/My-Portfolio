@@ -23,10 +23,10 @@ After onboarding, the first milestone is a successful payment flow that proves a
 
 ## What to verify
 
-- request bodies match the schema
-- customer and payment IDs are stored for follow-up requests
-- the frontend or test client displays the response clearly
-- failed requests surface actionable errors
+- Request bodies match the schema.
+- Customer and payment IDs are stored for follow-up requests.
+- The frontend or test client displays the response clearly.
+- Failed requests surface actionable errors.
 
 ## Next step
 

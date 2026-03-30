@@ -11,10 +11,12 @@ Create a refund for a previously created payment.
 
 ## Request body
 
-| Field | Type | Required | Example |
-| --- | --- | --- | --- |
-| `paymentId` | string | Yes | `pay_98765` |
-| `amount` | integer | No | `500` |
+| Field | Type | Required | Description | Example |
+| --- | --- | --- | --- | --- |
+| `paymentId` | string | Yes | The identifier of the charge to refund. | `pay_98765` |
+| `amount` | integer | No | A positive integer in cents representing how much to refund. If not provided, the entire remaining amount is refunded. | `500` |
+| `reason` | string | No | String indicating the reason for the refund. One of `duplicate`, `fraudulent`, or `requested_by_customer`. | `requested_by_customer` |
+| `metadata` | object | No | Arbitrary key-value pairs for your internal reference. | `{"ticket_id": "12345"}` |
 
 ## Example request
 
@@ -24,26 +26,47 @@ curl https://api.acmepayments.com/v1/refunds \
   -H "Content-Type: application/json" \
   -d '{
     "paymentId": "pay_98765",
-    "amount": 500
+    "amount": 500,
+    "reason": "requested_by_customer",
+    "metadata": { "ticket_id": "12345" }
   }'
 ```
 
-## Success response
+## Response
+
+### 201 Created
+
+Returns the created refund object.
+
+| Field | Type | Description | Example |
+| --- | --- | --- | --- |
+| `id` | string | Unique refund identifier. | `ref_45678` |
+| `paymentId` | string | ID of the payment that was refunded. | `pay_98765` |
+| `amount` | integer | Refunded amount in cents. | `500` |
+| `status` | string | Refund status. One of `pending`, `processed`, `failed`. | `processed` |
+| `reason` | string | Reason for the refund, if provided. | `requested_by_customer` |
+| `metadata` | object | Key-value pairs attached during creation. | `{"ticket_id": "12345"}` |
+| `createdAt` | string (ISO 8601) | UTC timestamp when the refund was created. | `2026-03-09T14:30:00Z` |
 
 ```json
 {
   "id": "ref_45678",
   "paymentId": "pay_98765",
   "amount": 500,
-  "status": "processed"
+  "status": "processed",
+  "reason": "requested_by_customer",
+  "metadata": { "ticket_id": "12345" },
+  "createdAt": "2026-03-09T14:30:00Z"
 }
 ```
 
-## Common errors
+## Error responses
 
-- `400 Bad Request` for invalid request bodies
-- `401 Unauthorized` for missing or invalid credentials
-- `404 Not Found` if the payment does not exist
+| HTTP status | Error code | Cause |
+| --- | --- | --- |
+| `400 Bad Request` | `invalid_request` | Missing required field or malformed JSON. Amount exceeds the remaining charge balance. |
+| `401 Unauthorized` | `invalid_api_key` | API key is missing, expired, or revoked. |
+| `404 Not Found` | `payment_not_found` | The `paymentId` does not exist in this account. |
 
 ## Related docs
 

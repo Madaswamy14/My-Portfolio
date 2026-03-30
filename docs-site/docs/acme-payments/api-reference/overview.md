@@ -9,10 +9,10 @@ The original standalone Acme portal generated endpoint docs from an OpenAPI sour
 
 ## Base request pattern
 
-- base URL: `https://api.acmepayments.com/v1`
-- authentication: `Authorization: Bearer <token>`
-- content type: `application/json`
-- write safety: send an `Idempotency-Key` header on create operations
+- Base URL: `https://api.acmepayments.com/v1`
+- Authentication: `Authorization: Bearer <token>`
+- Content type: `application/json`
+- Write safety: send an `Idempotency-Key` header on create operations
 
 ## Core endpoints
 

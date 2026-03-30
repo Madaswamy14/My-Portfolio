@@ -7,71 +7,69 @@ description: Complete the fastest path from sandbox credentials to a successful 
 
 This quickstart shows how to create your first payment using the Acme Payments API.
 
-## What you will do
+## 1. Prerequisites
 
-1. Create an API key
-2. Install the SDK or use raw HTTP
-3. Create a customer
-4. Create a payment
-5. Issue a refund
+Before you begin, you must:
+1. Get your API key. Refer to [Get an API Key](./get-api-key.md).
 
-## Get your API key
+## 2. Install the SDK
+Install the SDK for your preferred language.
 
-Get an API key from the Acme dashboard. You can use the sandbox key or create a new key.
-
-Example test key:
-
-`sk_test_51ABC123XYZ`
-
-Send it in the `Authorization` header:
-
-`Authorization: Bearer sk_test_51ABC123XYZ`
-
-## Install the SDK
-
-You can call the API directly or use an SDK.
-
-### Node.js
-
+**Node.js**
 ```bash
 npm install acme-payments
 ```
 
-### Python
-
+**Python**
 ```bash
 pip install acme-payments
 ```
 
-## Create a customer
+> **Note:** The examples below use raw `cURL` commands so you can copy and run them instantly from any terminal.
+
+---
+
+## 3. Create a customer
+Create a customer before charging them.
+
+**Endpoint:** `POST /customers`
+
+**Request**
 
 ```bash
 curl https://api.acmepayments.com/v1/customers \
-  -H "Authorization: Bearer sk_test_51ABC123XYZ" \
+  -u sk_test_51ABC123XYZ: \
   -H "Content-Type: application/json" \
   -d '{
-    "email": "customer@example.com",
+    "email": "jane.doe@example.com",
     "name": "Jane Doe"
   }'
 ```
 
-Example response:
-
+**Response**
+The API responds with the newly created customer object. Save the `id` for the next step.
 ```json
 {
   "id": "cus_12345",
-  "email": "customer@example.com",
-  "name": "Jane Doe"
+  "email": "jane.doe@example.com",
+  "name": "Jane Doe",
+  "createdAt": "2026-03-09T14:30:00Z"
 }
 ```
 
-Save the `id` for the payment request.
+---
 
-## Create a payment
+## 4. Create a payment
+Create a payment to charge the customer you just created. Pass the `cus_12345` into the `customerId` property.
 
+> **Warning:** Amounts must be provided in the lowest common denominator of the currency. For USD (`usd`), `$10.00` is represented as `1000` (cents).
+
+**Endpoint:** `POST /payments`
+
+**Request**
 ```bash
 curl https://api.acmepayments.com/v1/payments \
-  -H "Authorization: Bearer sk_test_51ABC123XYZ" \
+  -u sk_test_51ABC123XYZ: \
   -H "Content-Type: application/json" \
   -d '{
     "amount": 1000,
@@ -80,22 +78,31 @@ curl https://api.acmepayments.com/v1/payments \
   }'
 ```
 
-Example response:
-
+**Response**
+If the test card succeeds, the payment status returns `succeeded`.
 ```json
 {
   "id": "pay_98765",
   "amount": 1000,
   "currency": "USD",
-  "status": "succeeded"
+  "customerId": "cus_12345",
+  "status": "succeeded",
+  "createdAt": "2026-03-09T14:35:10Z"
 }
 ```
 
-## Issue a refund
+---
+
+## 5. Issue a refund
+Create a refund to undo the payment.
+
+Endpoint: `POST /refunds`
+
+**Request**
 
 ```bash
 curl https://api.acmepayments.com/v1/refunds \
-  -H "Authorization: Bearer sk_test_51ABC123XYZ" \
+  -u sk_test_51ABC123XYZ: \
   -H "Content-Type: application/json" \
   -d '{
     "paymentId": "pay_98765",
@@ -103,13 +110,27 @@ curl https://api.acmepayments.com/v1/refunds \
   }'
 ```
 
-## What success looks like
+**Response**
+```json
+{
+  "id": "ref_88291",
+  "paymentId": "pay_98765",
+  "amount": 1000,
+  "status": "processed",
+  "createdAt": "2026-03-09T14:40:22Z"
+}
+```
 
-You should have created a customer, completed a payment, and optionally exercised the refund workflow.
+---
 
-## Next steps
+## 7. What success looks like
+You have successfully completed a full payment lifecycle without touching any real money. If you check your Developer Dashboard now, you will see a customer, a successful payment, and a processed refund in your sandbox events logged for today.
 
-- [Authentication Overview](../authentication/overview.md)
-- [Error Handling](../concepts/error-handling.md)
-- [Handling Webhooks](../webhooks/handling-webhooks.md)
-- [API Reference Overview](../api-reference/overview.md)
+## 8. Next steps
+
+Now that you understand the basic flow, consider looking at:
+
+- **[Authentication Overview](../authentication/overview.md)**: Deep dive into securely managing API keys
+- **[Error Handling](../concepts/error-handling.md)**: How to programmatically react to declines and issues
+- **[Handling Webhooks](../webhooks/handling-webhooks.md)**: Receive real-time push notifications of events
+- **[API Reference Overview](../api-reference/overview.md)**: View all endpoints and schemas

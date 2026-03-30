@@ -13,9 +13,9 @@ Network failures and timeouts happen. Without idempotency, a client retry could 
 
 ## How to use it
 
-- send a unique `Idempotency-Key` header on each create request
-- reuse the same key only when retrying the exact same operation
-- generate keys in your application layer, not manually
+- Send a unique `Idempotency-Key` header on each create request.
+- Reuse the same key only when retrying the exact same operation.
+- Generate keys in your application layer, not manually.
 
 ## Best practice
 

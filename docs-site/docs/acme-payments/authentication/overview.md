@@ -9,19 +9,62 @@ Acme Payments uses API keys for server-to-server requests.
 
 ## How it works
 
-- send your key in the `Authorization` header as `Bearer <token>`
-- use sandbox keys in test environments only
-- rotate keys regularly and store them in a secret manager
+Acme Payments authenticates API requests using API keys. If you do not include your key when making an API request, or use one that is incorrect or disabled, Acme Payments returns a `401 Unauthorized` error.
 
-## Recommended pattern
+> [!IMPORTANT]  
+> Your API keys carry many privileges. Keep them secure! Do not share your secret API keys in publicly accessible areas such as GitHub, client-side code, or mobile applications.
 
-1. keep secrets out of frontend code
-2. proxy client requests through your backend
-3. restrict production keys to only the services that need them
+All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.
+
+## Authenticating Requests
+
+Authenticate your API requests by providing your API key in the `Authorization` header as a Bearer token.
+
+### Examples
+
+Here is how to authenticate in different environments:
+
+**cURL**
+```bash
+curl https://api.acmepayments.com/v1/payments \
+  -H "Authorization: Bearer sk_test_51ABC123XYZ..."
+```
+
+**Node.js**
+```javascript
+const response = await fetch('https://api.acmepayments.com/v1/payments', {
+  headers: {
+    'Authorization': 'Bearer sk_test_51ABC123XYZ...',
+    'Content-Type': 'application/json'
+  }
+});
+```
+
+**Python**
+```python
+import requests
+
+headers = {
+    'Authorization': 'Bearer sk_test_51ABC123XYZ...',
+    'Content-Type': 'application/json'
+}
+response = requests.get('https://api.acmepayments.com/v1/payments', headers=headers)
+```
+
+## Recommended patterns
+
+1. **Keep secrets out of frontend code**: Never hardcode API keys in UI repositories.
+2. **Proxy client requests**: Route requests through your backend service so your API key remains hidden from the browser.
+3. **Use environment variables**: Inject your API key via `.env` files or a secret manager.
 
 ## Authentication errors
 
-If credentials are missing or invalid, the API returns `401 Unauthorized` with an error code and request identifier.
+If credentials are missing or invalid, the API returns a `401 Unauthorized` response.
+
+| HTTP Status | Error Type | Cause |
+| :--- | :--- | :--- |
+| `401` | `unauthorized` | The `Authorization` header was not provided. |
+| `401` | `invalid_api_key` | The API key provided is invalid, revoked, or belongs to a different environment. |
 
 ## Related docs
 

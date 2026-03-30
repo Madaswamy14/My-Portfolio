@@ -44,11 +44,11 @@ This section is designed as a portfolio-grade developer portal experience, not a
 
 ## What this case study demonstrates
 
-- quickstart-led onboarding for a first successful API call
-- authentication guidance that supports server-side integration work
-- endpoint-focused API reference for customers, payments, and refunds
-- operational documentation for idempotency, errors, webhooks, monitoring, and production readiness
-- portfolio-ready information architecture that reads like a real developer platform
+- Quickstart-led onboarding for a first successful API call.
+- Authentication guidance that supports server-side integration work.
+- Endpoint-focused API reference for customers, payments, and refunds.
+- Operational documentation for idempotency, errors, webhooks, monitoring, and production readiness.
+- Portfolio-ready information architecture that reads like a real developer platform.
 
 :::tip Hiring-panel lens
 This section is positioned as a platform documentation case study. It is meant to demonstrate how onboarding, concepts, reference, and operational docs work together inside one coherent developer experience.

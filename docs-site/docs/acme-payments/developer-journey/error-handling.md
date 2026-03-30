@@ -9,11 +9,11 @@ Reliable integrations are built on clear error handling, not only successful res
 
 ## Common categories
 
-- `400 Bad Request` — request validation failed
-- `401 Unauthorized` — credentials are missing or invalid
-- `409 Conflict` — the request is colliding with previous state or idempotency expectations
-- `429 Too Many Requests` — back off and retry later
-- `5xx` — treat as transient and retry carefully when safe
+- `400 Bad Request` : Request validation failed.
+- `401 Unauthorized` : Credentials are missing or invalid.
+- `409 Conflict` : The request is colliding with previous state or idempotency expectations.
+- `429 Too Many Requests` : Back off and retry later.
+- `5xx` : Treat as transient and retry carefully when safe.
 
 ## Integration practices
 

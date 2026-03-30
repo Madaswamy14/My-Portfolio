@@ -9,30 +9,30 @@ Before going live, verify that your integration is secure, observable, and resil
 
 ## Credentials and environments
 
-- [ ] switch from sandbox to production API keys
-- [ ] keep secret keys only on the server side
-- [ ] separate test and production configuration clearly
+- [ ] Switch from sandbox to production API keys.
+- [ ] Keep secret keys only on the server side.
+- [ ] Separate test and production configuration clearly.
 
 ## Request safety
 
-- [ ] implement idempotency for payment creation workflows
-- [ ] validate request payloads before sending them
-- [ ] handle retries with backoff for transient failures
+- [ ] Implement idempotency for payment creation workflows.
+- [ ] Validate request payloads before sending them.
+- [ ] Handle retries with backoff for transient failures.
 
 ## Webhooks
 
-- [ ] verify webhook signatures
-- [ ] deduplicate events using stored event IDs
-- [ ] return `2xx` quickly and move long-running work to background jobs
+- [ ] Verify webhook signatures.
+- [ ] Deduplicate events using stored event IDs.
+- [ ] Return `2xx` quickly and move long-running work to background jobs.
 
 ## Monitoring and support
 
-- [ ] capture request IDs for failed API calls
-- [ ] monitor API error rates and webhook delivery failures using the [Monitoring and Observability Guide](./monitoring-observability.md)
-- [ ] create support workflows for refunds and payment investigation
+- [ ] Capture request IDs for failed API calls.
+- [ ] Monitor API error rates and webhook delivery failures using the [Monitoring and Observability Guide](./monitoring-observability.md)
+- [ ] Create support workflows for refunds and payment investigation.
 
 ## Launch readiness
 
-- [ ] run end-to-end tests in a staging environment
-- [ ] document rollback and incident response steps
-- [ ] review [Build a Payment App](../tutorials/build-payment-app.md), [Developer Journey Overview](./overview.md), and [Monitoring and Observability Guide](./monitoring-observability.md)
+- [ ] Run end-to-end tests in a staging environment.
+- [ ] Document rollback and incident response steps.
+- [ ] Review [Build a Payment App](../tutorials/build-payment-app.md), [Developer Journey Overview](./overview.md), and [Monitoring and Observability Guide](./monitoring-observability.md).

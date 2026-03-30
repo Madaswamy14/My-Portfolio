@@ -13,11 +13,11 @@ Payment status can change outside the immediate request cycle. Your integration 
 
 ## Core responsibilities
 
-1. receive webhook events on a server endpoint
-2. verify the signature before trusting the payload
-3. store the event ID for deduplication
-4. update your internal state
-5. retry safely when downstream work fails
+1. Receive webhook events on a server endpoint.
+2. Verify the signature before trusting the payload.
+3. Store the event ID for deduplication.
+4. Update your internal state.
+5. Retry safely when downstream work fails.
 
 ## Example event types
 

@@ -5,35 +5,50 @@ description: A complete API reference for SWAPI, including endpoints, schemas, p
 
 # SWAPI API Reference Documentation
 
-**URL:** https://swapi.dev
-
+**URL:** https://swapi.dev/api/  
 **Version:** 1.0  
 **Audience:** Developers & Technical Writers  
 
 ## 1. Introduction
-SWAPI (The Star Wars API) is an open-source, read-only REST API that provides structured data from the Star Wars universe. It provides data on various entities including characters, films, planets, species, vehicles, and starships. It is widely used as a learning resource for REST API consumption, documentation practice, and front-end prototyping.
+SWAPI (The Star Wars API) is an open-source, read-only REST API that provides structured data from the Star Wars universe. It provides data on various entities, including characters, films, planets, species, vehicles, and starships. It is widely used as a learning resource for REST API consumption, documentation practice, and front-end prototyping.
 This document provides a complete API reference including endpoint descriptions, request/response schemas, query parameters, error codes, and code examples.
 
 ## 2. Quick Reference
-### 2.1 API Specifications
-| Property | Value |
-| --- | --- |
-| Base URL | `https://swapi.dev/api/` |
-| Protocol | HTTPS only |
-| Data Format | JSON (`application/json`) |
-| Authentication | None |
-| Rate Limit | 10,000 requests per day per IP |
-| Pagination | 10 results per page (configurable) |
-| HTTP Methods | `GET` only (read-only API) |
-| CORS | Enabled for all origins |
-| Versioning | Version embedded in URL: `/api/v1/` (current) |
-| Status Codes | 200, 400, 404, 500 |
 
-### 2.2 Available Endpoints
+### 2.1 Base URL
+The base address of Web API is "https://swapi.dev/api/".
+
+### 2.2 Authorization
+No authentication required.
+
+### 2.3 Requests
+All requests are made using the `GET` HTTP method.
+
+### 2.4 Responses
+SWAPI uses standard HTTP status codes to communicate success and failure. All responses return a JSON object with a `detail` field describing the error.
+
+**Response Status Codes**
+
+| Status Code | Description |
+| --- | --- |
+| `200` | OK - Request succeeded. Response body contains the requested data. |
+| `400` | Bad Request - The request was malformed. Common causes include invalid page number or unsupported parameter. |
+| `404` | Not Found -The requested resource does not exist. For example, `/api/people/9999/` |
+| `500` | Internal Server Error - An unexpected server-side error occurred. Retry after a short delay. |
+
+### 2.5 Rate Limits
+The SWAPI API has a rate limit of 10,000 requests per day per IP address. If you exceed this limit, you will receive a 429 Too Many Requests response. You can check the `X-RateLimit-Remaining` header in the response to see how many requests you have left before the limit resets.
+
+### 2.6 Pagination
+Large result sets (such as listing all characters) are paginated. By default, SWAPI returns 10 records per page. A collection response includes a `count`, a `next` URL, and a `previous` URL.
+
+## 3. Endpoints
+
+### 3.1 Available Endpoints
 
 | Method | Endpoint Path | Description |
 | --- | --- | --- |
-| GET | `/api/` | Root — lists all available resource URLs |
+| GET | `/api/` | Root - lists all available resource URLs |
 | GET | `/api/people/` | List all people (paginated) |
 | GET | `/api/people/{id}/` | Retrieve a specific person by ID |
 | GET | `/api/films/` | List all films (paginated) |
@@ -47,16 +62,21 @@ This document provides a complete API reference including endpoint descriptions,
 | GET | `/api/starships/` | List all starships (paginated) |
 | GET | `/api/starships/{id}/` | Retrieve a specific starship by ID |
 
-## 3. Root Endpoint
-### 3.1 GET /api/
-The root endpoint returns a JSON object containing the URLs for all six resource collections. This is the recommended starting point for API exploration.
+### 3.2 The Root Endpoint
 
-**Request**
-```http
-GET https://swapi.dev/api/
+The root endpoint lists all available resource URLs. It acts as the primary directory for navigation.
+
+**Endpoint**
+
+`GET /api/`
+
+**Request sample**
+```bash
+curl -X GET "https://swapi.dev/api/" -H "Accept: application/json"
 ```
 
-**Response — 200 OK**
+**Response Sample**
+
 ```json
 {
   "people": "https://swapi.dev/api/people/",
@@ -68,43 +88,53 @@ GET https://swapi.dev/api/
 }
 ```
 
-## 4. People Endpoint
-The People resource returns data about individual characters in the Star Wars universe.
+---
 
-### 4.1 `GET /api/people/{id}/`
-Returns a single person resource identified by their integer ID.
+### 3.3 People
 
-**Path Parameter**
-| Parameter | Description |
-| --- | --- |
-| `{id}` | Integer. The unique identifier for the person. Range: 1–83. |
+Retrieve data about individual characters from the Star Wars universe.
 
-**Response Schema**
-| Field | Type & Description |
-| --- | --- |
-| `name` | string — Full name of the character |
-| `height` | string — Height in centimetres |
-| `mass` | string — Weight in kilograms |
-| `hair_color` | string — Hair colour(s) separated by commas |
-| `skin_color` | string — Skin colour(s) separated by commas |
-| `eye_color` | string — Eye colour(s) separated by commas |
-| `birth_year` | string — Birth year using BBY or ABY notation |
-| `gender` | string — 'male', 'female', 'hermaphrodite', 'none', or 'n/a' |
-| `homeworld` | string — URL of the planet resource for their home planet |
-| `films` | array[string] — URLs of film resources this character appears in |
-| `species` | array[string] — URLs of species resources |
-| `vehicles` | array[string] — URLs of vehicle resources piloted |
-| `starships` | array[string] — URLs of starship resources piloted |
-| `created` | string — ISO 8601 datetime when this record was created |
-| `edited` | string — ISO 8601 datetime when this record was last modified |
-| `url` | string — The canonical URL of this resource |
+**Endpoint**
 
-**Example Request**
-```http
-GET https://swapi.dev/api/people/1/
+`GET /api/people/{id}/`
+
+**Path Parameters**
+
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `id` | `integer` | Yes | The unique identifier for the person. For example, `1` for Luke Skywalker. |
+
+**Query Parameters**
+
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `search` | `string` | No | Case-insensitive partial match on the `name` field. |
+| `page` | `integer` | No | Page number for paginated list. List 10 results per page. |
+
+**Request sample**
+```bash
+curl -X GET "https://swapi.dev/api/people/1/" -H "Accept: application/json"
 ```
 
-**Example Response**
+**Response Schema**
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `name` | `string` | Full name of the character |
+| `height` | `string` | Height in centimetres |
+| `mass` | `string` | Weight in kilograms |
+| `hair_color` | `string` | Hair colour(s) separated by commas |
+| `skin_color` | `string` | Skin colour(s) separated by commas |
+| `eye_color` | `string` | Eye colour(s) separated by commas |
+| `birth_year` | `string` | Birth year using BBY or ABY notation |
+| `gender` | `string` | 'male', 'female', 'hermaphrodite', 'none', or 'n/a' |
+| `homeworld` | `string` | URL of the planet resource for their home planet |
+| `films` | `array[string]` | URLs of film resources this character appears in |
+| `species` | `array[string]` | URLs of species resources |
+| `vehicles` | `array[string]`| URLs of vehicle resources piloted |
+| `starships` | `array[string]`| URLs of starship resources piloted |
+
+**Response Sample**
 ```json
 {
   "name": "Luke Skywalker",
@@ -126,155 +156,173 @@ GET https://swapi.dev/api/people/1/
 }
 ```
 
-## 5. Films Endpoint
-The Films resource provides metadata for each of the seven Star Wars theatrical films covered by SWAPI (Episodes I–VII).
+---
 
-### 5.1 `GET /api/films/{id}/`
+### 3.4 Planets
 
-**Response Schema**
-| Field | Type & Description |
-| --- | --- |
-| `title` | string — The title of the film |
-| `episode_id` | integer — The episode number (1–7) |
-| `opening_crawl` | string — The full opening crawl text |
-| `director` | string — Name of the film director |
-| `producer` | string — Comma-separated list of producers |
-| `release_date` | string — Release date in YYYY-MM-DD format |
-| `characters` | array[string] — URLs of people resources appearing in this film |
-| `planets` | array[string] — URLs of planet resources featured |
-| `starships` | array[string] — URLs of starship resources featured |
-| `vehicles` | array[string] — URLs of vehicle resources featured |
-| `species` | array[string] — URLs of species resources featured |
-| `created` | string — ISO 8601 creation datetime |
-| `edited` | string — ISO 8601 last-modified datetime |
-| `url` | string — Canonical URL of this resource |
+Retrieve environmental and geographical data for Star Wars planets.
 
-## 6. Planets Endpoint
-The Planets resource provides environmental and geographical data for planets featured in the Star Wars films.
+**Endpoint**
 
-### 6.1 `GET /api/planets/{id}/`
+`GET /api/planets/{id}/`
 
-**Response Schema**
-| Field | Type & Description |
-| --- | --- |
-| `name` | string — Planet name |
-| `rotation_period` | string — Hours to complete one rotation on its axis |
-| `orbital_period` | string — Days to complete one orbit of its local star |
-| `diameter` | string — Diameter in kilometres |
-| `climate` | string — Comma-separated climate types (e.g., 'arid', 'temperate') |
-| `gravity` | string — Gravitational force relative to standard (e.g., '1 standard') |
-| `terrain` | string — Comma-separated terrain types |
-| `surface_water` | string — Percentage of planet surface covered in water |
-| `population` | string — Average population (or 'unknown') |
-| `residents` | array[string] — URLs of people who are residents |
-| `films` | array[string] — URLs of films this planet appears in |
-| `url` | string — Canonical URL of this resource |
+**Path Parameters**
 
-## 7. Starships Endpoint
-The Starships resource describes spacecraft capable of atmospheric and interstellar travel featured in the Star Wars films.
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `id` | `integer` | Yes | The unique identifier for the planet. |
 
-### 7.1 `GET /api/starships/{id}/`
+**Query Parameters**
 
-**Response Schema**
-| Field | Type & Description |
-| --- | --- |
-| `name` | string — Common name of the starship |
-| `model` | string — Model or official name |
-| `manufacturer` | string — Manufacturer(s) |
-| `cost_in_credits` | string — Cost in Galactic Credits |
-| `length` | string — Length in metres |
-| `max_atmosphering_speed` | string — Maximum speed in atmosphere (km/h), or 'n/a' |
-| `crew` | string — Minimum crew required to operate |
-| `passengers` | string — Maximum passengers (excluding crew) |
-| `cargo_capacity` | string — Cargo capacity in kilograms |
-| `consumables` | string — Duration of consumables (e.g., '2 years') |
-| `hyperdrive_rating` | string — Class of hyperdrive (lower = faster) |
-| `MGLT` | string — Megalight per hour speed rating |
-| `starship_class` | string — Type classification (e.g., 'Star Destroyer') |
-| `pilots` | array[string] — URLs of people resources who pilot this ship |
-| `films` | array[string] — URLs of films this ship appears in |
-| `url` | string — Canonical URL of this resource |
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `search` | `string` | No | Case-insensitive partial match on the `name` field. |
+| `page` | `integer` | No | Page number for paginated list. List 10 results per page. |
 
-## 8. Query Parameters
-All list endpoints support the following query parameters for searching and paginating results.
-
-### 8.1 Search and Pagination
-| Parameter | Description & Usage |
-| --- | --- |
-| `search` | string — Case-insensitive partial match on the `name` field. Example: `?search=luke` |
-| `page` | integer — Page number (1-indexed). Default: 1. Each page returns 10 results. Example: `?page=2` |
-| `format` | string — Response format. Supported: 'json' (default) or 'api' (browsable). Example: `?format=json` |
-
-### 8.2 Paginated Response Envelope
-All list endpoints wrap results in a standard pagination envelope:
-```json
-{
-  "count": 82,
-  "next": "https://swapi.dev/api/people/?page=2",
-  "previous": null,
-  "results": [ ... ]
-}
-```
-> **Tip:** To retrieve all records, start at page 1 and keep following the 'next' URL until it returns `null`. Each page contains up to 10 results.
-
-## 9. Error Responses
-SWAPI uses standard HTTP status codes to communicate success and failure. All error responses return a JSON object with a `detail` field describing the error.
-
-| HTTP Status | Meaning & When It Occurs |
-| --- | --- |
-| `200 OK` | Request succeeded. Response body contains the requested data. |
-| `400 Bad Request` | The request was malformed. Common cause: invalid page number or unsupported parameter. |
-| `404 Not Found` | The requested resource does not exist. Example: `/api/people/9999/` |
-| `500 Internal Server Error` | An unexpected server-side error occurred. Retry after a short delay. |
-
-**Error Response Body**
-```json
-{
-  "detail": "Not found"
-}
-```
-
-## 10. Code Examples
-### 10.1 JavaScript / Fetch API
-```javascript
-// Fetch Luke Skywalker's data
-fetch("https://swapi.dev/api/people/1/")
-  .then(response => {
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    return response.json();
-  })
-  .then(data => console.log(data.name, data.birth_year))
-  .catch(error => console.error("Error:", error));
-```
-
-### 10.2 Python (requests)
-```python
-import requests
-
-BASE = "https://swapi.dev/api/"
-
-# Get all films
-response = requests.get(f"{BASE}films/")
-response.raise_for_status()
-
-films = response.json()["results"]
-for film in films:
-    print(f"Episode {film['episode_id']}: {film['title']} ({film['release_date'][:4]})")
-```
-
-### 10.3 cURL
+**Request sample**
 ```bash
-# Retrieve Tatooine (planet ID 1)
 curl -X GET "https://swapi.dev/api/planets/1/" -H "Accept: application/json"
-
-# Search for characters named 'Vader'
-curl -X GET "https://swapi.dev/api/people/?search=Vader" -H "Accept: application/json"
-
-# Get page 2 of starships
-curl -X GET "https://swapi.dev/api/starships/?page=2" -H "Accept: application/json"
 ```
 
-## 11. Best Practices
+**Response Schema**
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `name` | `string` | Planet name |
+| `rotation_period` | `string` | Hours to complete one rotation on its axis |
+| `orbital_period` | `string` | Days to complete one orbit of its local star |
+| `diameter` | `string` | Diameter in kilometres |
+| `climate` | `string` | Comma-separated climate types. For example, 'arid', 'temperate' |
+| `gravity` | `string` | Gravitational force relative to standard. For example, '1 standard' |
+| `terrain` | `string` | Comma-separated terrain types |
+| `surface_water` | `string` | Percentage of planet surface covered in water |
+| `population` | `string` | Average population or 'unknown' |
+
+**Response Sample**
+```json
+{
+  "name": "Tatooine",
+  "rotation_period": "23",
+  "orbital_period": "304",
+  "diameter": "10465",
+  "climate": "arid",
+  "gravity": "1 standard",
+  "terrain": "desert",
+  "surface_water": "1",
+  "population": "200000",
+  "url": "https://swapi.dev/api/planets/1/"
+}
+```
+---
+
+### 3.5 Films
+
+Metadata for Star Wars theatrical films from Episodes I–VII.
+
+**Endpoint**
+
+`GET /api/films/{id}/`
+
+**Path Parameters**
+
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `id` | `integer` | Yes | The film episode ID or resource ID. |
+
+**Query Parameters**
+
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `search` | `string` | No | Case-insensitive partial match on the `title` field. |
+| `page` | `integer` | No | Page number for paginated list. List 10 results per page. |
+
+**Request sample**
+```bash
+curl -X GET "https://swapi.dev/api/films/1/" -H "Accept: application/json"
+```
+
+**Response Schema**
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `title` | `string` | The title of the film |
+| `episode_id` | `integer` | The episode number from 1–7 |
+| `opening_crawl` | `string` | The full opening crawl text |
+| `director` | `string` | Name of the film director |
+| `producer` | `string` | Comma-separated list of producers |
+| `release_date` | `string` | Release date in YYYY-MM-DD format |
+
+**Response Sample**
+```json
+{
+  "title": "A New Hope",
+  "episode_id": 4,
+  "opening_crawl": "It is a period of civil war.\r\nRebel spaceships, striking\r\nfrom a hidden base, have won\r\ntheir first victory against\r\nthe evil Galactic Empire.\r\n\r\nDuring the battle, Rebel\r\nspies managed to steal secret\r\nplans to the Empire's\r\nultimate weapon, the DEATH\r\nSTAR, an armored space\r\nstation with enough power to\r\ndestroy an
+  entire planet.\r\n\r\nPursued by the Empire's\r\nsinister agents, Princess\r\nLeia races home aboard her\r\nstarship, custodian of the\r\nstolen plans that can save her\r\npeople and restore\r\nfreedom to the galaxy....",
+  "director": "George Lucas",
+  "producer": "Gary Kurtz, Rick McCallum",
+  "release_date": "1977-05-25",
+  "url": "https://swapi.dev/api/films/1/"
+}
+```
+---
+
+### 3.6 Starships
+
+Spacecraft capable of atmospheric and interstellar travel.
+
+**Endpoint**
+
+`GET /api/starships/{id}/`
+
+**Path Parameters**
+
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `id` | `integer` | Yes | The unique identifier for the starship. |
+
+**Query Parameters**
+
+| Parameter | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `search` | `string` | No | Case-insensitive partial match on the `name` field. |
+| `page` | `integer` | No | Page number for paginated list. List 10 results per page. |
+
+**Request sample**
+```bash
+curl -X GET "https://swapi.dev/api/starships/9/" -H "Accept: application/json"
+```
+
+**Response Schema**
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `name` | `string` | Common name of the starship |
+| `model` | `string` | Model or official name |
+| `manufacturer` | `string` | Manufacturer(s) |
+| `cost_in_credits` | `string` | Cost in Galactic Credits |
+| `length` | `string` | Length in metres |
+| `max_atmosphering_speed`| `string` | Maximum speed in atmosphere (km/h), or 'n/a' |
+| `hyperdrive_rating` | `string` | Class of hyperdrive (lower = faster) |
+| `starship_class` | `string` | Type classification. For example, 'Star Destroyer' |
+
+**Response Sample**
+```json
+{
+  "name": "Death Star",
+  "model": "DS-1 Orbital Battle Station",
+  "manufacturer": "Imperial Department of Military Research, Sienar Fleet Systems",
+  "cost_in_credits": "1000000000000",
+  "length": "120000",
+  "max_atmosphering_speed": "n/a",
+  "hyperdrive_rating": "4.0",
+  "starship_class": "Deep Space Mobile Battlestation",
+  "url": "https://swapi.dev/api/starships/9/"
+}
+```
+---
+
+## 4. Best Practices
 *   Cache responses locally when building applications to avoid hitting the 10,000 req/day rate limit.
 *   Always check the `next` field in paginated responses to determine if more pages exist.
 *   Use the `?search=` parameter server-side rather than fetching all records and filtering client-side.
