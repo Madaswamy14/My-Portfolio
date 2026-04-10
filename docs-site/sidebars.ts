@@ -2,90 +2,59 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
-/**
- * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
- - provide next/previous navigation
-
- The sidebars can be generated from the filesystem, or explicitly defined here.
-
- Create as many sidebars as you want.
- */
 const sidebars: SidebarsConfig = {
   portalSidebar: [
     'intro',
     'facebook-events-quickstart',
     'jira-getting-started',
     'swapi-api-reference',
+    'documentation-samples',
     {
       type: 'category',
       label: 'Acme Payments Developer Platform',
       items: [
-        'acme-payments/intro',
         {
           type: 'category',
-          label: 'Quickstart',
+          label: 'Getting Started',
           items: [
-            'acme-payments/quickstart/get-api-key',
-            'acme-payments/quickstart/first-payment',
-            'acme-payments/quickstart/first-api-call',
+            'acme-payments/getting-started/introduction',
+            'acme-payments/getting-started/quickstart',
           ],
-        },
-        {
-          type: 'category',
-          label: 'Authentication',
-          items: ['acme-payments/authentication/overview'],
         },
         {
           type: 'category',
           label: 'API Reference',
           items: [
-            'acme-payments/api-reference/overview',
-            'acme-payments/api-reference/create-customer',
-            'acme-payments/api-reference/create-payment',
-            'acme-payments/api-reference/list-payments',
-            'acme-payments/api-reference/retrieve-payment',
-            'acme-payments/api-reference/create-refund',
+            'acme-payments/api/customers',
+            'acme-payments/api/payments',
           ],
         },
         {
           type: 'category',
-          label: 'Tutorials',
-          items: ['acme-payments/tutorials/build-payment-app'],
-        },
-        {
-          type: 'category',
-          label: 'Developer Journey',
+          label: 'Guides',
           items: [
-            'acme-payments/developer-journey/overview',
-            'acme-payments/developer-journey/onboarding',
-            'acme-payments/developer-journey/first-payment',
-            'acme-payments/developer-journey/webhooks',
-            'acme-payments/developer-journey/error-handling',
-            'acme-payments/developer-journey/monitoring-observability',
-            'acme-payments/developer-journey/production-checklist',
+            'acme-payments/guides/accept-payments',
+            'acme-payments/guides/refunds',
+            'acme-payments/guides/webhooks',
           ],
-        },
-        {
-          type: 'category',
-          label: 'Webhooks',
-          items: ['acme-payments/webhooks/handling-webhooks'],
         },
         {
           type: 'category',
           label: 'Concepts',
           items: [
-            'acme-payments/concepts/idempotency',
-            'acme-payments/concepts/error-handling',
+            'acme-payments/concepts/customers',
+            'acme-payments/concepts/payment-methods',
+            'acme-payments/concepts/payments',
           ],
         },
         {
           type: 'category',
-          label: 'Architecture',
-          items: ['acme-payments/architecture/developer-portal-architecture'],
+          label: 'Reference',
+          items: [
+            'acme-payments/reference/errors',
+            'acme-payments/reference/rate-limits',
+          ],
         },
-        'acme-payments/devex-design',
       ],
     },
   ],
