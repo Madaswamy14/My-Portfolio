@@ -218,3 +218,9 @@ curl -X PATCH https://api.acmepayments.com/v1/customers/cus_ABC123 \
 | `400 Bad Request` | The request body contains invalid values. |
 | `401 Unauthorized` | The API key is missing or invalid. |
 | `404 Not Found` | No customer exists with the specified ID. |
+
+## Next: 
+
+For Payments API, see [Payments API](/acme-payments/api/payments).
+For Refunds API, see [Refunds API](/acme-payments/api/refunds).
+For Webhooks API, see [Webhooks API](/acme-payments/api/webhooks).

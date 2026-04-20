@@ -13,13 +13,13 @@ Facebook is the one of the worlds largest social networking platform, with over 
 This quickstart guide will help you to create your Facebook Account, set up your profile, and connect with people.
 
 ## 2. Prerequisites
-Ensure you have the following items:
+Ensure you have the following
 | Requirement | Detail |
 | --- | --- |
 | Device | Smartphone with iOS 16+ or Android 8+, tablet, or desktop computer |
 | Browser | Chrome 90+, Firefox 90+, Edge 90+, or Safari 14+ |
-| Email or phone | A valid email address or mobile phone number for registration |
-| Age | Users must be thirteen years of age or older to join Facebook |
+| Email or phone | A valid email address or mobile phone number |
+| Age | Users must be thirteen years of age or older |
 | Internet connection | Stable Wi-Fi or mobile-data connection |
 
 ## 3. Create a Facebook Account

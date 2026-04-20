@@ -163,6 +163,8 @@ curl -X GET https://api.acmepayments.com/v1/payments/pay_XYZ789 \
 
 ---
 
-:::note Idempotency
-To safely retry a payment request without risk of creating a duplicate charge, include an `Idempotency-Key` header. Use a UUID or other sufficiently unique string. The same key returns the original response for up to 24 hours.
-:::
+## Next:
+
+For Refunds API, see [Refunds API](/acme-payments/api/refunds).
+For Webhooks API, see [Webhooks API](/acme-payments/api/webhooks).
+For Customers API, see [Customers API](/acme-payments/api/customers).

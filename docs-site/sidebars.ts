@@ -27,32 +27,15 @@ const sidebars: SidebarsConfig = {
           items: [
             'acme-payments/api/customers',
             'acme-payments/api/payments',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Guides',
-          items: [
-            'acme-payments/guides/accept-payments',
-            'acme-payments/guides/refunds',
-            'acme-payments/guides/webhooks',
+            'acme-payments/api/refunds',
+            'acme-payments/api/webhooks',
           ],
         },
         {
           type: 'category',
           label: 'Concepts',
           items: [
-            'acme-payments/concepts/customers',
-            'acme-payments/concepts/payment-methods',
-            'acme-payments/concepts/payments',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Reference',
-          items: [
-            'acme-payments/reference/errors',
-            'acme-payments/reference/rate-limits',
+            'acme-payments/concepts/concepts',
           ],
         },
       ],
